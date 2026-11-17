@@ -943,13 +943,15 @@
       box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.08);
       opacity: 0;
       visibility: hidden;
+      pointer-events: none;
       transform: translateY(20px) scale(0.96);
-      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: opacity 0.18s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
       overflow: hidden;
     }
     .ai-drawer.active {
       opacity: 1;
       visibility: visible;
+      pointer-events: auto;
       transform: translateY(0) scale(1);
     }
 
@@ -1028,7 +1030,11 @@
       border-bottom: 1px solid rgba(139, 92, 246, 0.3);
       font-size: 0.8rem;
       color: #cbd5e1;
+      flex-shrink: 0;
       animation: aiSlideDown 0.2s ease-out;
+    }
+    .ai-settings-panel.open {
+      display: block !important;
     }
     @keyframes aiSlideDown {
       from { opacity: 0; transform: translateY(-8px); }
@@ -1359,14 +1365,16 @@
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08);
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transform: translateY(20px) scale(0.96);
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.18s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 
 .notes-drawer.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translateY(0) scale(1);
 }
 
@@ -2694,7 +2702,7 @@ body.zen-mode .notes-fab-btn {
   <div id="appToast" class="app-toast"></div>
 
   <!-- Floating Exit Button for Zen Mode -->
-  <button id="floatingZenExit" onclick="toggleZenMode()">✕ Menüyü Göster</button>
+  <button id="floatingZenExit" onclick="toggleZenMode()" title="Tam ekrandan çık ve üst menüyü göster">✕ Tam Ekrandan Çık / Menüyü Göster</button>
 
   <!-- Floating Menu Pill (appears when workspace bar is hidden) -->
   <button id="floatingMenuPill" onclick="toggleHideBar()">☰ Menü</button>
@@ -2986,6 +2994,7 @@ body.zen-mode .notes-fab-btn {
       if (viewId === 'dashboard') {
         document.body.classList.remove('in-workspace');
         document.body.classList.remove('hide-bar');
+        document.body.classList.remove('zen-mode');
         document.getElementById('view-dashboard').classList.add('active');
         document.getElementById('tab-dashboard').classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -3028,6 +3037,7 @@ body.zen-mode .notes-fab-btn {
 
     function loadCourseWorkspace(courseId, defaultAppKey, updateHistory = true) {
       document.body.classList.remove('hide-bar');
+      document.body.classList.remove('zen-mode');
       showView('workspace', false);
 
       if (updateHistory) {
@@ -3137,6 +3147,7 @@ body.zen-mode .notes-fab-btn {
 
     // Zen / Fullscreen Mode Toggle
     function toggleZenMode() {
+      document.body.classList.remove('hide-bar');
       document.body.classList.toggle('zen-mode');
     }
 
@@ -3521,7 +3532,7 @@ const academicKnowledgeBase = [
       '• <strong>Yazının Doğuşu (M.Ö. 3200):</strong> Çivi yazısı felsefe yapmak için değil, tapınaktaki tahıl ve vergi hesaplarını tutmak (bürokrasi) için icat edilmiştir.'
   },
   {
-    tokens: ['hammurabi', 'babil', 'kısasa kısas', 'lex talionis', 'kanun'],
+    tokens: ['hammurabi', 'babil', 'kısasa kısas', 'lex talionis', 'hammurabi kanunları'],
     answer: '⚖️ <strong>Hammurabi Kanunları (HIST 151):</strong><br><br>' +
       '• <strong>Meşruiyet Kaynağı:</strong> Hammurabi kanunları kendisinin değil, Güneş ve Adalet Tanrısı Şamaş\'ın emrettiğini belirtir.<br>' +
       '• <strong>Lex Talionis (Kısasa Kısas):</strong> Göze göz, dişe diş ilkesi geçerlidir.<br>' +
@@ -3644,6 +3655,21 @@ const academicKnowledgeBase = [
       '• <strong>İkinci Derece Şart (SOC):</strong> <code>d²π/dq² < 0</code> (Maksimum olması için içbükey olmalıdır).'
   },
 
+  // --- HUKUK (LAW 101 - HUKUKA GİRİŞ) ---
+  {
+    tokens: ['normlar hiyerarşisi', 'kelsen', 'hukuka giriş', 'law 101', 'lex superior', 'lex posterior', 'lex specialis', 'anayasa m.11', 'normlar piramidi'],
+    answer: '⚖️ <strong>Hukuka Giriş (LAW 101) - Normlar Hiyerarşisi & Çatışma İlkeleri:</strong><br><br>' +
+      '• <strong>Hans Kelsen\'in Normlar Piramidi (Üstten Alta):</strong><br>' +
+      '  1. <strong>Anayasa</strong> (En üst norm — AY m.11: Kanunlar Anayasa\'ya aykırı olamaz)<br>' +
+      '  2. <strong>Kanunlar & Milletlerarası Antlaşmalar</strong> (Temel hak ve özgürlüklere ilişkin antlaşmalar kanunla çatışırsa antlaşma esas alınır — AY m.90/5)<br>' +
+      '  3. <strong>Cumhurbaşkanlığı Kararnameleri (CBK)</strong> (Münhasıran kanunla düzenlenmesi gereken konularda çıkarılamaz; kanunla çatışırsa kanun uygulanır — AY m.104)<br>' +
+      '  4. <strong>Yönetmelikler & Adsız Düzenleyici İşlemler</strong> (AY m.124)<br><br>' +
+      '• <span class="trap-tag">⚠️ Sınav İlkeleri:</span><br>' +
+      '  - <em>Lex superior derogat legi inferiori:</em> Üst norm alt normu ilga eder.<br>' +
+      '  - <em>Lex posterior derogat legi priori:</em> Aynı basamakta sonraki tarihli norm önceki normu yürürlükten kaldırır.<br>' +
+      '  - <em>Lex specialis derogat legi generali:</em> Özel hüküm genel hükme göre öncelikle uygulanır.'
+  },
+
   // --- İSPANYOLCA (SPA 101) ---
   {
     tokens: ['ser vs estar', 'ser', 'estar', 'ispanyolca fark', 'soy', 'estoy'],
@@ -3655,7 +3681,7 @@ const academicKnowledgeBase = [
       '• <span class="trap-tag">⚠️ Sınav Örneği:</span> "La manzana es verde" (Elma yeşil elmadır) vs "La manzana está verde" (Elma henüz hamdır/olgunlaşmamıştır).'
   },
   {
-    tokens: ['hay vs esta', 'hay', 'esta', 'están', 'var mı', 'nerede'],
+    tokens: ['hay vs esta', 'hay', 'esta', 'están', 'está'],
     answer: '📌 <strong>Hay vs Está / Están Kullanımı:</strong><br><br>' +
       '• <strong>HAY (Varlık/Belirsiz):</strong> Bir şeyin var olup olmadığını belirtir. Belirsiz artikellerle (un, una) veya sayılarla kullanılır.<br>' +
       '  <i>Örn: En Ankara hay muchos parques. / ¿Hay una farmacia cerca?</i><br>' +
@@ -3756,15 +3782,22 @@ function toggleAiDrawer() {
 function toggleAiSettings() {
   const p = document.getElementById('aiSettingsPanel');
   if (!p) return;
-  if (p.style.display === 'none' || !p.style.display) {
+  const isHidden = p.style.display === 'none' || getComputedStyle(p).display === 'none';
+  if (isHidden) {
     p.style.display = 'block';
+    p.classList.add('open');
     const input = document.getElementById('geminiApiKeyInput');
     const saved = safeStorageGet('asbu_gemini_api_key') || '';
     if (input) input.value = saved;
   } else {
     p.style.display = 'none';
+    p.classList.remove('open');
   }
 }
+window.toggleAiSettings = toggleAiSettings;
+window.toggleAiDrawer = toggleAiDrawer;
+window.clearAiChat = clearAiChat;
+window.submitAiMessage = submitAiMessage;
 
 function saveGeminiApiKey() {
   const input = document.getElementById('geminiApiKeyInput');
@@ -3780,6 +3813,7 @@ function saveGeminiApiKey() {
     toggleAiSettings();
   }
 }
+window.saveGeminiApiKey = saveGeminiApiKey;
 
 function setAiCourseContext(courseId) {
   currentActiveCourse = courseId || 'dashboard';
@@ -3861,7 +3895,11 @@ const GEMINI_API_ENABLED = true;
 function searchCommunityNotesForAi(query) {
   const q = String(query || '').toLocaleLowerCase('tr-TR').trim();
   if (!q || !Array.isArray(communityNotesCache) || communityNotesCache.length === 0) return '';
-  const words = q.split(/\s+/).filter(w => w.length >= 3);
+  const stopWords = new Set(['nedir', 'nelerdir', 'nasıl', 'için', 'hakkında', 'olan', 'olarak', 'göre', 'kadar', 'daha', 'çok', 'bir', 'bu', 'şu', 'veya', 'ile', 'var', 'yok', 'mı', 'mi', 'mu', 'mü', 'ne', 've']);
+  const words = q
+    .replace(/[?!.,:;()'"\[\]\/\\|-]+/g, ' ')
+    .split(/\s+/)
+    .filter(w => w.length >= 3 && !stopWords.has(w));
   if (!words.length) return '';
   const matches = communityNotesCache.filter(n => {
     const hay = `${n.department || ''} ${n.courseName || ''} ${n.noteType || ''} ${n.title || ''} ${n.content || ''}`.toLocaleLowerCase('tr-TR');
@@ -3935,13 +3973,19 @@ async function submitAiMessage() {
 
 // Akıllı ve Esnek Kelime/Kök Arama Algoritması
 function searchKnowledgeBase(query) {
-  const cleanQ = query.toLocaleLowerCase('tr-TR');
-  
-  // 1. Önce doğrudan token eşleşmesi ara
+  const cleanQ = String(query || '').toLocaleLowerCase('tr-TR');
+  const qWords = cleanQ.replace(/[?!.,:;()'"\[\]\/\\|-]+/g, ' ').split(/\s+/).filter(Boolean);
+
+  // 1. Önce doğrudan token eşleşmesi ara (<=4 harfli tekil kısaltmalarda yalnızca tam kelime eşleşmesi)
   for (const item of academicKnowledgeBase) {
     if (item.tokens) {
       for (const t of item.tokens) {
-        if (cleanQ.includes(t.toLocaleLowerCase('tr-TR'))) {
+        const lt = t.toLocaleLowerCase('tr-TR').trim();
+        if (!lt) continue;
+        const matched = (!lt.includes(' ') && lt.length <= 4)
+          ? qWords.includes(lt)
+          : cleanQ.includes(lt);
+        if (matched) {
           if (item.dynamic && typeof item.answerFn === 'function') {
             return item.answerFn();
           }
@@ -3952,7 +3996,7 @@ function searchKnowledgeBase(query) {
   }
 
   // 2. Tek kelimelik anlamlı kök eşleşmesi (çok kelimeli kalıpları parçalayıp yanlış eşleştirme yapma)
-  const words = cleanQ.replace(/[?!.,:;()'"\[\]]+/g, ' ').split(/\s+/).filter(w => w.length >= 4);
+  const words = qWords.filter(w => w.length >= 4);
   for (const item of academicKnowledgeBase) {
     if (item.tokens) {
       for (const t of item.tokens) {
@@ -4593,6 +4637,8 @@ function renderNotesView() {
     currentAdminMode = (notesDrawerMode === 'admin');
 
     if (authWrap) authWrap.style.display = 'none';
+    const authInner = document.getElementById('notesAuthCardInner');
+    if (authInner) authInner.innerHTML = '';
     if (mainWrap) mainWrap.style.display = 'flex';
     if (logoutBtn) logoutBtn.style.display = 'inline-flex';
     if (userBadge) {
@@ -6917,14 +6963,14 @@ window.exportFullDatabaseJson = exportFullDatabaseJson;
         </div>
       </div>
       <div class="ai-header-actions">
-        <button class="ai-icon-btn" id="aiSettingsBtn" onclick="toggleAiSettings()" title="Gemini API Ayarları (Tüm Bölümler)">⚙️</button>
-        <button class="ai-icon-btn" onclick="clearAiChat()" title="Sohbeti Temizle">🗑️</button>
-        <button class="ai-icon-btn" onclick="toggleAiDrawer()" title="Kapat">✕</button>
+        <button type="button" class="ai-icon-btn" id="aiSettingsBtn" onclick="toggleAiSettings()" aria-label="⚙️ Gemini API Ayarları" title="Gemini API Ayarları (Tüm Bölümler)">⚙️</button>
+        <button type="button" class="ai-icon-btn" onclick="clearAiChat()" title="Sohbeti Temizle">🗑️</button>
+        <button type="button" class="ai-icon-btn" onclick="toggleAiDrawer()" title="Kapat">✕</button>
       </div>
     </div>
 
     <!-- Collapsible Settings Panel -->
-    <div id="aiSettingsPanel" class="ai-settings-panel" style="display: none;">
+    <div id="aiSettingsPanel" class="ai-settings-panel ai-settings" style="display: none;">
       <h4>⚙️ Google Gemini AI Entegrasyonu</h4>
       <p class="ai-settings-desc">
         Sistem Google Gemini 3.8 Flash ile entegredir. Kendi ücretsiz API anahtarını girerek sınırsız ve kişiselleştirilmiş soru sorabilirsin:
