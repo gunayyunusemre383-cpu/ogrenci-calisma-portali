@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇪🇸 İspanyolca 140 Soruluk Çoktan Seçmeli Sınav Bankası (Gramática U1-5 & Aula U1-2)</title>
+<style>
+  @page { size: A4; margin: 12mm; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8fafc; color: #0f172a; line-height: 1.45; max-width: 920px; margin: 0 auto; padding: 18px; }
+  .header { background: linear-gradient(135deg, #991b1b, #1e3a8a); color: #fff; padding: 18px 22px; border-radius: 10px; margin-bottom: 18px; }
+  .header h1 { margin: 0 0 6px 0; font-size: 20pt; }
+  .header p { margin: 0; font-size: 10.5pt; opacity: 0.95; }
+  .toolbar { position: sticky; top: 8px; z-index: 50; background: #fff; border: 2px solid #cbd5e1; border-radius: 8px; padding: 10px 16px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
+  .score { font-weight: 700; font-size: 11pt; color: #1e3a8a; }
+  .btn { background: #1e3a8a; color: #fff; border: none; padding: 7px 14px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 9.5pt; margin-left: 6px; }
+  .btn:hover { background: #1d4ed8; }
+  h2 { background: #1e293b; color: #fff; padding: 9px 14px; border-radius: 6px; font-size: 13pt; margin-top: 26px; page-break-after: avoid; }
+  .qcard { background: #fff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px 15px; margin-bottom: 12px; page-break-inside: avoid; }
+  .qtitle { font-size: 10.5pt; margin-bottom: 8px; }
+  .opts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .opt { border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; cursor: pointer; font-size: 10pt; background: #f8fafc; transition: all 0.15s; }
+  .opt:hover { background: #e2e8f0; }
+  .opt.correct { background: #dcfce7 !important; border-color: #16a34a !important; color: #14532d; font-weight: 600; }
+  .opt.wrong { background: #fee2e2 !important; border-color: #dc2626 !important; color: #7f1d1d; text-decoration: line-through; }
+  .exp { display: none; margin-top: 8px; padding: 7px 10px; border-radius: 5px; background: #eff6ff; border-left: 4px solid #2563eb; font-size: 9.5pt; color: #1e3a8a; }
+  .show-all .exp { display: block !important; }
+  @media (max-width: 640px) {
+    body { padding: 10px; }
+    .header { padding: 14px 16px; }
+    .header h1 { font-size: 16pt; }
+    .toolbar { flex-direction: column; align-items: stretch; gap: 8px; padding: 10px; position: static; }
+    .toolbar .btn { margin: 4px 0 0 0; width: 100%; }
+    .opts { grid-template-columns: 1fr; }
+  }
+  @media print { .toolbar { display: none; } body { background: #fff; padding: 0; } .exp { display: block !important; } }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🇪🇸 İspanyolca 140 Soruluk Çoktan Seçmeli Sınav Bankası</h1>
+  <p><b>Gramática de uso del español (İlk 5 Ünite: Unidad 1–5)</b> &amp; <b>AULA Internacional 1 (İlk 2 Ünite: Unidad 1–2)</b> — Şıklara tıklayarak kendini test edebilir veya "Tüm Cevapları Göster" butonuna basabilirsin.</p>
+</div>
+<div class="toolbar">
+  <div class="score" id="scoreBox">Doğru: 0 | Yanlış: 0 | Kalan: 140</div>
+  <div>
+    <button class="btn" onclick="toggleAnswers()">Tüm Cevapları ve Açıklamaları Göster/Gizle</button>
+    <button class="btn" onclick="window.print()">Yazdır / PDF Kaydet (Ctrl+P)</button>
+  </div>
+</div>
+<div id="quizContainer">
+<h2>BÖLÜM 1: Gramática – Unidad 1 (<em>Masculino, femenino 1: Kişiler, Meslekler, Aile</em>) (Soru 1–20)</h2>
+<div class='qcard' data-q='1' data-ans='C'>
+  <div class='qtitle'><b>1.</b> Aşağıdaki kelimelerden hangisinin dişil (<i>femenino</i>) hali YANLIŞ verilmiştir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 1, "A")'><b>A)</b> el niño → la niña</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 1, "B")'><b>B)</b> el cocinero → la cocinera</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 1, "C")'><b>C)</b> el piloto → la pilota</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 1, "D")'><b>D)</b> el dependiente → la dependienta</div>
+  </div>
+  <div class='exp' id='exp-1'><b>Cevap: C</b> - <i>el piloto → la piloto</i> (PERO istisnasıdır, <i>pilota</i> olmaz).</div>
+</div>
+<div class='qcard' data-q='2' data-ans='B'>
+  <div class='qtitle'><b>2.</b> <i>"El paciente"</i> (hasta) kelimesinin dişil (<i>femenino</i>) karşılığı aşağıdakilerden hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 2, "A")'><b>A)</b> la pacienta</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 2, "B")'><b>B)</b> la paciente</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 2, "C")'><b>C)</b> el pacienta</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 2, "D")'><b>D)</b> la paciento</div>
+  </div>
+  <div class='exp' id='exp-2'><b>Cevap: B</b> - <i>el paciente → la paciente</i> (değişmez).</div>
+</div>
+<div class='qcard' data-q='3' data-ans='B'>
+  <div class='qtitle'><b>3.</b> <i>"El actor"</i> ve <i>"el rey"</i> kelimelerinin dişil (<i>femenino</i>) karşılıkları sırasıyla hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 3, "A")'><b>A)</b> la actora / la reya</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 3, "B")'><b>B)</b> la actriz / la reina</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 3, "C")'><b>C)</b> la actora / la reina</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 3, "D")'><b>D)</b> la actriz / la reya</div>
+  </div>
+  <div class='exp' id='exp-3'><b>Cevap: B</b> - <i>el actor → la actriz</i>, <i>el rey → la reina</i>.</div>
+</div>
+<div class='qcard' data-q='4' data-ans='A'>
+  <div class='qtitle'><b>4.</b> <i>"El alcalde"</i> (belediye başkanı) ve <i>"el marqués"</i> (marki) kelimelerinin dişil halleri hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 4, "A")'><b>A)</b> la alcaldesa / la marquesa</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 4, "B")'><b>B)</b> la alcalda / la marquesa</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 4, "C")'><b>C)</b> la alcaldesa / la marqués</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 4, "D")'><b>D)</b> la alcalde / la marquesa</div>
+  </div>
+  <div class='exp' id='exp-4'><b>Cevap: A</b> - <i>el alcalde → la alcaldesa</i>, <i>el marqués → la marquesa</i> (aksan düşer).</div>
+</div>
+<div class='qcard' data-q='5' data-ans='C'>
+  <div class='qtitle'><b>5.</b> Aşağıdaki meslek/kişi isimlerinden hangisi dişil yapılırken sonuna <i>"-a"</i> ALMAZ (sadece <i>el → la</i> değişir)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 5, "A")'><b>A)</b> el profesor</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 5, "B")'><b>B)</b> el director</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 5, "C")'><b>C)</b> el modelo</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 5, "D")'><b>D)</b> el bailarín</div>
+  </div>
+  <div class='exp' id='exp-5'><b>Cevap: C</b> - <i>el modelo → la modelo</i> (PERO kutusu).</div>
+</div>
+<div class='qcard' data-q='6' data-ans='C'>
+  <div class='qtitle'><b>6.</b> <i>"El joven"</i> (genç erkek) kelimesinin dişil (<i>femenino</i>) hali nedir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 6, "A")'><b>A)</b> la jovena</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 6, "B")'><b>B)</b> la jóvena</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 6, "C")'><b>C)</b> la joven</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 6, "D")'><b>D)</b> el jovena</div>
+  </div>
+  <div class='exp' id='exp-6'><b>Cevap: C</b> - <i>el joven → la joven</i> (ünsüzle bitmesine rağmen <i>-a</i> almaz).</div>
+</div>
+<div class='qcard' data-q='7' data-ans='B'>
+  <div class='qtitle'><b>7.</b> Aşağıdaki kelimelerden hangisinin eril ve dişil yazılışı tamamen AYNIDIR (yalnızca <i>el/la</i> değişir)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 7, "A")'><b>A)</b> el escritor</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 7, "B")'><b>B)</b> el pianista</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 7, "C")'><b>C)</b> el pintor</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 7, "D")'><b>D)</b> el doctor</div>
+  </div>
+  <div class='exp' id='exp-7'><b>Cevap: B</b> - <i>-ista</i> ve <i>-ante</i> ile bitenler değişmez (<i>el/la pianista</i>).</div>
+</div>
+<div class='qcard' data-q='8' data-ans='B'>
+  <div class='qtitle'><b>8.</b> <i>"El marido"</i> (koca) ve <i>"el padre"</i> (baba) kelimelerinin dişil karşılıkları sırasıyla hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 8, "A")'><b>A)</b> la marida / la madre</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 8, "B")'><b>B)</b> la mujer / la madre</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 8, "C")'><b>C)</b> la mujer / la padra</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 8, "D")'><b>D)</b> la hembra / la mamá</div>
+  </div>
+  <div class='exp' id='exp-8'><b>Cevap: B</b> - <i>el marido → la mujer</i>, <i>el padre → la madre</i>.</div>
+</div>
+<div class='qcard' data-q='9' data-ans='B'>
+  <div class='qtitle'><b>9.</b> Aşağıdaki eşleştirmelerden hangisi Gramática kitabına göre DOĞRUDUR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 9, "A")'><b>A)</b> el médico → sadece <i>la médico</i></div>
+    <div class='opt' data-opt='B' onclick='pick(this, 9, "B")'><b>B)</b> el médico → <i>la médica</i> veya <i>la médico</i></div>
+    <div class='opt' data-opt='C' onclick='pick(this, 9, "C")'><b>C)</b> el jefe → sadece <i>la jefe</i></div>
+    <div class='opt' data-opt='D' onclick='pick(this, 9, "D")'><b>D)</b> el cantante → <i>la cantanta</i></div>
+  </div>
+  <div class='exp' id='exp-9'><b>Cevap: B</b> - <i>el médico → la médica / la médico</i>; <i>el jefe → la jefa / la jefe</i>.</div>
+</div>
+<div class='qcard' data-q='10' data-ans='B'>
+  <div class='qtitle'><b>10.</b> <i>"El bailarín"</i> kelimesinin dişil hali nasıl yazılır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 10, "A")'><b>A)</b> la bailarína (aksanlı)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 10, "B")'><b>B)</b> la bailarina (aksansız)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 10, "C")'><b>C)</b> la bailarín</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 10, "D")'><b>D)</b> la bailarina</div>
+  </div>
+  <div class='exp' id='exp-10'><b>Cevap: B</b> - <i>bailarín → bailarina</i> (son hecedeki aksan düşer).</div>
+</div>
+<div class='qcard' data-q='11' data-ans='C'>
+  <div class='qtitle'><b>11.</b> <i>"El taxista, el turista, el estudiante, el cantante"</i> kelimelerinin ortak özelliği nedir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 11, "A")'><b>A)</b> Sadece erkekler için kullanılırlar.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 11, "B")'><b>B)</b> Dişil halleri <i>-a</i> ile biter (<i>la estudiantea</i>).</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 11, "C")'><b>C)</b> <i>-ante</i> ve <i>-ista</i> ile bittikleri için eril ve dişil yazılışları değişmez (<i>el/la taxista, el/la estudiante</i>).</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 11, "D")'><b>D)</b> Çoğul yapılamazlar.</div>
+  </div>
+  <div class='exp' id='exp-11'><b>Cevap: C</b> - <i>-ante</i> ve <i>-ista</i> ile biten meslek/kişi adları değişmez.</div>
+</div>
+<div class='qcard' data-q='12' data-ans='C'>
+  <div class='qtitle'><b>12.</b> <i>"Aquel chico rubio"</i> (Şu sarışın erkek çocuk) ifadesinin dişil (<i>femenino</i>) karşılığı hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 12, "A")'><b>A)</b> Aquel chica rubia</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 12, "B")'><b>B)</b> Aquella chica rubio</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 12, "C")'><b>C)</b> Aquella chica rubia</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 12, "D")'><b>D)</b> Aquella chico rubia</div>
+  </div>
+  <div class='exp' id='exp-12'><b>Cevap: C</b> - <i>aquel → aquella, chico → chica, rubio → rubia</i>.</div>
+</div>
+<div class='qcard' data-q='13' data-ans='B'>
+  <div class='qtitle'><b>13.</b> <i>"Un hombre alto"</i> (Uzun boylu bir adam) ifadesinin dişil karşılığı hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 13, "A")'><b>A)</b> Una hombre alta</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 13, "B")'><b>B)</b> Una mujer alta</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 13, "C")'><b>C)</b> Una mujer alto</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 13, "D")'><b>D)</b> Un mujer alta</div>
+  </div>
+  <div class='exp' id='exp-13'><b>Cevap: B</b> - <i>un → una, hombre → mujer, alto → alta</i>.</div>
+</div>
+<div class='qcard' data-q='14' data-ans='C'>
+  <div class='qtitle'><b>14.</b> (Aile Ağacı) <i>"El padre de mi padre es mi ________."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 14, "A")'><b>A)</b> tío</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 14, "B")'><b>B)</b> hermano</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 14, "C")'><b>C)</b> abuelo</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 14, "D")'><b>D)</b> hijo</div>
+  </div>
+  <div class='exp' id='exp-14'><b>Cevap: C</b> - Babamın babası = <i>abuelo</i> (dede).</div>
+</div>
+<div class='qcard' data-q='15' data-ans='B'>
+  <div class='qtitle'><b>15.</b> (Aile Ağacı) <i>"La hermana de mi madre es mi ________."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 15, "A")'><b>A)</b> abuela</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 15, "B")'><b>B)</b> tía</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 15, "C")'><b>C)</b> hija</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 15, "D")'><b>D)</b> mujer</div>
+  </div>
+  <div class='exp' id='exp-15'><b>Cevap: B</b> - Annemin kız kardeşi = <i>tía</i> (teyze).</div>
+</div>
+<div class='qcard' data-q='16' data-ans='A'>
+  <div class='qtitle'><b>16.</b> (Aile Ağacı) <i>"El hijo de mis padres es mi ________."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 16, "A")'><b>A)</b> hermano</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 16, "B")'><b>B)</b> tío</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 16, "C")'><b>C)</b> abuelo</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 16, "D")'><b>D)</b> nieto</div>
+  </div>
+  <div class='exp' id='exp-16'><b>Cevap: A</b> - Anne-babamın oğlu = <i>hermano</i> (erkek kardeş).</div>
+</div>
+<div class='qcard' data-q='17' data-ans='C'>
+  <div class='qtitle'><b>17.</b> Aşağıdaki kelimelerden hangisi <i>"-e"</i> ile bittiği halde dişil yapılırken <i>"-a"</i> ALIR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 17, "A")'><b>A)</b> el estudiante → la estudianta</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 17, "B")'><b>B)</b> el cantante → la cantanta</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 17, "C")'><b>C)</b> el dependiente → la dependienta</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 17, "D")'><b>D)</b> el paciente → la pacienta</div>
+  </div>
+  <div class='exp' id='exp-17'><b>Cevap: C</b> - <i>el dependiente → la dependienta</i> (<i>-e → -a</i> kuralı).</div>
+</div>
+<div class='qcard' data-q='18' data-ans='A'>
+  <div class='qtitle'><b>18.</b> Hangisi hem <i>"la jefa"</i> hem de <i>"la jefe"</i> şeklinde kullanılabilir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 18, "A")'><b>A)</b> el jefe</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 18, "B")'><b>B)</b> el joven</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 18, "C")'><b>C)</b> el juez</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 18, "D")'><b>D)</b> el jinete</div>
+  </div>
+  <div class='exp' id='exp-18'><b>Cevap: A</b> - <i>el jefe → la jefa / la jefe</i>.</div>
+</div>
+<div class='qcard' data-q='19' data-ans='A'>
+  <div class='qtitle'><b>19.</b> <i>"El escritor"</i> ve <i>"el pintor"</i> kelimelerinin dişil halleri hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 19, "A")'><b>A)</b> la escritora / la pintora</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 19, "B")'><b>B)</b> la escritor / la pintor</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 19, "C")'><b>C)</b> la escritriz / la pintriz</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 19, "D")'><b>D)</b> la escritora / la pintresa</div>
+  </div>
+  <div class='exp' id='exp-19'><b>Cevap: A</b> - <i>escritor → escritora, pintor → pintora</i>.</div>
+</div>
+<div class='qcard' data-q='20' data-ans='D'>
+  <div class='qtitle'><b>20.</b> Aşağıdakilerden hangisi YANLIŞTIR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 20, "A")'><b>A)</b> el señor → la señora</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 20, "B")'><b>B)</b> el amigo → la amiga</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 20, "C")'><b>C)</b> el turista → la turista</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 20, "D")'><b>D)</b> el modelo → la modela</div>
+  </div>
+  <div class='exp' id='exp-20'><b>Cevap: D</b> - <i>el modelo → la modelo</i> (<i>la modela</i> yanlıştır).</div>
+</div>
+<h2>BÖLÜM 2: Gramática – Unidad 2 (<em>Masculino, femenino 2: Nesneler ve Hayvanlar</em>) (Soru 21–45)</h2>
+<div class='qcard' data-q='21' data-ans='B'>
+  <div class='qtitle'><b>21.</b> Aşağıdaki kelimelerden hangisi <i>"-o"</i> ile bittiği halde DİŞİLDİR (<i>la</i> alır)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 21, "A")'><b>A)</b> el libro</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 21, "B")'><b>B)</b> la mano</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 21, "C")'><b>C)</b> el vaso</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 21, "D")'><b>D)</b> el museo</div>
+  </div>
+  <div class='exp' id='exp-21'><b>Cevap: B</b> - <i>la mano</i> (el) <i>-o</i> ile bitmesine rağmen dişildir.</div>
+</div>
+<div class='qcard' data-q='22' data-ans='A'>
+  <div class='qtitle'><b>22.</b> Aşağıdaki kelimelerden hangilerinin TAMAMI <i>"-o"</i> ile bittiği halde DİŞİLDİR (<i>la</i> alır)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 22, "A")'><b>A)</b> mano, foto, moto, radio</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 22, "B")'><b>B)</b> mano, carro, brazo, foto</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 22, "C")'><b>C)</b> moto, radio, teléfono, vaso</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 22, "D")'><b>D)</b> foto, libro, museo, mano</div>
+  </div>
+  <div class='exp' id='exp-22'><b>Cevap: A</b> - <i>la mano, la foto, la moto, la radio</i> (Gramática U2 PERO kutusu).</div>
+</div>
+<div class='qcard' data-q='23' data-ans='C'>
+  <div class='qtitle'><b>23.</b> Aşağıdaki kelimelerden hangisi <i>"-a"</i> ile bittiği halde ERİLDİR (<i>el</i> alır)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 23, "A")'><b>A)</b> casa</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 23, "B")'><b>B)</b> mesa</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 23, "C")'><b>C)</b> problema</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 23, "D")'><b>D)</b> ventana</div>
+  </div>
+  <div class='exp' id='exp-23'><b>Cevap: C</b> - <i>el problema</i> <i>-a</i> ile bitmesine rağmen erildir.</div>
+</div>
+<div class='qcard' data-q='24' data-ans='A'>
+  <div class='qtitle'><b>24.</b> Aşağıdaki gruplardan hangisindeki kelimelerin TAMAMI <i>"-a"</i> ile bittiği halde ERİLDİR (<i>el</i> alır)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 24, "A")'><b>A)</b> día, problema, idioma, pijama, mapa, planeta</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 24, "B")'><b>B)</b> día, casa, silla, idioma, mapa, cama</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 24, "C")'><b>C)</b> problema, página, lámpara, planeta, sofá</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 24, "D")'><b>D)</b> idioma, tortilla, cara, caja, pijama</div>
+  </div>
+  <div class='exp' id='exp-24'><b>Cevap: A</b> - <i>el día, el problema, el idioma, el pijama, el mapa, el planeta</i> (Gramática U2 PERO kutusu).</div>
+</div>
+<div class='qcard' data-q='25' data-ans='B'>
+  <div class='qtitle'><b>25.</b> <i>"_____ foto, _____ moto, _____ radio, _____ mano"</i> boşluklarına hangi tanımlık gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 25, "A")'><b>A)</b> el, el, el, el</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 25, "B")'><b>B)</b> la, la, la, la</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 25, "C")'><b>C)</b> la, el, el, la</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 25, "D")'><b>D)</b> el, la, la, el</div>
+  </div>
+  <div class='exp' id='exp-25'><b>Cevap: B</b> - Dördü de dişildir: <i>la foto, la moto, la radio, la mano</i>.</div>
+</div>
+<div class='qcard' data-q='26' data-ans='B'>
+  <div class='qtitle'><b>26.</b> <i>"_____ día, _____ idioma, _____ mapa, _____ planeta"</i> boşluklarına hangi tanımlık gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 26, "A")'><b>A)</b> la, la, la, la</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 26, "B")'><b>B)</b> el, el, el, el</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 26, "C")'><b>C)</b> el, la, el, la</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 26, "D")'><b>D)</b> la, el, la, el</div>
+  </div>
+  <div class='exp' id='exp-26'><b>Cevap: B</b> - Dördü de erildir: <i>el día, el idioma, el mapa, el planeta</i>.</div>
+</div>
+<div class='qcard' data-q='27' data-ans='B'>
+  <div class='qtitle'><b>27.</b> Sonu <i>"-ción"</i>, <i>"-sión"</i>, <i>"-dad"</i> ve <i>"-tad"</i> ile biten kelimeler için hangi kural geçerlidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 27, "A")'><b>A)</b> Her zaman erildirler (<i>el</i>).</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 27, "B")'><b>B)</b> Her zaman dişildirler (<i>la</i>): <i>la canción, la televisión, la ciudad, la universidad, la libertad</i>.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 27, "C")'><b>C)</b> Hem eril hem dişil olabilirler.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 27, "D")'><b>D)</b> Çoğul kullanılamazlar.</div>
+  </div>
+  <div class='exp' id='exp-27'><b>Cevap: B</b> - <i>-ción, -sión, -dad, -tad</i> ile bitenler her zaman dişildir (<i>la</i>).</div>
+</div>
+<div class='qcard' data-q='28' data-ans='A'>
+  <div class='qtitle'><b>28.</b> Haftanın günleri (<i>lunes, miércoles, viernes...</i>) ve birleşik isimler (<i>paraguas, cumpleaños</i>) hangi tanımlığı alır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 28, "A")'><b>A)</b> Her zaman <b>el</b> (<i>el lunes, el viernes, el paraguas, el cumpleaños</i>)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 28, "B")'><b>B)</b> Her zaman <b>la</b> (<i>la lunes, la viernes, la cumpleaños</i>)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 28, "C")'><b>C)</b> <i>-s</i> ile bittikleri için tekilde <i>los/las</i> alırlar</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 28, "D")'><b>D)</b> Tanımlık almazlar</div>
+  </div>
+  <div class='exp' id='exp-28'><b>Cevap: A</b> - Haftanın günleri ve birleşik kelimeler her zaman erildir (<i>el</i>).</div>
+</div>
+<div class='qcard' data-q='29' data-ans='C'>
+  <div class='qtitle'><b>29.</b> Aşağıdaki kelimelerden hangisi ERİLDİR (<i>el</i> alır)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 29, "A")'><b>A)</b> leche (süt)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 29, "B")'><b>B)</b> noche (gece)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 29, "C")'><b>C)</b> hotel (otel)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 29, "D")'><b>D)</b> llave (anahtar)</div>
+  </div>
+  <div class='exp' id='exp-29'><b>Cevap: C</b> - <i>el hotel</i> erildir (<i>la leche, la noche, la llave</i> dişildir).</div>
+</div>
+<div class='qcard' data-q='30' data-ans='C'>
+  <div class='qtitle'><b>30.</b> Aşağıdaki kelimelerden hangisi DİŞİLDİR (<i>la</i> alır)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 30, "A")'><b>A)</b> lápiz (kurşun kalem)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 30, "B")'><b>B)</b> coche (araba)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 30, "C")'><b>C)</b> luz (ışık)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 30, "D")'><b>D)</b> pan (ekmek)</div>
+  </div>
+  <div class='exp' id='exp-30'><b>Cevap: C</b> - <i>la luz</i> (ışık) dişildir (<i>el lápiz, el coche, el pan</i> erildir).</div>
+</div>
+<div class='qcard' data-q='31' data-ans='C'>
+  <div class='qtitle'><b>31.</b> Aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 31, "A")'><b>A)</b> el árbol (ağaç)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 31, "B")'><b>B)</b> la flor (çiçek)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 31, "C")'><b>C)</b> el sal (tuz)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 31, "D")'><b>D)</b> la leche (süt)</div>
+  </div>
+  <div class='exp' id='exp-31'><b>Cevap: C</b> - Tuz dişildir: <b>la sal</b>.</div>
+</div>
+<div class='qcard' data-q='32' data-ans='B'>
+  <div class='qtitle'><b>32.</b> <i>"_____ habitación, _____ universidad, _____ atención, _____ expresión"</i> kelimelerinin başına hangisi gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 32, "A")'><b>A)</b> el, el, el, el</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 32, "B")'><b>B)</b> la, la, la, la</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 32, "C")'><b>C)</b> la, el, la, el</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 32, "D")'><b>D)</b> el, la, el, la</div>
+  </div>
+  <div class='exp' id='exp-32'><b>Cevap: B</b> - <i>-ción, -sión, -dad</i> ile bittikleri için tamamı <b>la</b> alır.</div>
+</div>
+<div class='qcard' data-q='33' data-ans='B'>
+  <div class='qtitle'><b>33.</b> <i>"El caballo"</i> (at), <i>"el toro"</i> (boğa) ve <i>"el gallo"</i> (horoz) hayvanlarının dişil karşılıkları sırasıyla hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 33, "A")'><b>A)</b> la caballa / la tora / la galla</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 33, "B")'><b>B)</b> la yegua / la vaca / la gallina</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 33, "C")'><b>C)</b> la vaca / la yegua / la gallina</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 33, "D")'><b>D)</b> la yegua / la leona / la perra</div>
+  </div>
+  <div class='exp' id='exp-33'><b>Cevap: B</b> - <i>el caballo → la yegua, el toro → la vaca, el gallo → la gallina</i>.</div>
+</div>
+<div class='qcard' data-q='34' data-ans='A'>
+  <div class='qtitle'><b>34.</b> <i>"El león"</i> (aslan), <i>"el gato"</i> (kedi) ve <i>"el perro"</i> (köpek) hayvanlarının dişil karşılıkları hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 34, "A")'><b>A)</b> la leona / la gata / la perra</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 34, "B")'><b>B)</b> la león / la gata / la perra</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 34, "C")'><b>C)</b> la tigresa / la gata / la cabra</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 34, "D")'><b>D)</b> la leona / la gata / la yegua</div>
+  </div>
+  <div class='exp' id='exp-34'><b>Cevap: A</b> - <i>el león → la leona, el gato → la gata, el perro → la perra</i>.</div>
+</div>
+<div class='qcard' data-q='35' data-ans='B'>
+  <div class='qtitle'><b>35.</b> Gramática kitabına göre aşağıdaki hayvanlardan hangisi SADECE ERİL (<i>solo masculino</i>) olarak kullanılır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 35, "A")'><b>A)</b> la jirafa</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 35, "B")'><b>B)</b> el pez (balık)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 35, "C")'><b>C)</b> la serpiente</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 35, "D")'><b>D)</b> la mariposa</div>
+  </div>
+  <div class='exp' id='exp-35'><b>Cevap: B</b> - <i>el pez, el pájaro, el ratón, el conejo</i> sadece eril kullanılır.</div>
+</div>
+<div class='qcard' data-q='36' data-ans='C'>
+  <div class='qtitle'><b>36.</b> Aşağıdaki hayvanlardan hangisi <i>"-a"</i> ile bitmesine rağmen ERİLDİR (<i>el</i> alır)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 36, "A")'><b>A)</b> la rana</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 36, "B")'><b>B)</b> la jirafa</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 36, "C")'><b>C)</b> el gorila</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 36, "D")'><b>D)</b> la sardina</div>
+  </div>
+  <div class='exp' id='exp-36'><b>Cevap: C</b> - <i>el gorila</i> erildir.</div>
+</div>
+<div class='qcard' data-q='37' data-ans='B'>
+  <div class='qtitle'><b>37.</b> (Gramática Ej. 2.3) <i>"_____ llave"</i> (anahtar), <i>"_____ tenedor"</i> (çatal), <i>"_____ nariz"</i> (burun), <i>"_____ hospital"</i> (hastane) boşluklarına sırasıyla hangileri gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 37, "A")'><b>A)</b> el, la, el, la</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 37, "B")'><b>B)</b> la, el, la, el</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 37, "C")'><b>C)</b> la, la, la, el</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 37, "D")'><b>D)</b> el, el, la, el</div>
+  </div>
+  <div class='exp' id='exp-37'><b>Cevap: B</b> - <i>la llave, el tenedor, la nariz, el hospital</i>.</div>
+</div>
+<div class='qcard' data-q='38' data-ans='C'>
+  <div class='qtitle'><b>38.</b> Aşağıdaki nesnelerden hangisi DİŞİLDİR (<i>la</i> alır)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 38, "A")'><b>A)</b> cuaderno</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 38, "B")'><b>B)</b> teatro</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 38, "C")'><b>C)</b> ventana</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 38, "D")'><b>D)</b> minuto</div>
+  </div>
+  <div class='exp' id='exp-38'><b>Cevap: C</b> - <i>la ventana</i> (pencere) dişildir.</div>
+</div>
+<div class='qcard' data-q='39' data-ans='C'>
+  <div class='qtitle'><b>39.</b> Aşağıdaki nesnelerden hangisi ERİLDİR (<i>el</i> alır)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 39, "A")'><b>A)</b> cama</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 39, "B")'><b>B)</b> lámpara</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 39, "C")'><b>C)</b> diccionario</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 39, "D")'><b>D)</b> página</div>
+  </div>
+  <div class='exp' id='exp-39'><b>Cevap: C</b> - <i>el diccionario</i> (sözlük) erildir.</div>
+</div>
+<div class='qcard' data-q='40' data-ans='A'>
+  <div class='qtitle'><b>40.</b> <i>"_____ tren, _____ coche, _____ restaurante, _____ cine"</i> kelimelerinin tamamı hangi gruptadır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 40, "A")'><b>A)</b> Tamamı erildir (<i>el</i>)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 40, "B")'><b>B)</b> Tamamı dişildir (<i>la</i>)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 40, "C")'><b>C)</b> İkisi eril, ikisi dişildir</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 40, "D")'><b>D)</b> Çoğul isimlerdir</div>
+  </div>
+  <div class='exp' id='exp-40'><b>Cevap: A</b> - Dördü de erildir (<i>el tren, el coche, el restaurante, el cine</i>).</div>
+</div>
+<div class='qcard' data-q='41' data-ans='B'>
+  <div class='qtitle'><b>41.</b> Vurgulu <i>"a-"</i> ile başlayan tekil dişil kelimeler (<i>aula, arte</i> gibi) tekilde hangi tanımlığı alır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 41, "A")'><b>A)</b> la aula</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 41, "B")'><b>B)</b> el aula (ancak kelime dişildir, çoğulu <i>las aulas</i> olur)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 41, "C")'><b>C)</b> los aula</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 41, "D")'><b>D)</b> un aula</div>
+  </div>
+  <div class='exp' id='exp-41'><b>Cevap: B</b> - Vurgulu <i>a-</i> ile başlayan dişil kelimeler tekilde <b>el</b> alır (<i>el aula, el arte</i>).</div>
+</div>
+<div class='qcard' data-q='42' data-ans='B'>
+  <div class='qtitle'><b>42.</b> <i>"El sofá"</i> ve <i>"la mano"</i> kelimelerinin çoğul (<i>plural</i>) halleri belirli tanımlıklarıyla nasıl yazılır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 42, "A")'><b>A)</b> las sofás / los manos</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 42, "B")'><b>B)</b> los sofás / las manos</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 42, "C")'><b>C)</b> los sofáes / las manas</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 42, "D")'><b>D)</b> las sofás / las manos</div>
+  </div>
+  <div class='exp' id='exp-42'><b>Cevap: B</b> - <i>el sofá → los sofás</i>, <i>la mano → las manos</i>.</div>
+</div>
+<div class='qcard' data-q='43' data-ans='B'>
+  <div class='qtitle'><b>43.</b> <i>"_____ clase, _____ noche, _____ ciudad, _____ casa"</i> kelimelerinin başına hangisi gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 43, "A")'><b>A)</b> el</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 43, "B")'><b>B)</b> la</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 43, "C")'><b>C)</b> los</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 43, "D")'><b>D)</b> las</div>
+  </div>
+  <div class='exp' id='exp-43'><b>Cevap: B</b> - Dördü de dişildir (<i>la clase, la noche, la ciudad, la casa</i>).</div>
+</div>
+<div class='qcard' data-q='44' data-ans='B'>
+  <div class='qtitle'><b>44.</b> Hangisi Gramática Unidad 2'deki <i>"-e veya ünsüzle biten dişil kelimeler"</i> listesindedir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 44, "A")'><b>A)</b> el pan, el lápiz, el reloj</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 44, "B")'><b>B)</b> la leche, la sal, la flor, la luz</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 44, "C")'><b>C)</b> el lunes, el viernes, el mes</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 44, "D")'><b>D)</b> el paraguas, el cumpleaños</div>
+  </div>
+  <div class='exp' id='exp-44'><b>Cevap: B</b> - <i>la leche, la sal, la flor, la luz</i> Gramática s. 12'deki dişil listesindedir.</div>
+</div>
+<div class='qcard' data-q='45' data-ans='A'>
+  <div class='qtitle'><b>45.</b> <i>"El ratón"</i> (fare), <i>"el pájaro"</i> (kuş), <i>"el conejo"</i> (tavşan) ve <i>"la serpiente"</i> (yılan) için hangisi doğrudur?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 45, "A")'><b>A)</b> İlk üçü sadece eril (<i>masculino</i>), sonuncusu sadece dişil (<i>femenino</i>) kullanılır.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 45, "B")'><b>B)</b> Hepsi dişildir.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 45, "C")'><b>C)</b> <i>La ratona</i> ve <i>el serpiento</i> olarak değişirler.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 45, "D")'><b>D)</b> Tanımlık almazlar.</div>
+  </div>
+  <div class='exp' id='exp-45'><b>Cevap: A</b> - <i>el ratón, el pájaro, el conejo</i> (solo masculinos); <i>la serpiente</i> (solo femenino).</div>
+</div>
+<h2>BÖLÜM 3: AULA Internacional 1 – Unidad 1 (<em>Nosotros</em>) (Soru 46–72)</h2>
+<div class='qcard' data-q='46' data-ans='B'>
+  <div class='qtitle'><b>46.</b> <i>"¿Cómo _________ tú?"</i> – <i>"_________ Laura."</i> boşluklarına sırasıyla ne gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 46, "A")'><b>A)</b> se llama / Te llamas</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 46, "B")'><b>B)</b> te llamas / Me llamo</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 46, "C")'><b>C)</b> me llamo / Se llama</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 46, "D")'><b>D)</b> os llamáis / Nos llamamos</div>
+  </div>
+  <div class='exp' id='exp-46'><b>Cevap: B</b> - <i>¿Cómo te llamas tú? – Me llamo Laura.</i></div>
+</div>
+<div class='qcard' data-q='47' data-ans='B'>
+  <div class='qtitle'><b>47.</b> Resmi hitapta (<i>usted</i>) bir kişinin adını sormak için hangisi kullanılır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 47, "A")'><b>A)</b> ¿Cómo te llamas?</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 47, "B")'><b>B)</b> ¿Cómo se llama (usted)?</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 47, "C")'><b>C)</b> ¿Cómo os llamáis?</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 47, "D")'><b>D)</b> ¿Cómo nos llamamos?</div>
+  </div>
+  <div class='exp' id='exp-47'><b>Cevap: B</b> - <i>¿Cómo se llama (usted)?</i></div>
+</div>
+<div class='qcard' data-q='48' data-ans='B'>
+  <div class='qtitle'><b>48.</b> <i>"¿Cuántos años _________ (tú)?"</i> – <i>"_________ veintitrés años."</i> boşluklarına ne gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 48, "A")'><b>A)</b> eres / Soy</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 48, "B")'><b>B)</b> tienes / Tengo</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 48, "C")'><b>C)</b> tiene / Tiene</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 48, "D")'><b>D)</b> estás / Estoy</div>
+  </div>
+  <div class='exp' id='exp-48'><b>Cevap: B</b> - Yaş her zaman <b>tener</b> ile sorulur ve söylenir (<i>tienes / tengo</i>).</div>
+</div>
+<div class='qcard' data-q='49' data-ans='C'>
+  <div class='qtitle'><b>49.</b> <i>"¿De dónde _________ vosotros?"</i> – <i>"Nosotros _________ de Turquía."</i> boşluklarına ne gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 49, "A")'><b>A)</b> eres / soy</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 49, "B")'><b>B)</b> son / somos</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 49, "C")'><b>C)</b> sois / somos</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 49, "D")'><b>D)</b> sois / son</div>
+  </div>
+  <div class='exp' id='exp-49'><b>Cevap: C</b> - <i>vosotros sois / nosotros somos</i>.</div>
+</div>
+<div class='qcard' data-q='50' data-ans='D'>
+  <div class='qtitle'><b>50.</b> Bir kişinin mesleğini sormak için kullanılan <i>"¿A qué te dedicas?"</i> sorusuna aşağıdaki cevaplardan hangisi DİLBİLGİSİ OLARAK YANLIŞTIR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 50, "A")'><b>A)</b> Soy diseñadora gráfica.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 50, "B")'><b>B)</b> Trabajo en un banco.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 50, "C")'><b>C)</b> Trabajo de camarero.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 50, "D")'><b>D)</b> Trabajo en cocinero.</div>
+  </div>
+  <div class='exp' id='exp-50'><b>Cevap: D</b> - <i>Trabajo <b>de</b> cocinero</i> denir (<i>en cocinero</i> denmez).</div>
+</div>
+<div class='qcard' data-q='51' data-ans='B'>
+  <div class='qtitle'><b>51.</b> <i>"Trabajo _____ una agencia de viajes"</i> ve <i>"Trabajo _____ recepcionista"</i> cümlelerindeki boşluklara sırasıyla hangi edatlar gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 51, "A")'><b>A)</b> de / en</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 51, "B")'><b>B)</b> en / de</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 51, "C")'><b>C)</b> a / por</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 51, "D")'><b>D)</b> por / para</div>
+  </div>
+  <div class='exp' id='exp-51'><b>Cevap: B</b> - <i>Trabajo <b>en</b> + yer</i>, <i>Trabajo <b>de</b> + meslek</i>.</div>
+</div>
+<div class='qcard' data-q='52' data-ans='D'>
+  <div class='qtitle'><b>52.</b> Aşağıdaki milliyet (<i>nacionalidad</i>) eşleştirmelerinden hangisi YANLIŞTIR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 52, "A")'><b>A)</b> brasileño → brasileña</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 52, "B")'><b>B)</b> alemán → alemana</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 52, "C")'><b>C)</b> inglés → inglesa</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 52, "D")'><b>D)</b> marroquí → marroquía</div>
+  </div>
+  <div class='exp' id='exp-52'><b>Cevap: D</b> - <i>marroquí</i> değişmez (<i>el/la marroquí</i>).</div>
+</div>
+<div class='qcard' data-q='53' data-ans='B'>
+  <div class='qtitle'><b>53.</b> Hangi seçenekteki milliyet sıfatlarının tamamı ERİL ve DİŞİL için AYNI kalır (değişmez)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 53, "A")'><b>A)</b> italiano, argentino, sueco</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 53, "B")'><b>B)</b> belga, marroquí, estadounidense</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 53, "C")'><b>C)</b> francés, alemán, inglés</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 53, "D")'><b>D)</b> español, japonés, irlandés</div>
+  </div>
+  <div class='exp' id='exp-53'><b>Cevap: B</b> - <i>belga, marroquí, estadounidense</i> eril ve dişilde aynıdır.</div>
+</div>
+<div class='qcard' data-q='54' data-ans='B'>
+  <div class='qtitle'><b>54.</b> <i>"Paul es de Londres, es _________. Su mujer Anne es de Berlín, es _________."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 54, "A")'><b>A)</b> inglesa / alemán</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 54, "B")'><b>B)</b> inglés / alemana</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 54, "C")'><b>C)</b> inglés / alemán</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 54, "D")'><b>D)</b> ingléro / alemania</div>
+  </div>
+  <div class='exp' id='exp-54'><b>Cevap: B</b> - Paul (eril) → <i>inglés</i>, Anne (dişil) → <i>alemana</i>.</div>
+</div>
+<div class='qcard' data-q='55' data-ans='B'>
+  <div class='qtitle'><b>55.</b> Sınıfta <i>"Tahta İspanyolcada nasıl denir?"</i> diye sormak isteyen bir öğrenci hangisini söylemelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 55, "A")'><b>A)</b> ¿Qué significa "pizarra"?</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 55, "B")'><b>B)</b> ¿Cómo se dice <i>board</i> en español?</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 55, "C")'><b>C)</b> ¿Cómo se pronuncia "pizarra"?</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 55, "D")'><b>D)</b> ¿A qué te dedicas?</div>
+  </div>
+  <div class='exp' id='exp-55'><b>Cevap: B</b> - <i>¿Cómo se dice ... en español?</i> = İspanyolcada nasıl denir?</div>
+</div>
+<div class='qcard' data-q='56' data-ans='C'>
+  <div class='qtitle'><b>56.</b> <i>"¿Qué significa 'ordenador'?"</i> sorusu ne anlama gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 56, "A")'><b>A)</b> "Ordenador" nasıl telaffuz edilir?</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 56, "B")'><b>B)</b> "Ordenador" nasıl yazılır?</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 56, "C")'><b>C)</b> "Ordenador" ne demek (anlamı nedir)?</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 56, "D")'><b>D)</b> Bilgisayarın var mı?</div>
+  </div>
+  <div class='exp' id='exp-56'><b>Cevap: C</b> - <i>¿Qué significa ...?</i> = Ne anlama gelir?</div>
+</div>
+<div class='qcard' data-q='57' data-ans='A'>
+  <div class='qtitle'><b>57.</b> <i>"Susan"</i> isminin İspanyolca alfabeye (<i>el abecedario</i>) göre harf harf kodlanışı (<i>deletreo</i>) hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 57, "A")'><b>A)</b> ese, u, ese, a, ene</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 57, "B")'><b>B)</b> ce, u, ce, a, eñe</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 57, "C")'><b>C)</b> ese, uve, ese, a, eme</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 57, "D")'><b>D)</b> ceta, u, ese, a, ene</div>
+  </div>
+  <div class='exp' id='exp-57'><b>Cevap: A</b> - S (ese) - U (u) - S (ese) - A (a) - N (ene).</div>
+</div>
+<div class='qcard' data-q='58' data-ans='B'>
+  <div class='qtitle'><b>58.</b> İspanyolca alfabedeki <i>"Ñ, J, Q, V, Y, Z"</i> harflerinin okunuş adları sırasıyla hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 58, "A")'><b>A)</b> ene, ge, cu, be, i, ese</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 58, "B")'><b>B)</b> eñe, jota, cu, uve, i griega, ceta</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 58, "C")'><b>C)</b> eñe, hache, ca, uve doble, equis, ce</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 58, "D")'><b>D)</b> ene, jota, ca, uve, i griega, ceta</div>
+  </div>
+  <div class='exp' id='exp-58'><b>Cevap: B</b> - Ñ (eñe), J (jota), Q (cu), V (uve), Y (i griega), Z (ceta).</div>
+</div>
+<div class='qcard' data-q='59' data-ans='C'>
+  <div class='qtitle'><b>59.</b> Aşağıdaki kelimelerden hangisinde koyu yazılan harf diğerlerinden FARKLI bir ses verir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 59, "A")'><b>A)</b> <b>c</b>asa</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 59, "B")'><b>B)</b> <b>q</b>uilo</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 59, "C")'><b>C)</b> <b>c</b>ine</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 59, "D")'><b>D)</b> <b>c</b>omida</div>
+  </div>
+  <div class='exp' id='exp-59'><b>Cevap: C</b> - <i>cine</i> kelimesinde <i>ci</i> (/θ/ veya /s/) okunur; diğerlerinde /k/ okunur.</div>
+</div>
+<div class='qcard' data-q='60' data-ans='C'>
+  <div class='qtitle'><b>60.</b> Aşağıdaki kelimelerden hangisinde <i>"g"</i> harfi <i>"j"</i> gibi (/x/ – hırıltılı h sesi) okunur?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 60, "A")'><b>A)</b> <b>g</b>ato</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 60, "B")'><b>B)</b> <b>g</b>uerra</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 60, "C")'><b>C)</b> <b>g</b>imnasio</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 60, "D")'><b>D)</b> <b>g</b>uitarra</div>
+  </div>
+  <div class='exp' id='exp-60'><b>Cevap: C</b> - <i>ge / gi</i> hecelerinde <i>g</i> harfi /x/ (<i>j</i> gibi) okunur: <i>gimnasio, general</i>.</div>
+</div>
+<div class='qcard' data-q='61' data-ans='B'>
+  <div class='qtitle'><b>61.</b> <i>"16, 22, 23, 35"</i> sayılarının doğru yazılışı hangi seçenekte verilmiştir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 61, "A")'><b>A)</b> diez y seis / veinte y dos / veinte y tres / treinta cinco</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 61, "B")'><b>B)</b> dieciséis / veintidós / veintitrés / treinta y cinco</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 61, "C")'><b>C)</b> dieciseis / veintidos / veintitres / treintaycinco</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 61, "D")'><b>D)</b> dieciséis / veintidós / veintitrés / treintaicinco</div>
+  </div>
+  <div class='exp' id='exp-61'><b>Cevap: B</b> - <i>dieciséis, veintidós, veintitrés, treinta y cinco</i>.</div>
+</div>
+<div class='qcard' data-q='62' data-ans='A'>
+  <div class='qtitle'><b>62.</b> <i>"14, 15, 50, 70, 90, 100"</i> sayılarının doğru yazılışı hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 62, "A")'><b>A)</b> catorce, quince, cincuenta, setenta, noventa, cien</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 62, "B")'><b>B)</b> cuatroce, cincoce, cinquenta, septenta, nueventa, ciento</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 62, "C")'><b>C)</b> catorce, quince, cincuenta, sesenta, ochenta, cien</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 62, "D")'><b>D)</b> trece, quince, cuarenta, setenta, noventa, cien</div>
+  </div>
+  <div class='exp' id='exp-62'><b>Cevap: A</b> - <i>catorce, quince, cincuenta, setenta, noventa, cien</i>.</div>
+</div>
+<div class='qcard' data-q='63' data-ans='C'>
+  <div class='qtitle'><b>63.</b> <i>"Ellos _________ (ser) estudiantes, _________ (llamarse) Marco y Luca y _________ (tener) 19 años."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 63, "A")'><b>A)</b> es / se llama / tiene</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 63, "B")'><b>B)</b> somos / nos llamamos / tenemos</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 63, "C")'><b>C)</b> son / se llaman / tienen</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 63, "D")'><b>D)</b> sois / os llamáis / tenéis</div>
+  </div>
+  <div class='exp' id='exp-63'><b>Cevap: C</b> - <i>Ellos son / se llaman / tienen</i>.</div>
+</div>
+<div class='qcard' data-q='64' data-ans='B'>
+  <div class='qtitle'><b>64.</b> <i>"¿Vosotros _________ (tener) correo electrónico?"</i> – <i>"Sí, y también _________ (tener, nosotros) móvil."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 64, "A")'><b>A)</b> tienes / tengo</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 64, "B")'><b>B)</b> tenéis / tenemos</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 64, "C")'><b>C)</b> tienen / tenemos</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 64, "D")'><b>D)</b> sois / somos</div>
+  </div>
+  <div class='exp' id='exp-64'><b>Cevap: B</b> - <i>vosotros tenéis / nosotros tenemos</i>.</div>
+</div>
+<div class='qcard' data-q='65' data-ans='C'>
+  <div class='qtitle'><b>65.</b> Aşağıdaki fiillerden hangisi 3. çekim grubuna (<i>tercera conjugación: -IR</i>) aittir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 65, "A")'><b>A)</b> estudiar</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 65, "B")'><b>B)</b> leer</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 65, "C")'><b>C)</b> vivir</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 65, "D")'><b>D)</b> cantar</div>
+  </div>
+  <div class='exp' id='exp-65'><b>Cevap: C</b> - <i>vivir</i> (-ir, 3. grup).</div>
+</div>
+<div class='qcard' data-q='66' data-ans='D'>
+  <div class='qtitle'><b>66.</b> Aşağıdaki sınıf eşyalarından (<i>las cosas de la clase</i>) hangisinin anlamı YANLIŞ verilmiştir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 66, "A")'><b>A)</b> el bolígrafo = tükenmez kalem</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 66, "B")'><b>B)</b> la papelera = çöp kutusu</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 66, "C")'><b>C)</b> la pizarra = yazı tahtası</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 66, "D")'><b>D)</b> la silla = masa</div>
+  </div>
+  <div class='exp' id='exp-66'><b>Cevap: D</b> - <i>la silla</i> = sandalye (<i>la mesa</i> = masa).</div>
+</div>
+<div class='qcard' data-q='67' data-ans='A'>
+  <div class='qtitle'><b>67.</b> <i>"La mochila, el cuaderno, la hoja de papel, el proyector"</i> kelimelerinin Türkçe karşılıkları sırasıyla nedir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 67, "A")'><b>A)</b> Sırt çantası, defter, kağıt sayfası, projeksiyon cihazı</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 67, "B")'><b>B)</b> Kalemlik, kitap, defter, bilgisayar</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 67, "C")'><b>C)</b> Çanta, masa, tahta, televizyon</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 67, "D")'><b>D)</b> Kitap, sözlük, kağıt, sandalye</div>
+  </div>
+  <div class='exp' id='exp-67'><b>Cevap: A</b> - <i>mochila</i> = sırt çantası, <i>cuaderno</i> = defter, <i>hoja de papel</i> = kağıt, <i>proyector</i> = projeksiyon.</div>
+</div>
+<div class='qcard' data-q='68' data-ans='C'>
+  <div class='qtitle'><b>68.</b> Aşağıdaki hobilerden (<i>aficiones</i>) hangisi bir FİİL (<i>verbo</i>) DEĞİLDİR (isimdir)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 68, "A")'><b>A)</b> cocinar</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 68, "B")'><b>B)</b> esquiar</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 68, "C")'><b>C)</b> el tenis</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 68, "D")'><b>D)</b> bailar</div>
+  </div>
+  <div class='exp' id='exp-68'><b>Cevap: C</b> - <i>el tenis</i> ve <i>el fútbol</i> isimdir, diğerleri mastar fiildir.</div>
+</div>
+<div class='qcard' data-q='69' data-ans='A'>
+  <div class='qtitle'><b>69.</b> <i>"Tocar la guitarra, ir al gimnasio, ver la tele, viajar"</i> ifadelerinin anlamları sırasıyla nedir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 69, "A")'><b>A)</b> Gitar çalmak, spor salonuna gitmek, televizyon izlemek, seyahat etmek</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 69, "B")'><b>B)</b> Müzik dinlemek, sinemaya gitmek, kitap okumak, yemek yapmak</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 69, "C")'><b>C)</b> Gitar almak, koşmak, film çekmek, yüzmek</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 69, "D")'><b>D)</b> Şarkı söylemek, dans etmek, kayak yapmak, yazı yazmak</div>
+  </div>
+  <div class='exp' id='exp-69'><b>Cevap: A</b> - <i>tocar la guitarra</i> = gitar çalmak, <i>ir al gimnasio</i> = spora gitmek, <i>ver la tele</i> = TV izlemek, <i>viajar</i> = seyahat etmek.</div>
+</div>
+<div class='qcard' data-q='70' data-ans='C'>
+  <div class='qtitle'><b>70.</b> Aşağıdaki soru-cevap eşleştirmelerinden hangisi YANLIŞTIR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 70, "A")'><b>A)</b> ¿Cuál es tu apellido? → Meyerhofer.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 70, "B")'><b>B)</b> ¿Tienes móvil? → No, no tengo.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 70, "C")'><b>C)</b> ¿De dónde eres? → Soy enfermera.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 70, "D")'><b>D)</b> ¿Cuántos años tiene Katia? → Tiene diecinueve años.</div>
+  </div>
+  <div class='exp' id='exp-70'><b>Cevap: C</b> - <i>¿De dónde eres?</i> nerelisin sorusudur, meslekle (<i>soy enfermera</i>) cevaplanmaz.</div>
+</div>
+<div class='qcard' data-q='71' data-ans='A'>
+  <div class='qtitle'><b>71.</b> Bir e-posta adresini okurken <i>"@"</i> ve <i>"."</i> işaretleri İspanyolcada nasıl söylenir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 71, "A")'><b>A)</b> arroba / punto</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 71, "B")'><b>B)</b> at / coma</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 71, "C")'><b>C)</b> et / guion</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 71, "D")'><b>D)</b> barra / punto</div>
+  </div>
+  <div class='exp' id='exp-71'><b>Cevap: A</b> - `@` = <i>arroba</i>, `.` = <i>punto</i>.</div>
+</div>
+<div class='qcard' data-q='72' data-ans='B'>
+  <div class='qtitle'><b>72.</b> <i>"Hola, ¿qué tal?"</i> ifadesi ne zaman kullanılır ve ne anlama gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 72, "A")'><b>A)</b> Vedalaşırken / "Görüşürüz"</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 72, "B")'><b>B)</b> Selamlaşırken / "Merhaba, nasılsın?"</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 72, "C")'><b>C)</b> Özür dilerken / "Kusura bakma"</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 72, "D")'><b>D)</b> Teşekkür ederken / "Çok sağ ol"</div>
+  </div>
+  <div class='exp' id='exp-72'><b>Cevap: B</b> - <i>Hola, ¿qué tal?</i> = Merhaba, nasılsın?</div>
+</div>
+<h2>BÖLÜM 4: AULA Internacional 1 – Unidad 2 (<em>Quiero aprender español</em>) (Soru 73–100)</h2>
+<div class='qcard' data-q='73' data-ans='B'>
+  <div class='qtitle'><b>73.</b> <i>"Yo _________ (hablar) inglés, _________ (comprender) el francés y _________ (escribir) en español."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 73, "A")'><b>A)</b> hablas / comprendes / escribes</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 73, "B")'><b>B)</b> hablo / comprendo / escribo</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 73, "C")'><b>C)</b> habla / comprende / escribe</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 73, "D")'><b>D)</b> hablamos / comprendemos / escribimos</div>
+  </div>
+  <div class='exp' id='exp-73'><b>Cevap: B</b> - <i>yo hablo, comprendo, escribo</i>.</div>
+</div>
+<div class='qcard' data-q='74' data-ans='B'>
+  <div class='qtitle'><b>74.</b> <i>"Nosotros _________ (estudiar) arquitectura y _________ (vivir) en Madrid."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 74, "A")'><b>A)</b> estudiamos / vivemos</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 74, "B")'><b>B)</b> estudiamos / vivimos</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 74, "C")'><b>C)</b> estudiáis / vivís</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 74, "D")'><b>D)</b> estudian / viven</div>
+  </div>
+  <div class='exp' id='exp-74'><b>Cevap: B</b> - <i>nosotros estudiamos (-ar), vivimos (-ir)</i>.</div>
+</div>
+<div class='qcard' data-q='75' data-ans='C'>
+  <div class='qtitle'><b>75.</b> <i>"¿Vosotros _________ (comprender) bien el español o _________ (hablar) solo un poco?"</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 75, "A")'><b>A)</b> comprendemos / hablamos</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 75, "B")'><b>B)</b> comprenden / hablan</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 75, "C")'><b>C)</b> comprendéis / habláis</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 75, "D")'><b>D)</b> comprendes / hablas</div>
+  </div>
+  <div class='exp' id='exp-75'><b>Cevap: C</b> - <i>vosotros comprendéis (-er), habláis (-ar)</i>.</div>
+</div>
+<div class='qcard' data-q='76' data-ans='C'>
+  <div class='qtitle'><b>76.</b> <i>"Usted"</i> (Siz – tekil resmi) ve <i>"ustedes"</i> (Sizler – çoğul resmi) zamirleriyle fiiller hangi şahsa göre çekimlenir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 76, "A")'><b>A)</b> 1. şahıs (<i>yo / nosotros</i>)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 76, "B")'><b>B)</b> 2. şahıs (<i>tú / vosotros</i>)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 76, "C")'><b>C)</b> 3. şahıs (<i>él-ella / ellos-ellas</i>: <i>usted habla, ustedes hablan</i>)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 76, "D")'><b>D)</b> Mastar halinde kalır</div>
+  </div>
+  <div class='exp' id='exp-76'><b>Cevap: C</b> - <i>usted</i> ve <i>ustedes</i> 3. şahıs fiil çekimi kullanır.</div>
+</div>
+<div class='qcard' data-q='77' data-ans='B'>
+  <div class='qtitle'><b>77.</b> Düzensiz <i>"QUERER"</i> (istemek) fiilinin <i>yo, tú, él, nosotros, vosotros, ellos</i> çekimi sırasıyla hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 77, "A")'><b>A)</b> quiero, quieres, quiere, quieremos, quieréis, quieren</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 77, "B")'><b>B)</b> quiero, quieres, quiere, queremos, queréis, quieren</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 77, "C")'><b>C)</b> quero, queres, quere, queremos, queréis, queren</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 77, "D")'><b>D)</b> quiero, quires, quire, queremos, querís, quiren</div>
+  </div>
+  <div class='exp' id='exp-77'><b>Cevap: B</b> - <i>quiero, quieres, quiere, queremos, queréis, quieren</i> (<i>nosotros/vosotros</i>ta <i>ie</i> olmaz!).</div>
+</div>
+<div class='qcard' data-q='78' data-ans='A'>
+  <div class='qtitle'><b>78.</b> <i>"Mi compañero John _________ vivir en España, pero Anne y yo _________ estudiar en México."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 78, "A")'><b>A)</b> quiere / queremos</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 78, "B")'><b>B)</b> quieres / queremos</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 78, "C")'><b>C)</b> quiere / quieremos</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 78, "D")'><b>D)</b> quieren / queréis</div>
+  </div>
+  <div class='exp' id='exp-78'><b>Cevap: A</b> - <i>John (él) quiere / Anne y yo (nosotros) queremos</i>.</div>
+</div>
+<div class='qcard' data-q='79' data-ans='B'>
+  <div class='qtitle'><b>79.</b> <i>"¿_________ estudias español?"</i> – <i>"_________ quiero vivir en España."</i> boşluklarına sırasıyla hangileri gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 79, "A")'><b>A)</b> Porque / Por qué</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 79, "B")'><b>B)</b> Por qué / Porque</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 79, "C")'><b>C)</b> Para qué / Por</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 79, "D")'><b>D)</b> Por / Para</div>
+  </div>
+  <div class='exp' id='exp-79'><b>Cevap: B</b> - Soruda <b>¿Por qué</b> (ayrı ve aksanlı), cevapta <b>Porque</b> (bitişik ve aksansız).</div>
+</div>
+<div class='qcard' data-q='80' data-ans='C'>
+  <div class='qtitle'><b>80.</b> <i>"Estudio español _________ viajar por Sudamérica."</i> (mastar fiil var!) boşluğuna hangisi gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 80, "A")'><b>A)</b> porque</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 80, "B")'><b>B)</b> por</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 80, "C")'><b>C)</b> para</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 80, "D")'><b>D)</b> con</div>
+  </div>
+  <div class='exp' id='exp-80'><b>Cevap: C</b> - <b>para + mastar</b> (<i>para viajar</i> = seyahat etmek için).</div>
+</div>
+<div class='qcard' data-q='81' data-ans='C'>
+  <div class='qtitle'><b>81.</b> <i>"Quiero mejorar mi inglés _________ mi trabajo."</i> (isim grubu var!) boşluğuna hangisi gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 81, "A")'><b>A)</b> porque</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 81, "B")'><b>B)</b> para</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 81, "C")'><b>C)</b> por</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 81, "D")'><b>D)</b> a</div>
+  </div>
+  <div class='exp' id='exp-81'><b>Cevap: C</b> - <b>por + isim</b> (<i>por mi trabajo</i> = işim nedeniyle).</div>
+</div>
+<div class='qcard' data-q='82' data-ans='C'>
+  <div class='qtitle'><b>82.</b> <i>"Sam estudia español _________ su novia es colombiana."</i> (çekimli fiil var!) boşluğuna hangisi gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 82, "A")'><b>A)</b> para</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 82, "B")'><b>B)</b> por</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 82, "C")'><b>C)</b> porque</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 82, "D")'><b>D)</b> de</div>
+  </div>
+  <div class='exp' id='exp-82'><b>Cevap: C</b> - <b>porque + çekimli fiil</b> (<i>porque su novia es colombiana</i>).</div>
+</div>
+<div class='qcard' data-q='83' data-ans='C'>
+  <div class='qtitle'><b>83.</b> Aşağıdaki cümlelerden hangisinde <i>"porque / para / por"</i> kullanımı YANLIŞTIR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 83, "A")'><b>A)</b> Quiero aprender español para leer a Gabriel García Márquez.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 83, "B")'><b>B)</b> Estudio español porque quiero chatear con mis amigos.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 83, "C")'><b>C)</b> Estudio español para mi trabajo.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 83, "D")'><b>D)</b> Voy a Madrid porque tengo familia allí.</div>
+  </div>
+  <div class='exp' id='exp-83'><b>Cevap: C</b> - İsimden önce <i>para</i> değil <b>por</b> gelir (<i>por mi trabajo</i>).</div>
+</div>
+<div class='qcard' data-q='84' data-ans='B'>
+  <div class='qtitle'><b>84.</b> <i>"Quiero visitar _____ la ciudad y también quiero visitar _____ mis compañeros de clase."</i> boşluklarına ne gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 84, "A")'><b>A)</b> a / a</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 84, "B")'><b>B)</b> - (boş) / a</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 84, "C")'><b>C)</b> a / - (boş)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 84, "D")'><b>D)</b> en / con</div>
+  </div>
+  <div class='exp' id='exp-84'><b>Cevap: B</b> - Cansız nesne (<i>la ciudad</i>) edat almaz; kişi nesnesi (<b>a</b> <i>mis compañeros</i>) <b>a</b> alır.</div>
+</div>
+<div class='qcard' data-q='85' data-ans='B'>
+  <div class='qtitle'><b>85.</b> İspanyolcada <i>"Quiero conocer a tu hermano"</i> cümlesinde neden <i>"a"</i> edatı kullanılmıştır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 85, "A")'><b>A)</b> <i>Conocer</i> fiili her zaman <i>a</i> aldığı için (<i>conocer a Madrid</i> gibi).</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 85, "B")'><b>B)</b> Doğrudan nesne (<i>complemento directo</i>) bir <b>kişi (insan)</b> olduğunda önüne <b>a</b> geldiği için.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 85, "C")'><b>C)</b> Yönelme belirttiği için.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 85, "D")'><b>D)</b> Gelecek zaman olduğu için.</div>
+  </div>
+  <div class='exp' id='exp-85'><b>Cevap: B</b> - Belirtili nesne bir kişi olduğunda önüne <b>a</b> gelir.</div>
+</div>
+<div class='qcard' data-q='86' data-ans='B'>
+  <div class='qtitle'><b>86.</b> <i>"Este fin de semana quiero ir _____ cine y después salir _____ mis amigos _____ noche."</i> boşluklarına sırasıyla ne gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 86, "A")'><b>A)</b> a el / con / por</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 86, "B")'><b>B)</b> al / con / de</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 86, "C")'><b>C)</b> al / a / en</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 86, "D")'><b>D)</b> en el / de / de</div>
+  </div>
+  <div class='exp' id='exp-86'><b>Cevap: B</b> - <i>ir <b>al</b> cine, salir <b>con</b> mis amigos, salir <b>de</b> noche</i>.</div>
+</div>
+<div class='qcard' data-q='87' data-ans='C'>
+  <div class='qtitle'><b>87.</b> Aşağıdaki <i>"fiil + edat"</i> eşleştirmelerinden hangisi YANLIŞTIR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 87, "A")'><b>A)</b> ir <b>de</b> compras / ir <b>de</b> excursión</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 87, "B")'><b>B)</b> salir <b>a</b> bailar / salir <b>a</b> cenar</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 87, "C")'><b>C)</b> hacer <b>de</b> fotos / practicar <b>en</b> español</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 87, "D")'><b>D)</b> ir <b>a la</b> playa / ir <b>al</b> teatro</div>
+  </div>
+  <div class='exp' id='exp-87'><b>Cevap: C</b> - <i>hacer fotos</i> ve <i>practicar español</i> edat almaz.</div>
+</div>
+<div class='qcard' data-q='88' data-ans='A'>
+  <div class='qtitle'><b>88.</b> <i>"¿Quieres hacer _____ curso de guitarra?"</i> – <i>"No, prefiero ver _____ películas de Amenábar."</i> boşluklarına hangi belirli tanımlıklar gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 88, "A")'><b>A)</b> el / las</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 88, "B")'><b>B)</b> la / los</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 88, "C")'><b>C)</b> los / la</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 88, "D")'><b>D)</b> el / los</div>
+  </div>
+  <div class='exp' id='exp-88'><b>Cevap: A</b> - <i>el curso</i> (eril tekil), <i>las películas</i> (dişil çoğul).</div>
+</div>
+<div class='qcard' data-q='89' data-ans='A'>
+  <div class='qtitle'><b>89.</b> <i>"_____ museos, _____ playas, _____ cursos, _____ fiestas"</i> kelimelerinin başına sırasıyla hangi çoğul tanımlıklar gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 89, "A")'><b>A)</b> los, las, los, las</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 89, "B")'><b>B)</b> las, los, las, los</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 89, "C")'><b>C)</b> el, la, el, la</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 89, "D")'><b>D)</b> los, los, las, las</div>
+  </div>
+  <div class='exp' id='exp-89'><b>Cevap: A</b> - <i>los museos, las playas, los cursos, las fiestas</i>.</div>
+</div>
+<div class='qcard' data-q='90' data-ans='A'>
+  <div class='qtitle'><b>90.</b> Aula 1 (Sayfa 28) alıştırmasındaki <i>"montaña, curso, comida, noche, museo, historia, teatro, cine, película, trabajo, guitarra, playa, vino, clase, baile, plato"</i> kelimelerinden hangilerinin TAMAMI ERİLDİR (<i>el</i> alır)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 90, "A")'><b>A)</b> curso, museo, teatro, cine, trabajo, vino, baile, plato</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 90, "B")'><b>B)</b> montaña, comida, noche, historia, película, guitarra, playa, clase</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 90, "C")'><b>C)</b> curso, noche, cine, clase, baile, playa</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 90, "D")'><b>D)</b> teatro, película, vino, guitarra, plato</div>
+  </div>
+  <div class='exp' id='exp-90'><b>Cevap: A</b> - <i>el curso, el museo, el teatro, el cine, el trabajo, el vino, el baile, el plato</i>.</div>
+</div>
+<div class='qcard' data-q='91' data-ans='A'>
+  <div class='qtitle'><b>91.</b> Dil seviyesini derecelendirirken (<i>graduar</i>) büyükten küçüğe (en iyiden en kötüye) doğru sıralama hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 91, "A")'><b>A)</b> muy bien > bastante bien > un poco / regular > muy mal > nada de</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 91, "B")'><b>B)</b> bastante bien > muy bien > nada de > un poco > regular</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 91, "C")'><b>C)</b> un poco > regular > bastante bien > muy bien > mal</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 91, "D")'><b>D)</b> regular > muy bien > bastante bien > nada de > muy mal</div>
+  </div>
+  <div class='exp' id='exp-91'><b>Cevap: A</b> - <i>muy bien > bastante bien > un poco / regular > muy mal > nada de</i>.</div>
+</div>
+<div class='qcard' data-q='92' data-ans='B'>
+  <div class='qtitle'><b>92.</b> <i>"No hablo _________ ruso, pero comprendo _________ el portugués y leo en francés _________."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 92, "A")'><b>A)</b> muy mal / nada de / un poco</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 92, "B")'><b>B)</b> nada de / un poco / bastante bien</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 92, "C")'><b>C)</b> regular / nada / muy</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 92, "D")'><b>D)</b> un poco / nada de / mal</div>
+  </div>
+  <div class='exp' id='exp-92'><b>Cevap: B</b> - <i>No hablo <b>nada de</b> ruso / comprendo <b>un poco</b> el portugués / leo <b>bastante bien</b></i>.</div>
+</div>
+<div class='qcard' data-q='93' data-ans='B'>
+  <div class='qtitle'><b>93.</b> <i>"Yo bailo salsa."</i> diyen bir arkadaşına <i>"Ben de!"</i> demek için hangisini kullanırsın?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 93, "A")'><b>A)</b> Yo tampoco.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 93, "B")'><b>B)</b> Yo también.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 93, "C")'><b>C)</b> Pues yo no.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 93, "D")'><b>D)</b> Yo sí.</div>
+  </div>
+  <div class='exp' id='exp-93'><b>Cevap: B</b> - Olumlu cümleye katılırken <b>Yo también</b> (Ben de) denir.</div>
+</div>
+<div class='qcard' data-q='94' data-ans='B'>
+  <div class='qtitle'><b>94.</b> (Aula 1 s. 27 – Yo bailo salsa) <i>"Stéphane y Chloé _________ salsa, Alexander _________ literatura hispanoamericana y Sophie _________ películas españolas."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 94, "A")'><b>A)</b> baila / leen / ven</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 94, "B")'><b>B)</b> bailan / lee / ve</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 94, "C")'><b>C)</b> bailamos / leo / veo</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 94, "D")'><b>D)</b> bailan / leen / ve</div>
+  </div>
+  <div class='exp' id='exp-94'><b>Cevap: B</b> - <i>Stéphane y Chloé (ellos) bailan / Alexander (él) lee / Sophie (ella) ve</i>.</div>
+</div>
+<div class='qcard' data-q='95' data-ans='B'>
+  <div class='qtitle'><b>95.</b> <i>"Noam y Florent _________ platos españoles y Andrea _________ música en español."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 95, "A")'><b>A)</b> cocina / escuchan</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 95, "B")'><b>B)</b> cocinan / escucha</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 95, "C")'><b>C)</b> cocináis / escuchas</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 95, "D")'><b>D)</b> cocinan / escuchan</div>
+  </div>
+  <div class='exp' id='exp-95'><b>Cevap: B</b> - <i>Noam y Florent (ellos) cocinan / Andrea (él/ella) escucha</i>.</div>
+</div>
+<div class='qcard' data-q='96' data-ans='B'>
+  <div class='qtitle'><b>96.</b> Aşağıdaki dil sınıfı aktivitelerinden (<i>actividades de la clase de lengua</i>) hangisi <i>"gazete ve dergi okumak"</i> anlamına gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 96, "A")'><b>A)</b> escribir postales</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 96, "B")'><b>B)</b> leer periódicos y revistas</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 96, "C")'><b>C)</b> buscar información en internet</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 96, "D")'><b>D)</b> practicar la pronunciación</div>
+  </div>
+  <div class='exp' id='exp-96'><b>Cevap: B</b> - <i>leer periódicos y revistas</i> = gazete ve dergi okumak.</div>
+</div>
+<div class='qcard' data-q='97' data-ans='A'>
+  <div class='qtitle'><b>97.</b> <i>"Cata de vinos"</i>, <i>"clases particulares"</i> ve <i>"intercambio"</i> kelimelerinin anlamları sırasıyla nedir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 97, "A")'><b>A)</b> Şarap tadımı / özel dersler / dil değişimi (konuşma pratiği)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 97, "B")'><b>B)</b> Yemek kursu / grup dersleri / sınav</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 97, "C")'><b>C)</b> Dans gecesi / tiyatro kulübü / sergi</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 97, "D")'><b>D)</b> Gitar kursu / sinema kulübü / gezi</div>
+  </div>
+  <div class='exp' id='exp-97'><b>Cevap: A</b> - <i>cata de vinos</i> = şarap tadımı, <i>clases particulares</i> = özel ders, <i>intercambio</i> = dil değişimi.</div>
+</div>
+<div class='qcard' data-q='98' data-ans='A'>
+  <div class='qtitle'><b>98.</b> <i>"Ir a una exposición"</i>, <i>"hacer deporte"</i>, <i>"salir a cenar"</i>, <i>"pasear"</i> ifadelerinin anlamları sırasıyla nedir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 98, "A")'><b>A)</b> Sergiye gitmek / spor yapmak / akşam yemeğine çıkmak /เดิน-dolaşmak (yürüyüş yapmak)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 98, "B")'><b>B)</b> Alışverişe gitmek / fotoğraf çekmek / gece çıkmak / çalışmak</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 98, "C")'><b>C)</b> Geziye gitmek / tiyatroya gitmek / yemek pişirmek / okumak</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 98, "D")'><b>D)</b> Sinemaya gitmek / dans etmek / şarkı söylemek / seyahat etmek</div>
+  </div>
+  <div class='exp' id='exp-98'><b>Cevap: A</b> - <i>ir a una exposición</i> = sergiye gitmek, <i>hacer deporte</i> = spor yapmak, <i>salir a cenar</i> = akşam yemeğine çıkmak, <i>pasear</i> = yürüyüş yapmak/dolaşmak.</div>
+</div>
+<div class='qcard' data-q='99' data-ans='A'>
+  <div class='qtitle'><b>99.</b> <i>"¿Qué queréis hacer en este curso?"</i> sorusunda hangi özne zamiri kastedilmiştir ve nasıl cevap verilir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 99, "A")'><b>A)</b> vosotros → Nosotros queremos hablar mucho en clase.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 99, "B")'><b>B)</b> ellos → Ellos quieren leer libros.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 99, "C")'><b>C)</b> tú → Tú quieres escuchar música.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 99, "D")'><b>D)</b> usted → Él quiere escribir.</div>
+  </div>
+  <div class='exp' id='exp-99'><b>Cevap: A</b> - <i>queréis</i> = <i>vosotros</i> çekimidir; cevap <i>nosotros queremos</i> ile verilir.</div>
+</div>
+<div class='qcard' data-q='100' data-ans='B'>
+  <div class='qtitle'><b>100.</b> Aşağıdaki cümlelerden hangisinde HİÇBİR DİLBİLGİSİ HATASI YOKTUR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 100, "A")'><b>A)</b> Me llamo es Carlos, soy veintidós años y trabajo en camarero.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 100, "B")'><b>B)</b> Me llamo Carlos, tengo veintidós años, trabajo de camarero y quiero aprender el idioma español para viajar.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 100, "C")'><b>C)</b> Mi llamo Carlos, tengo veinte y dos años y quiero conocer tu hermano porque mi trabajo.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 100, "D")'><b>D)</b> Me llamas Carlos, eres de Madrid y quieremos ir a el cine en el viernes.</div>
+  </div>
+  <div class='exp' id='exp-100'><b>Cevap: B</b> - <i>Me llamo..., tengo veintidós años, trabajo de camarero, el idioma, para viajar</i> — tamamı doğrudur.</div>
+</div>
+<h2>BÖLÜM 5: Gramática – Unidad 3 (<em>Singular, plural: Tekil ve Çoğul</em>) (Soru 101–113)</h2>
+<div class='qcard' data-q='101' data-ans='B'>
+  <div class='qtitle'><b>101.</b> <i>"El reloj"</i>, <i>"el hotel"</i> ve <i>"el mes"</i> kelimelerinin çoğul (<i>plural</i>) halleri sırasıyla hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 101, "A")'><b>A)</b> los relojs / los hotels / los mess</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 101, "B")'><b>B)</b> los relojes / los hoteles / los meses</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 101, "C")'><b>C)</b> los relojos / los hotelos / los mesos</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 101, "D")'><b>D)</b> los relojes / los hotels / los mes</div>
+  </div>
+  <div class='exp' id='exp-101'><b>Cevap: B</b> - Ünsüzle biten kelimeler <b>-es</b> alarak çoğul olur: <i>relojes, hoteles, meses</i>.</div>
+</div>
+<div class='qcard' data-q='102' data-ans='B'>
+  <div class='qtitle'><b>102.</b> <i>"El pez"</i> (balık), <i>"la actriz"</i> (aktris) ve <i>"el lápiz"</i> (kalem) kelimelerinin çoğul halleri hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 102, "A")'><b>A)</b> los pezes / las actrizes / los lápizes</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 102, "B")'><b>B)</b> los peces / las actrices / los lápices</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 102, "C")'><b>C)</b> los pezs / las actrizs / los lápizs</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 102, "D")'><b>D)</b> los peces / las actrices / los lápizes</div>
+  </div>
+  <div class='exp' id='exp-102'><b>Cevap: B</b> - <b>-z</b> ile bitenler <b>-ces</b> olur: <i>pez → peces, actriz → actrices, lápiz → lápices</i>.</div>
+</div>
+<div class='qcard' data-q='103' data-ans='B'>
+  <div class='qtitle'><b>103.</b> <i>"El rubí"</i> (yakut) ve <i>"la ley"</i> (yasa) kelimelerinin çoğul halleri Gramática Unidad 3'e göre nasıl yazılır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 103, "A")'><b>A)</b> los rubís / las leys</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 103, "B")'><b>B)</b> los rubíes / las leyes</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 103, "C")'><b>C)</b> los rubíes / las leys</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 103, "D")'><b>D)</b> los rubis / las leyes</div>
+  </div>
+  <div class='exp' id='exp-103'><b>Cevap: B</b> - Vurgulu <b>-í</b> ve <b>-y</b> ile bitenler <b>-es</b> alır: <i>rubí → rubíes, ley → leyes</i>.</div>
+</div>
+<div class='qcard' data-q='104' data-ans='A'>
+  <div class='qtitle'><b>104.</b> <i>"El café"</i>, <i>"el menú"</i> ve <i>"la mamá"</i> kelimelerinin çoğul halleri hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 104, "A")'><b>A)</b> los cafés / los menús / las mamás</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 104, "B")'><b>B)</b> los cafées / los menúes / las mamáes</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 104, "C")'><b>C)</b> los cafes / los menus / las mamas</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 104, "D")'><b>D)</b> los cafés / los menúes / las mamás</div>
+  </div>
+  <div class='exp' id='exp-104'><b>Cevap: A</b> - Vurgulu <i>-á, -é, -ó, -ú</i> ile bitenler <b>-s</b> alır: <i>cafés, menús, mamás</i>.</div>
+</div>
+<div class='qcard' data-q='105' data-ans='B'>
+  <div class='qtitle'><b>105.</b> <i>"El autobús"</i>, <i>"la televisión"</i>, <i>"la habitación"</i> ve <i>"el león"</i> kelimeleri çoğul yapıldığında nasıl yazılır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 105, "A")'><b>A)</b> los autobúses, las televisiónes, las habitaciónes, los leónes (aksanlar kalır)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 105, "B")'><b>B)</b> los autobuses, las televisiones, las habitaciones, los leones (aksanlar düşer!)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 105, "C")'><b>C)</b> los autobús, las televisión, las habitación, los león (değişmez)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 105, "D")'><b>D)</b> los autobuses, las televisións, las habitacións, los leons</div>
+  </div>
+  <div class='exp' id='exp-105'><b>Cevap: B</b> - Son hecesi aksanlı <i>-s / -n</i> ile bitenler <i>-es</i> aldığında aksan düşer: <i>autobuses, televisiones, habitaciones, leones</i>.</div>
+</div>
+<div class='qcard' data-q='106' data-ans='A'>
+  <div class='qtitle'><b>106.</b> Aşağıdaki kelimelerden hangilerinin tekil ve çoğul yazılışı DEĞİŞMEZ (yalnızca <i>el → los</i> olur)?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 106, "A")'><b>A)</b> el lunes, el jueves, el paraguas, el cumpleaños</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 106, "B")'><b>B)</b> el mes, el autobús, el hotel, el reloj</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 106, "C")'><b>C)</b> el día, el problema, el idioma, el mapa</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 106, "D")'><b>D)</b> el rey, la ley, el pez, la luz</div>
+  </div>
+  <div class='exp' id='exp-106'><b>Cevap: A</b> - Çok heceli ve vurgusuz <i>-s</i> ile bitenler değişmez: <i>el/los lunes, el/los jueves, el/los paraguas, el/los cumpleaños</i>.</div>
+</div>
+<div class='qcard' data-q='107' data-ans='A'>
+  <div class='qtitle'><b>107.</b> Gramática Unidad 3'e göre aşağıdaki kelimelerden hangileri hem 1 taneyi hem de birden fazlasını anlatırken HER ZAMAN ÇOĞUL BİÇİMDE (<i>plural</i>) kullanılır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 107, "A")'><b>A)</b> tijeras, gafas, pantalones, vaqueros</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 107, "B")'><b>B)</b> zapatos, libros, botellas, sillas</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 107, "C")'><b>C)</b> relojes, paraguas, autobuses, lápices</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 107, "D")'><b>D)</b> camisas, mesas, lámparas, postales</div>
+  </div>
+  <div class='exp' id='exp-107'><b>Cevap: A</b> - <i>tijeras, gafas, pantalones, vaqueros</i> tekilde de çoğulda da aynı (<i>plural</i>) formda kullanılır.</div>
+</div>
+<div class='qcard' data-q='108' data-ans='B'>
+  <div class='qtitle'><b>108.</b> <i>"Amalia tiene un hijo y dos hijas."</i> cümlesini tek bir çoğul kelimeyle nasıl ifade ederiz? (Ej. 3.3)</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 108, "A")'><b>A)</b> Amalia tiene tres hijas.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 108, "B")'><b>B)</b> Amalia tiene tres hijos.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 108, "C")'><b>C)</b> Amalia tiene tres hijes.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 108, "D")'><b>D)</b> Amalia tiene un hijos.</div>
+  </div>
+  <div class='exp' id='exp-108'><b>Cevap: B</b> - Eril + dişil = eril çoğul (<i>un hijo + dos hijas = tres hijos</i>).</div>
+</div>
+<div class='qcard' data-q='109' data-ans='B'>
+  <div class='qtitle'><b>109.</b> <i>"En mi escuela hay un profesor y dos profesoras."</i> cümlesinin eşdeğeri hangisidir? (Ej. 3.3)</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 109, "A")'><b>A)</b> En mi escuela hay tres profesoras.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 109, "B")'><b>B)</b> En mi escuela hay tres profesores.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 109, "C")'><b>C)</b> En mi escuela hay tres profesor.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 109, "D")'><b>D)</b> En mi escuela hay unos profesoras.</div>
+  </div>
+  <div class='exp' id='exp-109'><b>Cevap: B</b> - <i>un profesor + dos profesoras = tres profesores</i>.</div>
+</div>
+<div class='qcard' data-q='110' data-ans='B'>
+  <div class='qtitle'><b>110.</b> <i>"Mi padre y mi madre"</i> yerine <b>"Mis ________"</b>; <i>"El rey y la reina"</i> yerine <b>"Los ________"</b> kullanılır.</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 110, "A")'><b>A)</b> madres / reinas</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 110, "B")'><b>B)</b> padres / reyes</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 110, "C")'><b>C)</b> papás / reynas</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 110, "D")'><b>D)</b> padres / reys</div>
+  </div>
+  <div class='exp' id='exp-110'><b>Cevap: B</b> - <i>padre + madre = padres</i>, <i>rey + reina = reyes</i>.</div>
+</div>
+<div class='qcard' data-q='111' data-ans='B'>
+  <div class='qtitle'><b>111.</b> <i>"Es una compañía de ballet con un bailarín y dos bailarinas."</i> cümlesinde altı çizili bölüm yerine ne yazılır? (Ej. 3.3/10)</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 111, "A")'><b>A)</b> tres bailarínes (aksanlı)</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 111, "B")'><b>B)</b> tres bailarines (aksansız)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 111, "C")'><b>C)</b> tres bailarinas</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 111, "D")'><b>D)</b> tres bailarín</div>
+  </div>
+  <div class='exp' id='exp-111'><b>Cevap: B</b> - <i>un bailarín + dos bailarinas = tres bailarines</i> (aksan düşer!).</div>
+</div>
+<div class='qcard' data-q='112' data-ans='A'>
+  <div class='qtitle'><b>112.</b> (Ej. 3.1) <i>"La universidad"</i>, <i>"el día"</i>, <i>"la foto"</i> ve <i>"el jueves"</i> kelimelerinin çoğul halleri sırasıyla hangisidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 112, "A")'><b>A)</b> las universidades / los días / las fotos / los jueves</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 112, "B")'><b>B)</b> las universidads / los días / las fotoes / los jueveses</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 112, "C")'><b>C)</b> las universidades / los díaes / las fotos / los jueves</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 112, "D")'><b>D)</b> las universidad / los días / las fotos / los jueve</div>
+  </div>
+  <div class='exp' id='exp-112'><b>Cevap: A</b> - <i>universidades, días, fotos, los jueves</i> (jueves değişmez).</div>
+</div>
+<div class='qcard' data-q='113' data-ans='A'>
+  <div class='qtitle'><b>113.</b> <i>"El abuelo y la abuela de Marta"</i> ve <i>"Mi tío y mi tía"</i> ifadelerinin çoğul karşılıkları sırasıyla nedir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 113, "A")'><b>A)</b> Los abuelos de Marta / Mis tíos</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 113, "B")'><b>B)</b> Las abuelas de Marta / Mis tías</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 113, "C")'><b>C)</b> Los abueles de Marta / Mis tíes</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 113, "D")'><b>D)</b> Unos abuelos de Marta / Unas tías</div>
+  </div>
+  <div class='exp' id='exp-113'><b>Cevap: A</b> - <i>el abuelo + la abuela = los abuelos</i>, <i>mi tío + mi tía = mis tíos</i>.</div>
+</div>
+<h2>BÖLÜM 6: Gramática – Unidad 4 (<em>un, una, unos, unas: El artículo indeterminado</em>) (Soru 114–126)</h2>
+<div class='qcard' data-q='114' data-ans='B'>
+  <div class='qtitle'><b>114.</b> Vurgulu <i>"a-"</i> veya <i>"ha-"</i> ile başlayan <i>"águila"</i> (kartal), <i>"aula"</i> (sınıf) ve <i>"hacha"</i> (balta) dişil kelimelerinin tekil belirsiz tanımlığı nedir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 114, "A")'><b>A)</b> una águila, una aula, una hacha</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 114, "B")'><b>B)</b> un águila, un aula, un hacha</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 114, "C")'><b>C)</b> unos águila, unos aula, unos hacha</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 114, "D")'><b>D)</b> el águila, el aula, el hacha</div>
+  </div>
+  <div class='exp' id='exp-114'><b>Cevap: B</b> - Vurgulu <i>a-/ha-</i> ile başlayan dişil tekil kelimeler <b>un</b> alır: <i>un águila, un aula, un hacha</i>.</div>
+</div>
+<div class='qcard' data-q='115' data-ans='B'>
+  <div class='qtitle'><b>115.</b> <i>"____ aula"</i> (tekil), <i>"____ aulas"</i> (çoğul) ve <i>"____ buena aula"</i> (araya sıfat girmiş) boşluklarına sırasıyla hangileri gelmelidir? (Gramática U4 ATENCIÓN)</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 115, "A")'><b>A)</b> una / unas / una</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 115, "B")'><b>B)</b> un / unas / una</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 115, "C")'><b>C)</b> un / unos / un</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 115, "D")'><b>D)</b> una / unos / una</div>
+  </div>
+  <div class='exp' id='exp-115'><b>Cevap: B</b> - Tekilde <b>un aula</b>, çoğulda <b>unas aulas</b>, araya sıfat girerse <b>una buena aula</b>.</div>
+</div>
+<div class='qcard' data-q='116' data-ans='A'>
+  <div class='qtitle'><b>116.</b> <i>"____ hacha"</i> (bir balta), <i>"____ pequeña hacha"</i> (küçük bir balta) ve <i>"____ águilas"</i> (birkaç kartal) boşluklarına sırasıyla ne gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 116, "A")'><b>A)</b> un / una / unas</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 116, "B")'><b>B)</b> una / una / unas</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 116, "C")'><b>C)</b> un / un / unos</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 116, "D")'><b>D)</b> una / un / unas</div>
+  </div>
+  <div class='exp' id='exp-116'><b>Cevap: A</b> - <b>un</b> hacha / <b>una</b> pequeña hacha / <b>unas</b> águilas.</div>
+</div>
+<div class='qcard' data-q='117' data-ans='B'>
+  <div class='qtitle'><b>117.</b> <i>"Necesito ______ tijeras"</i> (1 makasa ihtiyacım var) ve <i>"Quiero ______ vaqueros"</i> (1 kot pantolon istiyorum) boşluklarına ne gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 117, "A")'><b>A)</b> una / un</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 117, "B")'><b>B)</b> unas / unos</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 117, "C")'><b>C)</b> unos / unas</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 117, "D")'><b>D)</b> la / el</div>
+  </div>
+  <div class='exp' id='exp-117'><b>Cevap: B</b> - <i>tijeras</i> (dişil) → <b>unas tijeras</b>; <i>vaqueros</i> (eril) → <b>unos vaqueros</b>.</div>
+</div>
+<div class='qcard' data-q='118' data-ans='B'>
+  <div class='qtitle'><b>118.</b> <i>"Me han regalado unas flores."</i> ve <i>"He comprado unos libros."</i> cümlelerinde <i>"unas / unos"</i> ne anlam katar?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 118, "A")'><b>A)</b> Sadece 1 tane olduğunu belirtir.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 118, "B")'><b>B)</b> <i>Algunos / algunas</i> (birkaç tane: yaklaşık 3, 4, 5...) anlamı katar.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 118, "C")'><b>C)</b> Olumsuzluk anlamı katar.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 118, "D")'><b>D)</b> Belirli (bilinen) nesne anlamı katar.</div>
+  </div>
+  <div class='exp' id='exp-118'><b>Cevap: B</b> - Çoğul sayılabilir isimlerle <i>unos/unas</i> = <i>algunos/algunas</i> (birkaç tane: 3, 4, 5...) demektir.</div>
+</div>
+<div class='qcard' data-q='119' data-ans='B'>
+  <div class='qtitle'><b>119.</b> (Ej. 4.1) <i>"____ flor, ____ relojes, ____ habitación, ____ lápices"</i> boşluklarına sırasıyla hangileri gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 119, "A")'><b>A)</b> un, unos, una, unas</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 119, "B")'><b>B)</b> una, unos, una, unos</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 119, "C")'><b>C)</b> una, unas, un, unos</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 119, "D")'><b>D)</b> un, unos, un, unos</div>
+  </div>
+  <div class='exp' id='exp-119'><b>Cevap: B</b> - <i>una flor, unos relojes, una habitación, unos lápices</i>.</div>
+</div>
+<div class='qcard' data-q='120' data-ans='B'>
+  <div class='qtitle'><b>120.</b> (Ej. 4.1) <i>"____ ciudad, ____ aula, ____ aulas, ____ pantalones"</i> boşluklarına sırasıyla hangileri gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 120, "A")'><b>A)</b> una, una, unas, un</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 120, "B")'><b>B)</b> una, un, unas, unos</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 120, "C")'><b>C)</b> un, un, unos, unos</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 120, "D")'><b>D)</b> una, un, unos, unas</div>
+  </div>
+  <div class='exp' id='exp-120'><b>Cevap: B</b> - <i>una ciudad, un aula, unas aulas, unos pantalones</i>.</div>
+</div>
+<div class='qcard' data-q='121' data-ans='A'>
+  <div class='qtitle'><b>121.</b> (Ej. 4.2) <i>"–¿Qué es el balonmano? –Es ______."</i> ve <i>"–¿Qué es Colombia? –Es ______."</i> boşluklarına ne gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 121, "A")'><b>A)</b> un deporte / un país</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 121, "B")'><b>B)</b> una fruta / una ciudad</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 121, "C")'><b>C)</b> un país / una flor</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 121, "D")'><b>D)</b> deporte / país (tanımlıksız)</div>
+  </div>
+  <div class='exp' id='exp-121'><b>Cevap: A</b> - Bir şeyi bir grubun üyesi olarak tanımlarken <i>un/una</i> kullanılır: <i>Es un deporte / Es un país</i>.</div>
+</div>
+<div class='qcard' data-q='122' data-ans='B'>
+  <div class='qtitle'><b>122.</b> (Ej. 4.2) <i>"–¿Quién es Isabel Allende? –Es ______."</i> ve <i>"–¿Quién es Amenábar? –Es ______."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 122, "A")'><b>A)</b> un escritor / una directora de cine</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 122, "B")'><b>B)</b> una escritora / un director de cine</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 122, "C")'><b>C)</b> escritora / director de cine</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 122, "D")'><b>D)</b> la escritora / el director</div>
+  </div>
+  <div class='exp' id='exp-122'><b>Cevap: B</b> - <i>Isabel Allende → Es una escritora</i>, <i>Amenábar → Es un director de cine</i>.</div>
+</div>
+<div class='qcard' data-q='123' data-ans='B'>
+  <div class='qtitle'><b>123.</b> (Ej. 4.4) <i>"¡Cuidado, ____ serpiente!"</i>, <i>"¡Mira! ____ águila."</i>, <i>"–¿Qué es eso? –Es ____ radio."</i> boşluklarına sırasıyla ne gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 123, "A")'><b>A)</b> un / una / un</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 123, "B")'><b>B)</b> una / un / una</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 123, "C")'><b>C)</b> una / una / un</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 123, "D")'><b>D)</b> un / un / una</div>
+  </div>
+  <div class='exp' id='exp-123'><b>Cevap: B</b> - <i>una serpiente, un águila, una radio</i>.</div>
+</div>
+<div class='qcard' data-q='124' data-ans='B'>
+  <div class='qtitle'><b>124.</b> (Ej. 4.4) <i>"¿Tienes ____ mapa de Ecuador?"</i>, <i>"Necesitamos ____ tijeras."</i>, <i>"Tengo ____ zapatos muy cómodos."</i> boşluklarına sırasıyla ne gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 124, "A")'><b>A)</b> una / una / unos</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 124, "B")'><b>B)</b> un / unas / unos</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 124, "C")'><b>C)</b> un / unos / unas</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 124, "D")'><b>D)</b> una / unas / un</div>
+  </div>
+  <div class='exp' id='exp-124'><b>Cevap: B</b> - <i>un mapa</i> (eril istisna!), <i>unas tijeras</i>, <i>unos zapatos</i>.</div>
+</div>
+<div class='qcard' data-q='125' data-ans='A'>
+  <div class='qtitle'><b>125.</b> <i>"–¿Qué es eso? –Es ____ paraguas."</i> ve <i>"En la tienda venden ____ paraguas muy bonitos."</i> boşluklarına sırasıyla ne gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 125, "A")'><b>A)</b> un / unos</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 125, "B")'><b>B)</b> unos / un</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 125, "C")'><b>C)</b> una / unas</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 125, "D")'><b>D)</b> el / los</div>
+  </div>
+  <div class='exp' id='exp-125'><b>Cevap: A</b> - Tekilde <i>un paraguas</i>, çoğulda <i>unos paraguas</i>.</div>
+</div>
+<div class='qcard' data-q='126' data-ans='B'>
+  <div class='qtitle'><b>126.</b> (Ej. 4.3) <i>"____ coche, ____ niños, ____ hacha, ____ vacas, ____ gafas"</i> boşluklarına sırasıyla hangileri gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 126, "A")'><b>A)</b> un, unos, una, unas, una</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 126, "B")'><b>B)</b> un, unos, un, unas, unas</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 126, "C")'><b>C)</b> un, unas, un, unos, unas</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 126, "D")'><b>D)</b> uno, unos, un, unas, unas</div>
+  </div>
+  <div class='exp' id='exp-126'><b>Cevap: B</b> - <i>un coche, unos niños, un hacha, unas vacas, unas gafas</i>.</div>
+</div>
+<h2>BÖLÜM 7: Gramática – Unidad 5 (<em>Ausencia de artículo: un/una Kullanılmadığı Durumlar</em>) (Soru 127–140)</h2>
+<div class='qcard' data-q='127' data-ans='B'>
+  <div class='qtitle'><b>127.</b> Aşağıdaki cümlelerden hangisi Gramática Unidad 5 kurallarına göre DOĞRUDUR?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 127, "A")'><b>A)</b> Soy un estudiante y Chantal es una abogada.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 127, "B")'><b>B)</b> Soy estudiante y Chantal es abogada.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 127, "C")'><b>C)</b> Soy el estudiante y Chantal es la abogada.</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 127, "D")'><b>D)</b> Soy unos estudiantes.</div>
+  </div>
+  <div class='exp' id='exp-127'><b>Cevap: B</b> - <i>Ser</i> fiilinden sonra meslek tek başına gelirse <i>un/una</i> kullanılmaz: <i>Soy estudiante, es abogada</i>.</div>
+</div>
+<div class='qcard' data-q='128' data-ans='B'>
+  <div class='qtitle'><b>128.</b> <i>"Chantal es ____ francesa."</i> ve <i>"Chantal es ____ francesa muy simpática."</i> boşluklarına sırasıyla ne gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 128, "A")'><b>A)</b> una / una</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 128, "B")'><b>B)</b> Ø (boş) / una</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 128, "C")'><b>C)</b> una / Ø (boş)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 128, "D")'><b>D)</b> la / Ø (boş)</div>
+  </div>
+  <div class='exp' id='exp-128'><b>Cevap: B</b> - Milliyet tek başınayken tanımlık almaz (<i>es francesa</i>), sıfat varsa alır (<b>una</b> <i>francesa muy simpática</i>).</div>
+</div>
+<div class='qcard' data-q='129' data-ans='B'>
+  <div class='qtitle'><b>129.</b> (Ej. 5.2/3) <i>"El marido de Luisa es ________. Es ________ muy caro."</i> boşluklarına sırasıyla hangileri gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 129, "A")'><b>A)</b> un abogado / abogado</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 129, "B")'><b>B)</b> abogado / un abogado</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 129, "C")'><b>C)</b> un abogado / un abogado</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 129, "D")'><b>D)</b> abogado / abogado</div>
+  </div>
+  <div class='exp' id='exp-129'><b>Cevap: B</b> - Tek başına meslek: <i>es <b>abogado</b></i>; sıfatla birlikte: <i>es <b>un abogado</b> muy caro</i>.</div>
+</div>
+<div class='qcard' data-q='130' data-ans='B'>
+  <div class='qtitle'><b>130.</b> (Ej. 5.2/1 & 7) <i>"–¿Quién es Vargas Llosa? –Es ________; es ________."</i> boşluklarına sırasıyla ne gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 130, "A")'><b>A)</b> escritor / un peruano</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 130, "B")'><b>B)</b> un escritor / peruano</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 130, "C")'><b>C)</b> un escritor / un peruano</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 130, "D")'><b>D)</b> escritor / peruano</div>
+  </div>
+  <div class='exp' id='exp-130'><b>Cevap: B</b> - <i>¿Quién es?</i> sorusuna meslekle kimlik tanımlarken <b>un escritor</b>; milliyet tek başına <b>peruano</b>.</div>
+</div>
+<div class='qcard' data-q='131' data-ans='B'>
+  <div class='qtitle'><b>131.</b> (Ej. 5.2/2) <i>"La doctora Ramírez es ________ buenísima; es ________."</i> boşluklarına sırasıyla ne gelmelidir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 131, "A")'><b>A)</b> médica / una argentina</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 131, "B")'><b>B)</b> una médica / argentina</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 131, "C")'><b>C)</b> una médica / una argentina</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 131, "D")'><b>D)</b> médica / argentina</div>
+  </div>
+  <div class='exp' id='exp-131'><b>Cevap: B</b> - Sıfat olduğu için <b>una médica</b> <i>buenísima</i>; milliyet tek başına <b>argentina</b>.</div>
+</div>
+<div class='qcard' data-q='132' data-ans='B'>
+  <div class='qtitle'><b>132.</b> <i>"Tomás se ha hecho ________."</i> ve <i>"Alberto y Lola son ________. Son ________."</i> (Ej. 5.2/4 & 8) cümlelerinde hangisi doğrudur?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 132, "A")'><b>A)</b> un musulmán / unos estudiantes / unos socialistas</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 132, "B")'><b>B)</b> musulmán / estudiantes / socialistas (hiçbirinde <i>un/unos</i> kullanılmaz!)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 132, "C")'><b>C)</b> el musulmán / los estudiantes / los socialistas</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 132, "D")'><b>D)</b> musulmán / unos estudiantes / socialistas</div>
+  </div>
+  <div class='exp' id='exp-132'><b>Cevap: B</b> - Din (<i>musulmán</i>), meslek (<i>estudiantes</i>) ve siyasi görüş (<i>socialistas</i>) tek başına <i>un/unos</i> almaz.</div>
+</div>
+<div class='qcard' data-q='133' data-ans='B'>
+  <div class='qtitle'><b>133.</b> <i>"La hermana de Rosa es ________ de español."</i> ve <i>"Es ________ muy seria."</i> boşluklarına sırasıyla ne gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 133, "A")'><b>A)</b> una profesora / profesora</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 133, "B")'><b>B)</b> profesora / una profesora</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 133, "C")'><b>C)</b> una profesora / una profesora</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 133, "D")'><b>D)</b> profesora / profesora</div>
+  </div>
+  <div class='exp' id='exp-133'><b>Cevap: B</b> - <i>profesora de español</i> (branş tanımı, sıfat değil → Ø); <i>una profesora muy seria</i> (sıfat var → <i>una</i>).</div>
+</div>
+<div class='qcard' data-q='134' data-ans='B'>
+  <div class='qtitle'><b>134.</b> (Ej. 5.2/6 & 10) <i>"El hermano de Patricio es ________ famoso."</i> ve <i>"García Márquez es ________ de éxito."</i> boşluklarına ne gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 134, "A")'><b>A)</b> actor / escritor</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 134, "B")'><b>B)</b> un actor / un escritor (niteleme olduğu için <i>un</i> alır!)</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 134, "C")'><b>C)</b> el actor / el escritor</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 134, "D")'><b>D)</b> un actor / escritor</div>
+  </div>
+  <div class='exp' id='exp-134'><b>Cevap: B</b> - <i>famoso</i> ve <i>de éxito</i> niteleme yaptığı için <b>un actor famoso</b> ve <b>un escritor de éxito</b> denir.</div>
+</div>
+<div class='qcard' data-q='135' data-ans='B'>
+  <div class='qtitle'><b>135.</b> <i>"Antonio vende ____ coches."</i> (genel tür) ve <i>"Hoy ha vendido ____ coche."</i> (miktar = 1 adet) boşluklarına sırasıyla ne gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 135, "A")'><b>A)</b> unos / un</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 135, "B")'><b>B)</b> Ø (boş) / un</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 135, "C")'><b>C)</b> un / Ø (boş)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 135, "D")'><b>D)</b> los / un</div>
+  </div>
+  <div class='exp' id='exp-135'><b>Cevap: B</b> - Genel sınıf: <i>vende <b>Ø</b> coches</i>; miktar (1 adet): <i>ha vendido <b>un</b> coche</i>.</div>
+</div>
+<div class='qcard' data-q='136' data-ans='B'>
+  <div class='qtitle'><b>136.</b> <i>"Necesito ____ gafas."</i> (genel) ve <i>"Necesito ____ gafas especiales."</i> (sıfat var!) boşluklarına sırasıyla ne gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 136, "A")'><b>A)</b> unas / unas</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 136, "B")'><b>B)</b> Ø (boş) / unas</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 136, "C")'><b>C)</b> unas / Ø (boş)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 136, "D")'><b>D)</b> las / unas</div>
+  </div>
+  <div class='exp' id='exp-136'><b>Cevap: B</b> - Genel: <i>Necesito <b>Ø</b> gafas</i>; sıfatlı: <i>Necesito <b>unas</b> gafas especiales</i>.</div>
+</div>
+<div class='qcard' data-q='137' data-ans='B'>
+  <div class='qtitle'><b>137.</b> <i>"¿Tienes ____ hermanos?"</i> – <i>"Sí, tengo ____ hermana."</i> boşluklarına sırasıyla ne gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 137, "A")'><b>A)</b> unos / una</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 137, "B")'><b>B)</b> Ø (boş) / una</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 137, "C")'><b>C)</b> unos / Ø (boş)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 137, "D")'><b>D)</b> los / la</div>
+  </div>
+  <div class='exp' id='exp-137'><b>Cevap: B</b> - Genel soru: <i>¿Tienes <b>Ø</b> hermanos?</i>; miktar (1 kız kardeş): <i>Tengo <b>una</b> hermana</i>.</div>
+</div>
+<div class='qcard' data-q='138' data-ans='B'>
+  <div class='qtitle'><b>138.</b> (Ej. 5.3/2) <i>"Colecciono ____ monedas. Ayer me compré ____ monedas chinas."</i> boşluklarına sırasıyla ne gelir?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 138, "A")'><b>A)</b> unas / unas</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 138, "B")'><b>B)</b> Ø (boş) / unas</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 138, "C")'><b>C)</b> unas / Ø (boş)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 138, "D")'><b>D)</b> las / unas</div>
+  </div>
+  <div class='exp' id='exp-138'><b>Cevap: B</b> - Genel: <i>Colecciono <b>Ø</b> monedas</i>; miktar + sıfat: <i>me compré <b>unas</b> monedas chinas</i>.</div>
+</div>
+<div class='qcard' data-q='139' data-ans='B'>
+  <div class='qtitle'><b>139.</b> (Ej. 5.3/4 & 10) <i>"–¿Tomas ____ café? –Solo ____ taza al día."</i> ve <i>"–¿Quieres ____ queso? –No, gracias; es ____ queso muy fuerte."</i></div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 139, "A")'><b>A)</b> un / una / un / un</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 139, "B")'><b>B)</b> Ø (boş) / una / Ø (boş) / un</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 139, "C")'><b>C)</b> Ø (boş) / Ø (boş) / un / Ø (boş)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 139, "D")'><b>D)</b> un / Ø (boş) / Ø (boş) / un</div>
+  </div>
+  <div class='exp' id='exp-139'><b>Cevap: B</b> - <i>¿Tomas <b>Ø</b> café? –Solo <b>una</b> taza... / ¿Quieres <b>Ø</b> queso? –Es <b>un</b> queso muy fuerte</i>.</div>
+</div>
+<div class='qcard' data-q='140' data-ans='C'>
+  <div class='qtitle'><b>140.</b> (Ej. 5.3/1, 8, 11) Aşağıdaki cümlelerden hangisinde gereksiz <i>"un/una/unos/unas"</i> kullanıldığı için HATA vardır?</div>
+  <div class='opts'>
+    <div class='opt' data-opt='A' onclick='pick(this, 140, "A")'><b>A)</b> –¿Comes carne? –No, soy vegetariano.</div>
+    <div class='opt' data-opt='B' onclick='pick(this, 140, "B")'><b>B)</b> Ernesto es músico. Escribe canciones.</div>
+    <div class='opt' data-opt='C' onclick='pick(this, 140, "C")'><b>C)</b> Carolina es una vendedora y vende unas enciclopedias. (sıfat veya miktar olmadığı halde <i>una/unas</i> kullanılmış!)</div>
+    <div class='opt' data-opt='D' onclick='pick(this, 140, "D")'><b>D)</b> Luis siempre lleva corbata, pero hoy lleva una corbata muy original.</div>
+  </div>
+  <div class='exp' id='exp-140'><b>Cevap: C</b> - <i>Carolina es vendedora. Vende enciclopedias.</i> olmalıydı (<i>una</i> ve <i>unas</i> kullanılmaz).</div>
+</div>
+</div>
+<script>
+let correctCount = 0, wrongCount = 0, answered = {};
+function pick(el, qNum, letter) {
+  const card = el.closest('.qcard');
+  const ans = card.getAttribute('data-ans');
+  const opts = card.querySelectorAll('.opt');
+  opts.forEach(o => {
+    o.classList.remove('correct', 'wrong');
+    if (o.getAttribute('data-opt') === ans) o.classList.add('correct');
+  });
+  if (letter !== ans) el.classList.add('wrong');
+  document.getElementById('exp-' + qNum).style.display = 'block';
+  if (!(qNum in answered)) {
+    answered[qNum] = (letter === ans);
+    if (letter === ans) correctCount++; else wrongCount++;
+    updateScore();
+  }
+}
+function updateScore() {
+  const rem = 140 - (correctCount + wrongCount);
+  document.getElementById('scoreBox').textContent = `Doğru: ${correctCount} | Yanlış: ${wrongCount} | Kalan: ${rem}`;
+}
+let showingAll = false;
+function toggleAnswers() {
+  showingAll = !showingAll;
+  document.body.classList.toggle('show-all', showingAll);
+  document.querySelectorAll('.qcard').forEach(card => {
+    const ans = card.getAttribute('data-ans');
+    card.querySelectorAll('.opt').forEach(o => {
+      if (showingAll && o.getAttribute('data-opt') === ans) o.classList.add('correct');
+      else if (!showingAll && !(card.getAttribute('data-q') in answered)) o.classList.remove('correct');
+    });
+  });
+}
+</script>
+</body>
+</html>

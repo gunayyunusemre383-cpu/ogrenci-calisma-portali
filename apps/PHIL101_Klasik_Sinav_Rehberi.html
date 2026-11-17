@@ -1,0 +1,1275 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHIL 101: History & Philosophy of Social Sciences — Klasik Sınav Rehberi</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --primary: #4338ca;
+      --accent: #6366f1;
+      --success: #15803d;
+      --warning: #b45309;
+      --danger: #b91c1c;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --formula-bg: #eef2ff;
+      --concept-bg: #f0fdf4;
+      --tip-bg: #fefce8;
+      --trap-bg: #fef2f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      margin: 0;
+      padding: 24px 24px 56px;
+    }
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #1e1b4b, #3730a3, #4f46e5);
+      color: white;
+      padding: 32px 36px;
+      border-radius: 16px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 25px rgba(67, 56, 202, 0.2);
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      opacity: 0.92;
+      font-size: 1.05rem;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .badge {
+      font-size: 0.82rem;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-primary { background: rgba(255,255,255,0.2); color: #fff; }
+    .badge-accent { background: #818cf8; color: #1e1b4b; }
+    .badge-emerald { background: #34d399; color: #064e3b; }
+    
+    .toc {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      position: sticky;
+      top: 10px;
+      z-index: 30;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .toc::-webkit-scrollbar { display: none; }
+    .toc strong {
+      font-size: 0.84rem;
+      color: var(--primary);
+      margin-right: 2px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .toc a {
+      text-decoration: none;
+      background: #eef2ff;
+      color: var(--primary);
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid #c7d2fe;
+      font-size: 0.81rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all 0.15s ease;
+    }
+    .toc a:hover,
+    .toc a.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .chapter-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      scroll-margin-top: 84px;
+    }
+    .chapter-title {
+      color: var(--primary);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 12px;
+      margin-top: 0;
+      margin-bottom: 22px;
+      font-size: 1.55rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    h3 {
+      color: #1e1b4b;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+    h4 {
+      color: #3730a3;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
+    
+    /* Dual-Track Components */
+    .concept-block {
+      background: var(--concept-bg);
+      border-left: 5px solid var(--success);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.98rem;
+    }
+    .concept-block strong.concept-label {
+      color: var(--success);
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .eng-quote {
+      background: #f8fafc;
+      border-left: 5px solid #475569;
+      border: 1px dashed #94a3b8;
+      border-left: 5px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-style: normal;
+      color: #0f172a;
+      margin: 12px 0;
+      font-size: 0.95rem;
+    }
+    .eng-quote .eng-label {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .eng-quote .eng-text {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    .trap-box {
+      background: var(--trap-bg);
+      border-left: 5px solid var(--danger);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+    .trap-box strong { color: var(--danger); }
+
+    .tip-box {
+      background: var(--tip-bg);
+      border-left: 5px solid #eab308;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+    .tip-box strong { color: #854d0e; }
+
+    .formula-block {
+      background: var(--formula-bg);
+      border-left: 5px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .formula-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 580px;
+      margin: 0;
+      font-size: 0.92rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #eef2ff;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    tr:nth-child(even) { background: #f8fafc; }
+
+    .model-question {
+      background: #f8fafc;
+      border: 2px solid #c7d2fe;
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin: 24px 0;
+      box-shadow: 0 4px 12px rgba(67, 56, 202, 0.05);
+    }
+    .model-question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+    .model-question-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .score-badge {
+      background: #4f46e5;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    ul, ol { margin: 8px 0; padding-left: 24px; }
+    li { margin-bottom: 6px; }
+
+    .checklist-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .checklist-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .checklist-progress {
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #86efac;
+      border-radius: 999px;
+      padding: 3px 11px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+    .checklist-reset {
+      background: #ffffff;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .checklist-reset:hover {
+      background: #fee2e2;
+      color: #b91c1c;
+      border-color: #fca5a5;
+    }
+    .exam-checklist {
+      list-style: none !important;
+      margin: 0;
+      padding: 0 !important;
+      display: grid;
+      gap: 8px;
+    }
+    .exam-checklist li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid #bbf7d0;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .check-item:hover {
+      background: #ffffff;
+      border-color: #4ade80;
+      box-shadow: 0 2px 6px rgba(21, 128, 61, 0.08);
+    }
+    .check-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin: 3px 0 0;
+      accent-color: #15803d;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .check-item .check-text {
+      flex: 1;
+      color: #0f172a;
+    }
+    .check-item .check-state {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #166534;
+      background: #bbf7d0;
+      border-radius: 999px;
+      padding: 2px 8px;
+      white-space: nowrap;
+      display: none;
+      align-self: center;
+    }
+    .check-item.is-checked {
+      background: #dcfce7;
+      border-color: #4ade80;
+    }
+    .check-item.is-checked .check-text {
+      color: #14532d;
+      font-weight: 600;
+    }
+    .check-item.is-checked .check-state {
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 14px 12px 48px; }
+      header { padding: 22px 18px; }
+      header h1 { font-size: 1.5rem; }
+      .chapter-card { padding: 20px 16px; scroll-margin-top: 76px; }
+      .toc {
+        top: 6px;
+        padding: 8px 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .chapter-card { box-shadow: none; border: 1px solid #cbd5e1; page-break-inside: avoid; }
+      .toc { display: none; }
+      .checklist-reset { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="badges">
+      <span class="badge badge-primary">PHIL 101 • Social Sciences Philosophy</span>
+      <span class="badge badge-accent">PHIL 101 Midterm</span>
+      <span class="badge badge-emerald">Dual-Track Dual-Language Edition</span>
+    </div>
+    <h1>🏛️ PHIL 101: History and Philosophy of Social Sciences</h1>
+    <p>Klasik Sınav Master Çalışma Rehberi • Türkçe Saf Mantık &amp; Günlük Hayat Sezgisi + Sınav İngilizcesi Model Cevaplar + Düşünür Matrisleri &amp; Vize Tuzakları</p>
+  </header>
+
+  <nav class="toc">
+    <strong>Bölümlere Git:</strong>
+    <a href="#strategy">🎯 Sınav Stratejisi</a>
+    <a href="#vocab">📚 Kavram Sözlüğü</a>
+    <a href="#matrices">📊 Karşılaştırma Matrisleri</a>
+    <a href="#models">🔥 10 Model Soru &amp; Cevap</a>
+    <a href="#traps">🚨 Top 12 Vize Tuzağı</a>
+    <a href="#checklist">📋 Sınav Kontrol Listesi</a>
+  </nav>
+
+  <!-- ==================== STRATEJİ ==================== -->
+  <section id="strategy" class="chapter-card">
+    <div class="chapter-title">
+      <span>🎯 Bölüm 1: Klasik (Açık Uçlu) Sınavda 100 Puan Alma Stratejisi</span>
+      <span class="badge badge-primary">Exam Methodology</span>
+    </div>
+
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık &amp; Günlük Hayat Sezgisi: Hoca Ne İster?</strong>
+      Felsefe hocaları sizden ansiklopedik ezber beklemez. Hocanın aradığı şey: <em>"Bu öğrenci bir iddiayı alıp mantıksal bir zincire dizebiliyor mu, zıttıyla kıyaslayabiliyor mu ve somut bir örnekle temellendirebiliyor mu?"</em><br>
+      Eğer sadece "Hobbes Leviathan'ı yazdı, kral güçlü olsun dedi" derseniz 10 üzerinden 4 alırsınız. Ancak: <em>"Hobbes'un doğa durumu bir güvensizlik ve herkesin herkese karşı savaşı (bellum omnium contra omnes) olduğu için, bireyler rasyonel olarak can güvenliklerini devlete devreder"</em> dediğinizde 10 üzerinden 10 alırsınız!
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-title">💡 Her Klasik Cevapta Bulunması Gereken 4'lü Altın Formül:</div>
+      <ol>
+        <li><strong>Kavramsal Netlik (Definition &amp; Terms):</strong> İlk cümlede kavramı teknik adıyla tanımla (Örn: <em>"Verstehen is the interpretive understanding of subjective meaning..."</em>).</li>
+        <li><strong>Mekanizma &amp; Mantıksal Neden-Sonuç (Mechanism):</strong> Düşünür bu sonuca nasıl ulaştı? Adım adım açıkla.</li>
+        <li><strong>Karşılaştırma / Zıtlık (Dichotomy &amp; Contrast):</strong> Zıttıyla kıyasla (Naturalism vs Anti-Naturalism; Hobbes vs Locke; Mekanik vs Organik).</li>
+        <li><strong>Somut Örnek veya Sınav İçi Vaka (Contextual Evidence):</strong> Fikri havada bırakma (Durkheim'ın intihar verileri, modern bürokrasi, Weber'in demir kafesi).</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ==================== KAVRAM SÖZLÜĞÜ ==================== -->
+  <section id="vocab" class="chapter-card">
+    <div class="chapter-title">
+      <span>📚 Bölüm 2: Sosyal Bilimler Temel Kavram Sözlüğü (Vocabulary of Social Sciences)</span>
+      <span class="badge badge-accent">Core Foundations</span>
+    </div>
+
+    <h3>1. Gündelik Akıl Yürütmedeki 5 Hata (Alternatives to Social Research)</h3>
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+      Gündelik hayatta beynimiz tembeldir; kestirme yollara sapar ve genelleme yapar. Bilim ise bu kestirmelere karşı geliştirilmiş kurallar sistemidir.
+    </div>
+
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Bilişsel Hata</th>
+          <th>🇹🇷 Türkçe Mantığı &amp; Günlük Örnek</th>
+          <th>🇬🇧 Sınav İngilizcesi &amp; Akademik Tanım</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Overgeneralization</strong> (Aşırı Genelleme)</td>
+          <td>İki taksiciden kazık yiyip "Bütün taksiciler dolandırıcıdır" demek. Küçük örneklemden evrensel kural çıkarma.</td>
+          <td><em>"Drawing conclusions about an entire population based on a few unrepresentative observations."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Selective Observation</strong> (Seçici Gözlem)</td>
+          <td>Burçlara inanan birinin sadece tutan şeyleri hatırlayıp, tutmayan 20 kehaneti tamamen unutması.</td>
+          <td><em>"Focusing only on evidence that confirms prior beliefs while filtering out contradictory evidence (Confirmation Bias)."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Premature Closure</strong> (Erken Kapatma)</td>
+          <td>"Ben bu konuyu zaten anladım, daha fazla araştırmaya gerek yok" diyerek veriyi erken kesmek.</td>
+          <td><em>"Jumping to a definitive conclusion before sufficient empirical evidence has been systematically gathered."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Halo Effect</strong> (Hale Etkisi)</td>
+          <td>Ünlü bir kalp cerrahı borsa hakkında konuşunca onun her söylediğini finans gerçeği sanmak.</td>
+          <td><em>"Allowing the prestige, authority, or positive reputation of an individual or institution to validate statements outside their expertise."</em></td>
+        </tr>
+        <tr>
+          <td><strong>False Consensus</strong> (Yalancı Fikir Birliği)</td>
+          <td>"Herkes benim gibi düşünüyor, aksini düşünen zaten mantıksızdır" yanılgısı.</td>
+          <td><em>"The cognitive tendency to overestimate the extent to which other people share one's own opinions, values, and behaviors."</em></td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <h3>2. Ontoloji, Epistemoloji ve Metodoloji Ayrımı</h3>
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık &amp; Ağaç Sezgisi:</strong>
+      <ul style="margin: 0; padding-left: 20px;">
+        <li><strong>Ontoloji (Varlık):</strong> "Dışarıda ne var?" (Ağaç orada gerçekten var mı, yoksa zihnimizin uydurduğu bir kavram mı?)</li>
+        <li><strong>Epistemoloji (Bilgi):</strong> "Ağacın var olduğunu nereden biliyorsun?" (Gözlerinle görerek ve ölçerek mi [ampirizm], yoksa kültürel tanımlar aracılığıyla mı?)</li>
+        <li><strong>Metodoloji (Yöntem):</strong> "Ağacı araştırmak için hangi aletleri kullanacaksın?" (Cetvel ve tartı mı [nicel], yoksa ağacın orman köylüsü için taşıdığı manevi anlamı sorarak mı [nitel]?)</li>
+      </ul>
+    </div>
+
+    <div class="eng-quote">
+      <span class="eng-label">🇬🇧 High-Score Academic Definition</span>
+      <div class="eng-text">
+        <strong>Ontology:</strong> The philosophical study of the nature of reality and existence (What is real? Does an objective reality exist independently of human consciousness?).<br>
+        <strong>Epistemology:</strong> The theory of knowledge concerned with the nature, grounds, and validity of knowledge (How do we know what we know? What constitutes legitimate scientific evidence?).<br>
+        <strong>Methodology:</strong> The overarching system of rules, principles, and procedures that guide scientific inquiry within a specific ontological and epistemological framework.
+      </div>
+    </div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı:</strong> Hoca testte veya klasik soruda <em>"Ontology vs Epistemology"</em> ayrımını sorar. Asla metodoloji (araştırma tekniği, anket vs.) ile epistemolojiyi karıştırmayın! Epistemoloji bilginin meşruiyet teorisidir, metodoloji ise o bilgiye ulaşmak için izlenen yol haritasıdır.
+    </div>
+
+    <h3>3. Sosyal Bilimlerde 3 Büyük Paradigma</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Paradigma</th>
+          <th>Ontoloji &amp; Epistemoloji</th>
+          <th>🇹🇷 Temel Mantık</th>
+          <th>🇬🇧 Sınav İngilizcesi &amp; Temsilciler</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Positivist Social Science (PSS)</strong></td>
+          <td>Realist Ontoloji + Realist Epistemoloji</td>
+          <td>Toplum da tıpkı doğa gibidir; yerçekimi kanunu neyse toplumsal hareket kanunları da odur. Sayısal veri, anket ve istatistikle nesnel yasalar bulunur.</td>
+          <td><em>"Seeks universal causal laws using quantitative methods, value-free observation, and nomothetic explanation."</em> (Comte, Durkheim)</td>
+        </tr>
+        <tr>
+          <td><strong>Interpretive Social Science (ISS)</strong></td>
+          <td>Nominalist Ontoloji + Nominalist Epistemoloji</td>
+          <td>İnsan doğa nesnesi değildir; iradesi, bilinci ve duyguları vardır. Amaç yasa bulmak değil, eylemin ardındaki 'anlamı' kavramaktır (Verstehen).</td>
+          <td><em>"Focuses on subjective meaning, cultural context, and qualitative hermeneutic understanding (Verstehen) of social action."</em> (Max Weber, Dilthey)</td>
+        </tr>
+        <tr>
+          <td><strong>Critical Social Science (CSS)</strong></td>
+          <td>Tarihsel Gerçekçilik + Eleştirel Epistemoloji</td>
+          <td>Görünen gerçeklik aldatıcıdır (yanlış bilinç). Gerçeklik sınıfsal tahakküm ve sömürü yapıları içerir. Amaç sadece açıklamak değil, toplumu dönüştürmektir.</td>
+          <td><em>"Aims to uncover hidden structures of domination and empower people to change society (Emancipation &amp; Praxis)."</em> (Karl Marx, Frankfurt Okulu)</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- ==================== DÜŞÜNÜR MATRİSLERİ ==================== -->
+  <section id="matrices" class="chapter-card">
+    <div class="chapter-title">
+      <span>📊 Bölüm 3: Karşılaştırmalı Düşünür Matrisleri</span>
+      <span class="badge badge-primary">Comparative Matrices</span>
+    </div>
+
+    <h3>1. Doğa Durumu &amp; Toplum Sözleşmesi: Hobbes vs. Locke vs. Rousseau</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Kriter</th>
+          <th>Thomas Hobbes (1588–1679)</th>
+          <th>John Locke (1632–1704)</th>
+          <th>Jean-Jacques Rousseau (1712–1778)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>İnsan Doğası</strong></td>
+          <td>Bencil, korkak, doyumsuz, iktidar peşinde.</td>
+          <td>Rasyonel, ahlaki açıdan kapasiteli, eşit.</td>
+          <td>Doğası gereği iyi ("Soylu Vahşi"), masum, empati yeteneği olan (pitié).</td>
+        </tr>
+        <tr>
+          <td><strong>Doğa Durumu (State of Nature)</strong></td>
+          <td><em>"War of all against all"</em>. Hayat yalnız, yoksul, iğrenç, vahşi ve kısadır (solitary, poor, nasty, brutish, short).</td>
+          <td>Barışçıl ve akla uygun; fakat tarafsız bir yargıç ve mülkiyet güvenliği eksiktir.</td>
+          <td>Özgür ve mutlu; ta ki "özel mülkiyet" ve eşitsizlik doğana kadar.</td>
+        </tr>
+        <tr>
+          <td><strong>Sözleşmenin Amacı</strong></td>
+          <td>Ölüm korkusunu yenmek, mutlak can güvenliği sağlamak.</td>
+          <td>Doğal hakları (Hayat, Hürriyet, Mülkiyet) güvenceye almak.</td>
+          <td>Toplumsal eşitsizliği aşarak "Genel İrade" (General Will) altında birleşmek.</td>
+        </tr>
+        <tr>
+          <td><strong>Devlet Biçimi &amp; Egemenlik</strong></td>
+          <td><strong>Mutlak Monarşi (Leviathan):</strong> Egemen sözleşmeye taraf değildir; bölünemez, devredilemez.</td>
+          <td><strong>Sınırlı / Meşruti Yönetim:</strong> Yasama ve yürütme ayrımı; halkın direnme hakkı (Right to Revolution) vardır.</td>
+          <td><strong>Doğrudan Demokrasi:</strong> Egemenlik halktadır (Genel İrade bölünemez ve temsil edilemez).</td>
+        </tr>
+        <tr>
+          <td><strong>🇬🇧 Sınav Anahtar Cümlesi</strong></td>
+          <td><em>"Without a common power to keep them in awe, life is solitary, poor, nasty, brutish, and short."</em></td>
+          <td><em>"Government exists only to preserve life, liberty, and property; when it breaches trust, people have the right to revolt."</em></td>
+          <td><em>"Man was born free, and everywhere he is in chains. Sovereign authority lies in the indivisible General Will."</em></td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <h3>2. Sosyolojinin 19. Yüzyıl Kurucuları: Comte vs. Durkheim vs. Marx vs. Weber</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Düşünür</th>
+          <th>Temel Kavramlar &amp; Mekanizma</th>
+          <th>🇹🇷 Türkçe Özeti</th>
+          <th>🇬🇧 Sınav İngilizcesi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Auguste Comte</strong> (1798–1857)</td>
+          <td><em>Law of Three Stages, Social Statics, Social Dynamics, Positivism</em></td>
+          <td>İnsan zihni Teolojik (Tanrılar) → Metafizik (Soyut Güçler) → Pozitif (Bilimsel Yasalar) evrelerinden geçer. Sosyoloji bilimlerin kraliçesidir.</td>
+          <td><em>"Human thought progresses through the Theological, Metaphysical, and Positive stages, ending in scientific sociological laws."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Émile Durkheim</strong> (1858–1917)</td>
+          <td><em>Social Facts, Sui Generis, Anomie, Mechanical vs Organic Solidarity</em></td>
+          <td>Toplumsal olgular (dil, hukuk, ahlak) bireyin dışındadır ve onu zorlar. Birey psikolojisine indirgenemez. İşbölümü geliştikçe mekanikten organik dayanışmaya geçilir.</td>
+          <td><em>"Social facts must be studied as 'things' (sui generis); anomie is normlessness caused by rapid modernization."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Karl Marx</strong> (1818–1883)</td>
+          <td><em>Historical Materialism, Base &amp; Superstructure, Alienation (4 Dimensions)</em></td>
+          <td>Tüm tarih sınıf mücadelelerinin tarihidir. Altyapı (ekonomi/üretim ilişkileri) üstyapıyı (hukuk, din, devlet) belirler. Kapitalizmde işçi emeğine yabancılaşır.</td>
+          <td><em>"The mode of production of material life conditions the general process of social, political, and intellectual life. Class conflict drives history."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Max Weber</strong> (1864–1920)</td>
+          <td><em>Verstehen, Ideal Type, Protestant Ethic, Bureaucracy, Iron Cage (Demir Kafes)</em></td>
+          <td>Toplumu anlamak için eylemin öznel anlamı (Verstehen) çözülmelidir. Kalvinizm kapitalizmi doğurdu. Modern rasyonelleşme insanı 'demir kafese' hapsedebilir.</td>
+          <td><em>"Sociology is the science of interpretive understanding (Verstehen) of meaningful social action; rationalization leads to an 'iron cage'."</em></td>
+        </tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- ==================== 10 MODEL SORU ==================== -->
+  <section id="models" class="chapter-card">
+    <div class="chapter-title">
+      <span>🔥 Bölüm 4: 10 Adet Tam Kapsamlı Klasik Sınav Sorusu ve Model Cevaplar</span>
+      <span class="badge badge-emerald">Model Essay Bank</span>
+    </div>
+
+    <!-- MODEL 1 -->
+    <div class="model-question">
+      <div class="model-question-header">
+        <div class="model-question-title">Model Soru 1: Sosyal Bilim Araştırmaları ile Gündelik Akıl Yürütme Arasındaki Farklar ve Bilişsel Hatalar</div>
+        <span class="score-badge">10 Puan</span>
+      </div>
+      <p><strong>Exam Prompt:</strong> <em>"Discuss the fundamental differences between systematic social scientific research and ordinary daily knowledge acquisition. Identify at least three cognitive errors in everyday thinking and explain how the scientific method overcomes them."</em></p>
+      
+      <div class="concept-block">
+        <strong class="concept-label">🇹🇷 Türkçe Saf Mantık &amp; Soru Analizi:</strong>
+        Hoca burada şunu görmek ister: Sıradan insan kendi tecrübesine ve duyduklarına körü körüne inanır. Sosyal bilimci ise ampirik veri toplar, sistematik yöntem kullanır, şüphecidir ve önyargılarını nötrlemeye çalışır. Cevabında aşırı genelleme (overgeneralization), seçici gözlem (selective observation) ve erken kapatma (premature closure) kavramlarını net örneklerle ver!
+      </div>
+
+      <div class="eng-quote">
+        <span class="eng-label">🇬🇧 100 Puanlık Model İngilizce Essay Cevabı:</span>
+        <div class="eng-text">
+          Social scientific inquiry fundamentally differs from ordinary everyday reasoning in its systematic, empirical, and transparent methodology. Everyday knowledge relies heavily on subjective personal experience, casual observation, and unverified authority. Consequently, daily thinking is plagued by systematic cognitive errors:
+          <br><br>
+          First, <strong>Overgeneralization</strong> occurs when an individual draws sweeping conclusions about an entire social group based on a tiny or biased sample (e.g., claiming all immigrants cause unemployment after witnessing one case). The scientific method resolves this through <em>representative probability sampling</em>.
+          <br><br>
+          Second, <strong>Selective Observation</strong> occurs when people only notice phenomena that reinforce their existing prejudices while ignoring disconfirming facts. Science corrects this through <em>standardized measurement instruments</em> and systematic data recording.
+          <br><br>
+          Third, <strong>Premature Closure</strong> occurs when people finalize their judgment before sufficient evidence is collected. Social science combats this through the ethos of <em>organized skepticism</em>, hypothesis falsifiability, and peer review.
+        </div>
+      </div>
+
+      <div class="trap-box">
+        <strong>🚨 Vize Tuzağı &amp; Hocanın Puan Kırdığı Nokta:</strong> Bilişsel hataların sadece adını yazıp bırakırsan hoca 4 puan kırar. Her hatanın yanına bilimin bunu <strong>hangi teknik araçla</strong> (Örn: random sampling, systematic coding, falsification) düzelttiğini mutlaka eklemelisin!
+      </div>
+    </div>
+
+    <!-- MODEL 2 -->
+    <div class="model-question">
+      <div class="model-question-header">
+        <div class="model-question-title">Model Soru 2: Doğalcılık (Naturalism) ve Doğalcılık Karşıtlığı (Anti-Naturalism / Dilthey)</div>
+        <span class="score-badge">10 Puan</span>
+      </div>
+      <p><strong>Exam Prompt:</strong> <em>"Compare Naturalism and Anti-Naturalism regarding the relationship between the natural sciences and social sciences. Elaborate on Wilhelm Dilthey’s distinction between 'Erklären' and 'Verstehen'."</em></p>
+
+      <div class="concept-block">
+        <strong class="concept-label">🇹🇷 Türkçe Saf Mantık &amp; Günlük Hayat Sezgisi:</strong>
+        Bir taş yuvarlandığında kendi iradesi yoktur; yerçekimi yasası ne derse onu yapar (Doğa Bilimi = Nedenini Açıkla / Erklären). Ama bir insan bir binadan aşağı koşuyorsa, hırsız mı kovalıyor, yangından mı kaçıyor, spor mu yapıyor bilemezsin. Onun iç dünyasına, niyetine ve anlamına bakman gerekir (Sosyal Bilim = Anla ve Yorumla / Verstehen).
+      </div>
+
+      <div class="eng-quote">
+        <span class="eng-label">🇬🇧 100 Puanlık Model İngilizce Essay Cevabı:</span>
+        <div class="eng-text">
+          The debate between Naturalism and Anti-Naturalism addresses whether the epistemological and methodological framework of the natural sciences can be applied to the study of human society:
+          <br><br>
+          <strong>Naturalism</strong> asserts the <em>"unity of scientific method"</em>. It posits that society is part of the physical and biological world, subject to invariant causal laws. Just as physics investigates motion, social science must discover universal social laws using empirical observation, quantitative measurement, and causal explanations.
+          <br><br>
+          In sharp contrast, <strong>Anti-Naturalism</strong> (advocated by Wilhelm Dilthey and Heinrich Rickert) argues that human beings possess consciousness, free will, cultural values, and subjective meaning. Dilthey established a fundamental dichotomy:
+          <br>
+          • <strong>Erklären (Causal Explanation):</strong> The method of the Natural Sciences (<em>Naturwissenschaften</em>), aimed at discovering external, causal, mechanistic laws.
+          <br>
+          • <strong>Verstehen (Interpretive Understanding):</strong> The method of the Human/Social Sciences (<em>Geisteswissenschaften</em>), aimed at comprehending the inner, subjective lived experience (<em>Erlebnis</em>) and cultural meanings of human actors from within.
+        </div>
+      </div>
+
+      <div class="trap-box">
+        <strong>🚨 Vize Tuzağı:</strong> Almanca terimleri sakın unutma! <em>Erklären</em> = Explanation (Doğa), <em>Verstehen</em> = Understanding (Sosyal). Dilthey'in <em>Naturwissenschaften</em> vs <em>Geisteswissenschaften</em> ayrımını yazmak sınavda tam 10 puan getirir!
+      </div>
+    </div>
+
+    <!-- MODEL 3 -->
+    <div class="model-question">
+      <div class="model-question-header">
+        <div class="model-question-title">Model Soru 3: Nedensellik, Korelasyon ve Sahte İlişki (Spuriousness &amp; Variables)</div>
+        <span class="score-badge">10 Puan</span>
+      </div>
+      <p><strong>Exam Prompt:</strong> <em>"Explain the critical difference between correlation and causality. Define independent, dependent, and intervening variables, and describe how a 'spurious relationship' arises with a concrete example."</em></p>
+
+      <div class="concept-block">
+        <strong class="concept-label">🇹🇷 Türkçe Saf Mantık &amp; Dondurma-Boğulma Örneği:</strong>
+        Yaz aylarında dondurma satışları arttığında denizdeki boğulma vakaları da artar. İkisi arasında pozitif korelasyon vardır. Peki dondurma yemek insanı boğar mı? Hayır! Aradaki gizli değişken (confounding variable) <strong>sıcak havadır</strong>. Hava sıcak olunca hem dondurma yenir hem denize girilir. Sıcak hava kontrol altına alınınca bu ilişki yok olur; işte buna <strong>Sahte İlişki (Spurious Relationship)</strong> denir.
+      </div>
+
+      <div class="eng-quote">
+        <span class="eng-label">🇬🇧 100 Puanlık Model İngilizce Essay Cevabı:</span>
+        <div class="eng-text">
+          A fundamental axiom of scientific methodology states: <strong>"Correlation does not imply causation."</strong>
+          <br><br>
+          • <strong>Correlation:</strong> A statistical co-variation indicating that two variables change together.
+          <br>
+          • <strong>Causality:</strong> Requires three strict criteria: (1) Empirical association/correlation, (2) Temporal precedence (the independent variable must precede the dependent variable in time), and (3) Elimination of alternative explanations (non-spuriousness).
+          <br><br>
+          • <strong>Independent Variable (X):</strong> The causal factor or predictor that produces an effect.<br>
+          • <strong>Dependent Variable (Y):</strong> The outcome or effect being explained.<br>
+          • <strong>Intervening Variable (Z):</strong> The mediator through which X influences Y (X → Z → Y).
+          <br><br>
+          A <strong>Spurious Relationship</strong> occurs when an observed statistical correlation between X and Y is entirely artificial, caused by an unobserved antecedent third variable (Z) affecting both. For example, ice cream sales (X) and drowning deaths (Y) correlate positively; however, hot summer temperatures (Z) cause both. Controlling for temperature renders the correlation between ice cream and drowning zero.
+        </div>
+      </div>
+
+      <div class="trap-box">
+        <strong>🚨 Vize Tuzağı:</strong> Nedenselliğin 3 şartını (Korelasyon, Zamansal Önceleme, Sahte Olmama / Non-spuriousness) eksik yazarsan hoca yarım puan verir. Üçünü de tek tek maddeler halinde yaz!
+      </div>
+    </div>
+
+    <!-- MODEL 4 -->
+    <div class="model-question">
+      <div class="model-question-header">
+        <div class="model-question-title">Model Soru 4: Bilimsel Tutum ve Bilimin Din/Ahlaktan Ayrışması (Demarcation of Science)</div>
+        <span class="score-badge">10 Puan</span>
+      </div>
+      <p><strong>Exam Prompt:</strong> <em>"Trace the historical emergence of the modern scientific attitude. How did science separate itself from theological dogma and moral philosophy during the Scientific Revolution?"</em></p>
+
+      <div class="concept-block">
+        <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+        Ortaçağ'da (Thomas Aquinas) olgu ve ahlak birdi: "Güneş Dünya'nın etrafında döner çünkü Tanrı insanı evrenin merkezine koymuştur." Modern bilimle (Bacon, Galileo, Descartes) olgu ve değer birbirinden ayrıldı: "Gezegenlerin nasıl döndüğü ampirik bir olgudur; iyi ya da kötü olmasıyla ilgisi yoktur."
+      </div>
+
+      <div class="eng-quote">
+        <span class="eng-label">🇬🇧 100 Puanlık Model İngilizce Essay Cevabı:</span>
+        <div class="eng-text">
+          In the medieval scholastic worldview (exemplified by Thomas Aquinas), knowledge was an integrated synthesis of divine revelation, Aristotelian teleology, and moral philosophy. Empirical facts (<em>what is</em>) and moral values (<em>what ought to be</em>) were subsumed under Divine Natural Law.
+          <br><br>
+          The Scientific Revolution (Bacon, Galileo, Descartes, Newton) brought about the <strong>Demarcation of Science</strong>:
+          <br>
+          1. <strong>Francis Bacon's Empiricism:</strong> Demanded systematic inductive observation rather than reliance on theological authority or syllogistic dogma.
+          <br>
+          2. <strong>Galileo's Mechanization:</strong> Described the universe in mathematical terms, removing spiritual purposes (teleology) from physical motion.
+          <br>
+          3. <strong>Descartes' Radical Skepticism:</strong> Established reason and systematic doubt as the basis for epistemological certainty.
+          <br><br>
+          Consequently, science emerged as an autonomous, value-neutral (<em>wertfrei</em>), self-correcting discipline grounded in empirical testability, falsifiability, and methodological transparency.
+        </div>
+      </div>
+
+      <div class="trap-box">
+        <strong>🚨 Vize Tuzağı:</strong> "Demarcation" kelimesi vizede hocanın en sevdiği kavramdır. Bilimin sahte bilimden (pseudo-science) ve dogmatik dinden ayrım sınırını ifade ettiğini vurgulamayı unutma!
+      </div>
+    </div>
+
+    <!-- MODEL 5 -->
+    <div class="model-question">
+      <div class="model-question-header">
+        <div class="model-question-title">Model Soru 5: Hobbes ve Locke Karşılaştırması: Doğa Durumu ve Toplum Sözleşmesi</div>
+        <span class="score-badge">10 Puan</span>
+      </div>
+      <p><strong>Exam Prompt:</strong> <em>"Critically compare Thomas Hobbes and John Locke regarding the State of Nature, the purpose of the Social Contract, and the resulting structure of political authority."</em></p>
+
+      <div class="concept-block">
+        <strong class="concept-label">🇹🇷 Türkçe Saf Mantık &amp; Zombi / Mahkeme Benzetmesi:</strong>
+        Hobbes için doğa durumu kuralın olmadığı zombi kıyametidir; herkes birbirini öldürmek üzeredir, bu yüzden tek kurtuluş mutlak bir diktatöre (Leviathan) boyun eğmektir. Locke içinse doğa durumu medenidir, insanlar iyi geçinir ama aralarında bir mülk anlaşmazlığı çıkarsa tarafsız bir hakem yoktur; bu yüzden polis ve mahkeme kurmak için devlete yetki verirler. Devlet hakları çiğnerse halk isyan edip o hükümeti devirebilir!
+      </div>
+
+      <div class="eng-quote">
+        <span class="eng-label">🇬🇧 100 Puanlık Model İngilizce Essay Cevabı:</span>
+        <div class="eng-text">
+          Hobbes and Locke provide radically divergent contractarian foundations for the modern state:
+          <br><br>
+          <strong>1. State of Nature:</strong><br>
+          • <em>Hobbes:</em> Human nature is driven by competitive self-interest and fear. Without sovereign power, the state of nature is a chronic condition of war (<em>bellum omnium contra omnes</em>), making life <em>"solitary, poor, nasty, brutish, and short."</em><br>
+          • <em>Locke:</em> The state of nature is governed by the Law of Nature (Reason), where individuals enjoy natural rights to Life, Liberty, and Estate (Property). However, it suffers from inconveniences due to the absence of an impartial common judge.
+          <br><br>
+          <strong>2. The Social Contract and Sovereign Authority:</strong><br>
+          • <em>Hobbes:</em> Individuals surrender all natural rights unconditionally to an absolute sovereign (<em>Leviathan</em>) in exchange for physical security. The sovereign is not a party to the contract and cannot be lawfully overthrown.<br>
+          • <em>Locke:</em> The contract is fiduciary and conditional. Individuals delegate only the power to enforce the Law of Nature. Sovereign authority is limited by the rule of law and division of powers. If government violates natural rights, citizens possess the legitimate <strong>Right to Revolution</strong>.
+        </div>
+      </div>
+
+      <div class="trap-box">
+        <strong>🚨 Vize Tuzağı:</strong> Hobbes'un egemeninin sözleşmenin <em>tarafı olmadığını</em> (not a party to the contract) vurgulamak vize kağıdını sıradan öğrenci kağıdından ayırır! Çünkü egemen sözleşmeyi imzalamaz; sözleşme vatandaşların kendi arasında yapılır ve tüm yetki egemene hibe edilir.
+      </div>
+    </div>
+
+    <!-- MODEL 6 -->
+    <div class="model-question">
+      <div class="model-question-header">
+        <div class="model-question-title">Model Soru 6: Jean-Jacques Rousseau: Soylu Vahşi, Özel Mülkiyet ve Genel İrade (General Will)</div>
+        <span class="score-badge">10 Puan</span>
+      </div>
+      <p><strong>Exam Prompt:</strong> <em>"Explain Jean-Jacques Rousseau’s critique of modern civilization. How does he define the transition from the Noble Savage to inequality, and what is his solution through the concept of the 'General Will' (Volonté Générale)?"</em></p>
+
+      <div class="concept-block">
+        <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+        Rousseau der ki: "İnsan özgür doğar, oysa her yerde zincire vurulmuştur." İnsan ilkel doğa durumunda masum, huzurlu ve merhametliydi (Noble Savage). Ne zaman ki bir adam bir arsayı çitle çevirip 'Burası benimdir' dedi ve etraftakiler de buna inandı; işte savaşlar, cinayetler ve eşitsizlik o gün başladı! Kurtuluş: Herkesin kendi özel bencil çıkarını bırakıp toplumun ortak iyiliği olan "Genel İrade"ye katılmasıdır.
+      </div>
+
+      <div class="eng-quote">
+        <span class="eng-label">🇬🇧 100 Puanlık Model İngilizce Essay Cevabı:</span>
+        <div class="eng-text">
+          Rousseau radicalizes social contract theory by critiquing Enlightenment progress and civilization:
+          <br><br>
+          <strong>1. Critique of Civilization &amp; Inequality:</strong> In the original state of nature, humans were <em>"Noble Savages"</em>—healthy, free, driven by self-preservation (<em>amour de soi</em>) and natural pity/compassion (<em>pitié</em>). Degradation began with the institutionalization of <strong>private property</strong>: <em>"The first man who enclosed a piece of land and said 'This is mine' was the true founder of civil society."</em> This birthed vanity (<em>amour-propre</em>), servitude, and systemic class inequality.
+          <br><br>
+          <strong>2. The General Will (Volonté Générale):</strong> In <em>The Social Contract</em> (1762), Rousseau offers a democratic alternative. Citizens completely alienate themselves and their private rights to the community. In doing so, they form a collective moral body guided by the <strong>General Will</strong>—which is not simply the sum of private interests (<em>will of all</em>), but the collective will aimed strictly at the common good. Obeying the General Will means citizens obey only themselves, remaining as free as before (<em>"forced to be free"</em>).
+        </div>
+      </div>
+
+      <div class="trap-box">
+        <strong>🚨 Vize Tuzağı:</strong> <em>"General Will" (Genel İrade)</em> ile <em>"Will of All" (Herkesin İradesi)</em> kesinlikle aynı şey değildir! Will of All sadece bireysel bencil çıkarların toplamıdır (oy çokluğu); General Will ise toplumun ortak ve nesnel çıkarıdır.
+      </div>
+    </div>
+
+    <!-- MODEL 7 -->
+    <div class="model-question">
+      <div class="model-question-header">
+        <div class="model-question-title">Model Soru 7: Auguste Comte: Pozitivizm, Üç Hâl Yasası ve Sosyal Dinamik/Statik</div>
+        <span class="score-badge">10 Puan</span>
+      </div>
+      <p><strong>Exam Prompt:</strong> <em>"Detail Auguste Comte’s 'Law of Three Stages' and explain why he considered sociology to be the crowning achievement of the positive sciences. Distinguish between Social Statics and Social Dynamics."</em></p>
+
+      <div class="concept-block">
+        <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+        Comte'a göre insan aklı çocukluktan yetişkinliğe geçer gibi 3 aşamadan geçer:
+        1. Çocukken her şeyi cinlere perilere bağlarsın (Teolojik).
+        2. Ergenken soyut felsefi güçlerle açıklarsın (Metafizik: "Doğanın kanunu", "gizli güçler").
+        3. Yetişkin olunca sadece deney, gözlem ve matematiksel formüllere bakarsın (Pozitif).
+        Sosyoloji de fizik ve kimya gibi toplumun yerçekimi yasalarını keşfeden "Toplumsal Fizik"tir.
+      </div>
+
+      <div class="eng-quote">
+        <span class="eng-label">🇬🇧 100 Puanlık Model İngilizce Essay Cevabı:</span>
+        <div class="eng-text">
+          Auguste Comte, the founder of Positivism and coiner of the term "Sociology", proposed the <strong>Law of Three Stages</strong> governing the intellectual evolution of humankind:
+          <br><br>
+          1. <strong>Theological Stage:</strong> Phenomena are explained by supernatural agents, deities, or spirits (Animism → Polytheism → Monotheism).
+          <br>
+          2. <strong>Metaphysical Stage:</strong> Transitional phase where supernatural forces are replaced by abstract entities, essences, or philosophical personifications (e.g., "Nature's will").
+          <br>
+          3. <strong>Positive / Scientific Stage:</strong> The mind abandons the search for absolute causes and focuses strictly on empirical observation and mathematical laws governing relations of coexistence and succession.
+          <br><br>
+          Comte classified sciences hierarchically: Astronomy → Physics → Chemistry → Biology → <strong>Sociology</strong>. Sociology is the most complex, dependent, and final science—the "Queen of Sciences". Furthermore, Comte divided sociology into:
+          <br>
+          • <strong>Social Statics:</strong> The study of social order, stability, and institutional harmony.
+          <br>
+          • <strong>Social Dynamics:</strong> The study of progressive change, historical development, and intellectual evolution.
+        </div>
+      </div>
+
+      <div class="trap-box">
+        <strong>🚨 Vize Tuzağı:</strong> Comte'un bilimler hiyerarşisinde Sosyolojinin neden <em>en sonda</em> olduğunu sorarlar. Cevap: Çünkü nesnesi (insan toplumu) en karmaşık, en değişken ve kendinden önceki tüm bilimlerin (biyoloji, kimya, fizik) yasalarına bağımlı olan alandır!
+      </div>
+    </div>
+
+    <!-- MODEL 8 -->
+    <div class="model-question">
+      <div class="model-question-header">
+        <div class="model-question-title">Model Soru 8: Émile Durkheim: Toplumsal Olgular (Social Facts), Anomi ve Mekanik/Organik Dayanışma</div>
+        <span class="score-badge">10 Puan</span>
+      </div>
+      <p><strong>Exam Prompt:</strong> <em>"How does Émile Durkheim define 'Social Facts' as things (sui generis)? Contrast Mechanical and Organic Solidarity, and explain the sociological meaning of 'Anomie'."</em></p>
+
+      <div class="concept-block">
+        <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+        Türkçe konuşmayı sen mi icat ettin? Hayır. Sen doğduğunda Türkçe vardı, kuralları vardı; kurallara uymazsan kimse seni anlamaz. İşte dil bir <strong>Toplumsal Olgu</strong>dur: Bireyin dışındadır (externality) ve bireyi zorlar (coercion). Köyde herkes birbirine benzer, herkes aynı dine inanır, herkes aynı işi yapar (Mekanik Dayanışma). Modern şehirde ise doktor avukata, avukat bakkala muhtaçtır (Organik Dayanışma). Hızlı modernleşmede kurallar çökerse insan boşluğa düşer (Anomi).
+      </div>
+
+      <div class="eng-quote">
+        <span class="eng-label">🇬🇧 100 Puanlık Model İngilizce Essay Cevabı:</span>
+        <div class="eng-text">
+          Émile Durkheim established sociology as an independent empirical discipline governed by rigorous methodological rules:
+          <br><br>
+          <strong>1. Social Facts as Things (Choses / Sui Generis):</strong> Social facts are ways of acting, thinking, and feeling external to the individual, endowed with coercive power (<em>externality and constraint</em>). Because they exist independent of individual psychology (<em>sui generis</em>), <em>"social facts must be explained only by other social facts."</em>
+          <br><br>
+          <strong>2. Mechanical vs. Organic Solidarity (Division of Labor):</strong><br>
+          • <em>Mechanical Solidarity:</em> Traditional, low division of labor. Society is held together by high collective consciousness (shared beliefs, penal/repressive law). Individuals are homogeneous.<br>
+          • <em>Organic Solidarity:</em> Modern, high division of labor. Society functions like a biological organism where specialized organs depend on each other. Governed by restitutive (contract) law and individual autonomy.
+          <br><br>
+          <strong>3. Anomie (Normlessness):</strong> Rapid social transition, industrialization, or economic crisis weakens the collective moral regulation, leaving individual desires unchecked and producing acute social deregulation (anomie). Durkheim famously showed in <em>Suicide</em> (1897) that anomie drives specific suicide rates.
+        </div>
+      </div>
+
+      <div class="trap-box">
+        <strong>🚨 Vize Tuzağı:</strong> Durkheim'a göre intihar psikolojik bir delilik midir? HAYIR! Hoca bunu kesin sorar. Durkheim intiharın bireysel bir patoloji değil, toplumsal entegrasyon ve düzenleme (regulation) seviyesine bağlı bir <strong>sosyal olgu</strong> olduğunu kanıtlamıştır.
+      </div>
+    </div>
+
+    <!-- MODEL 9 -->
+    <div class="model-question">
+      <div class="model-question-header">
+        <div class="model-question-title">Model Soru 9: Karl Marx: Tarihsel Materyalizm, Altyapı/Üstyapı ve Yabancılaşmanın 4 Boyutu</div>
+        <span class="score-badge">10 Puan</span>
+      </div>
+      <p><strong>Exam Prompt:</strong> <em>"Elucidate Karl Marx's theory of Historical Materialism (Base and Superstructure). Explain the four distinct dimensions of Alienation (Entfremdung) experienced by the proletariat under capitalism."</em></p>
+
+      <div class="concept-block">
+        <strong class="concept-label">🇹🇷 Türkçe Saf Mantık &amp; iPhone Fabrikası Analojisi:</strong>
+        Foxconn fabrikasında 14 saat çalışan bir işçi düşün:
+        1. Günde binlerce iPhone üretir ama o telefon ona ait değildir; patronundur (Ürüne yabancılaşma).
+        2. Üretim sürecinde yaratıcı bir usta değil, sadece bir vidayı sıkan robottur (Üretim eylemine yabancılaşma).
+        3. İnsan yaratarak ve düşünerek var olur; oysa işçi hayvandan farksız hale getirilmiştir (İnsan türsel özüne yabancılaşma).
+        4. Yanındaki diğer işçi onun yoldaşı değil, işini kapacak bir rakiptir (Diğer insanlara yabancılaşma).
+      </div>
+
+      <div class="eng-quote">
+        <span class="eng-label">🇬🇧 100 Puanlık Model İngilizce Essay Cevabı:</span>
+        <div class="eng-text">
+          Karl Marx developed Historical Materialism, asserting that economic conditions determine human history:
+          <br><br>
+          <strong>1. Base and Superstructure:</strong><br>
+          • <strong>Economic Base (Substructure):</strong> The foundation consisting of the <em>Forces of Production</em> (technology, raw materials, labor) and <em>Relations of Production</em> (property relations, class ownership: Bourgeoisie vs Proletariat).<br>
+          • <strong>Superstructure:</strong> Legal, political, religious, and ideological institutions shaped by the base to legitimize the dominant class's rule. <em>"The ruling ideas of each age have ever been the ideas of its ruling class."</em>
+          <br><br>
+          <strong>2. The Four Dimensions of Alienation (Entfremdung):</strong> Under capitalist wage-labor, the worker is structurally separated from:<br>
+          1. <strong>The Product of Labor:</strong> The worker does not own what they produce; the object confronts them as an alien, hostile power.<br>
+          2. <strong>The Act of Production:</strong> Labor is forced and monotonous; work is not self-fulfillment but mere physical torment.<br>
+          3. <strong>Species-Essence (Gattungswesen):</strong> Conscious, creative production distinguishes humans from animals. Capitalism reduces human labor to animal survival.<br>
+          4. <strong>Other Workers (Fellow Human Beings):</strong> Instead of solidarity, market competition pits workers against each other as commodities.
+        </div>
+      </div>
+
+      <div class="trap-box">
+        <strong>🚨 Vize Tuzağı:</strong> Yabancılaşmayı psikolojik bir can sıkıntısı veya depresyon sanmayın! Marx için yabancılaşma sermaye mülkiyeti düzeninden kaynaklanan <strong>yapısal ve ekonomik bir kopuştur</strong>.
+      </div>
+    </div>
+
+    <!-- MODEL 10 -->
+    <div class="model-question">
+      <div class="model-question-header">
+        <div class="model-question-title">Model Soru 10: Max Weber: Anlayıcı Sosyoloji, İdeal Tip, Protestan Ahlakı ve Rasyonelleşme (Demir Kafes)</div>
+        <span class="score-badge">10 Puan</span>
+      </div>
+      <p><strong>Exam Prompt:</strong> <em>"Discuss Max Weber's methodological concepts: Verstehen and Ideal Types. How did the 'Protestant Ethic' foster modern capitalism, and what did Weber mean by the 'Iron Cage' (stahlhartes Gehäuse) of rationalization?"</em></p>
+
+      <div class="concept-block">
+        <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+        Marx "Tarihi ekonomi yönetir" derken; Weber "Durun, fikirler ve din de ekonomiyi yönetebilir!" dedi. Kalvinist Protestanlar zenginleştiklerinde para harcamayı günah saydı, kazandıkları parayı tekrar yatırıma dönüştürdü ve modern kapitalist sermaye birikimi doğdu. Fakat bu rasyonellik sonunda canavarlaştı: Bürokrasi, kurallar, evraklar insanı içine hapseden bir <strong>Demir Kafese</strong> dönüştü.
+      </div>
+
+      <div class="eng-quote">
+        <span class="eng-label">🇬🇧 100 Puanlık Model İngilizce Essay Cevabı:</span>
+        <div class="eng-text">
+          Max Weber formulated an anti-positivist, interpretive approach (<em>Verstehende Soziologie</em>):
+          <br><br>
+          <strong>1. Verstehen &amp; Ideal Types:</strong><br>
+          • <strong>Verstehen:</strong> Sociologists must reconstruct the subjective motives, intentions, and cultural meaning that individuals attach to their actions.<br>
+          • <strong>Ideal Type (Idealtypus):</strong> A conceptual measuring rod, constructed by accentuating specific empirical elements to analyze real-world phenomena (e.g., Ideal Type of Bureaucracy, Authority).
+          <br><br>
+          <strong>2. The Protestant Ethic &amp; Spirit of Capitalism:</strong> Weber challenged pure materialist determinism. He argued that the Calvinist doctrine of <em>Predestination</em> produced severe psychological anxiety. Calvinists sought proof of election through worldly asceticism, thrift, and relentless devotion to an occupational "calling" (<em>Beruf</em>). Wealth was reinvested rather than consumed, directly sparking modern rational capitalism.
+          <br><br>
+          <strong>3. Rationalization &amp; The Iron Cage (stahlhartes Gehäuse):</strong> As rationalization, formal calculation, and modern bureaucratic efficiency conquered social life, the religious spirit evaporated. Humanity became trapped in an <strong>"Iron Cage"</strong> of dehumanized bureaucratic rules, disenchantment of the world (<em>Entzauberung</em>), and loss of individual freedom.
+        </div>
+      </div>
+
+      <div class="trap-box">
+        <strong>🚨 Vize Tuzağı:</strong> "Ideal Type" günlük dildeki gibi "mükemmel, arzu edilen" anlamına GELMEZ! İdeal tip zihinsel bir analitik modeldir; Hitler'in diktatörlüğü için de bir "ideal tip" kurulabilir.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VİZE TUZAKLARI ==================== -->
+  <section id="traps" class="chapter-card">
+    <div class="chapter-title">
+      <span>🚨 Bölüm 5: Top 12 Vize Tuzağı &amp; Hoca Ne Sorar?</span>
+      <span class="badge badge-primary">High-Yield Exam Traps</span>
+    </div>
+
+    <div class="trap-box">
+      <strong>1. Hobbes Leviathan'ı Tanrısal Krallık mıdır?</strong><br>
+      HAYIR. Ortaçağ kralları meşruiyetini Tanrı'dan (Divine Right of Kings) alırdı. Hobbes'un Leviathan'ı ise tamamen dünyevi ve sekülerdir; meşruiyetini halkın yaptığı rasyonel toplum sözleşmesinden alır!
+    </div>
+
+    <div class="trap-box">
+      <strong>2. Locke mülkiyeti devletin mi verdiğini savunur?</strong><br>
+      HAYIR. Mülkiyet (Property) devletten ÖNCE, doğa durumunda vardır! İnsan doğadaki nesneye kendi emeğini kattığı an (Labor Theory of Property) o şey onun mülkü olur. Devlet mülkiyeti yaratmaz, sadece korur.
+    </div>
+
+    <div class="trap-box">
+      <strong>3. Durkheim'a göre suç patolojik bir hastalık mıdır?</strong><br>
+      HAYIR. Durkheim'a göre suç her sağlıklı toplumda görülen <strong>normal bir sosyal olgudur</strong>. Çünkü suç olmasa ahlaki sınırlar çizilemez ve toplumsal değişim gerçekleşemez.
+    </div>
+
+    <div class="trap-box">
+      <strong>4. Marx'a göre işçi patronla anlaşarak yabancılaşmayı çözebilir mi?</strong><br>
+      HAYIR. Yabancılaşma psikolojik değil yapısal bir olgudur. Üretim araçlarının özel mülkiyeti kalkmadan yabancılaşma ortadan kaldırılamaz.
+    </div>
+
+    <div class="trap-box">
+      <strong>5. Weber'e göre bürokrasi verimsiz bir hantallık mıdır?</strong><br>
+      HAYIR. Günlük dilde bürokrasi hantallıktır ama Weber'e göre ideal tip bürokrasi insanlık tarihindeki en rasyonel, en dakik ve en teknik yönetim aracıdır.
+    </div>
+
+    <div class="trap-box">
+      <strong>6. Nominalizm ile Realizm Ontolojisi Karışır:</strong><br>
+      Realizm: "Toplum bireylerden bağımsız gerçek bir nesnedir." (Durkheim). Nominalizm: "Toplum sadece bir isimdir; gerçek olan yalnızca bireyler ve onların eylemleridir." (Weber).
+    </div>
+
+    <div class="trap-box">
+      <strong>7. Korelasyon Asla Nedensellik Demek Değildir:</strong><br>
+      Testte "X ve Y arasında güçlü bir ilişki bulunmuştur, o halde X Y'ye neden olur" önermesi verilirse kesinlikle YANLIŞTIR. Üçüncü değişken etkisi elenmelidir.
+    </div>
+
+    <div class="trap-box">
+      <strong>8. Rousseau'nun "Zorla Özgür Kılınmak" (Forced to be Free) Çelişkisi:</strong><br>
+      Eğer bir birey bencil arzularıyla Genel İrade'ye karşı gelirse, toplum onu Genel İrade'ye uymaya zorlayabilir. Rousseau buna "Bireyi kendi gerçek aklına ve özgürlüğüne zorlamak" der.
+    </div>
+
+    <div class="trap-box">
+      <strong>9. Erken Kapatma (Premature Closure) vs Seçici Gözlem (Selective Observation):</strong><br>
+      Seçici gözlem sadece kendi inancını destekleyen kanıtı görmektir. Erken kapatma ise yeterli kanıt toplanmadan araştırmayı tamamen bitirmektir.
+    </div>
+
+    <div class="trap-box">
+      <strong>10. Mekanik Dayanışma vs Organik Dayanışma İsim Tuzağı:</strong><br>
+      Öğrenciler modern toplumu makine gibi sanıp "modern = mekanik" zanneder. TAM TERSİDİR! İlkel toplum mekaniktir (tek tip parçalar), modern toplum organiktir (farklılaşmış organlar).
+    </div>
+
+    <div class="trap-box">
+      <strong>11. Dilthey'in İki Bilim Ayrımı:</strong><br>
+      Doğa bilimleri = <em>Naturwissenschaften</em> (Açıklama / Erklären). Sosyal/Tinsel bilimler = <em>Geisteswissenschaften</em> (Anlama / Verstehen).
+    </div>
+
+    <div class="trap-box">
+      <strong>12. Hale Etkisi (Halo Effect) vs Otoriteye Başvurma:</strong><br>
+      Hale etkisi bir insanın bir alandaki parlaklığının (prestij, yakışıklılık, ödül) alakasız diğer konulardaki iddialarına da doğruymuş gibi yansımasıdır.
+    </div>
+  </section>
+
+  <!-- ==================== KONTROL LİSTESİ ==================== -->
+  <section id="checklist" class="chapter-card">
+    <div class="chapter-title">
+      <span>📋 Bölüm 6: Sınav Sabahı Hızlı Kontrol Listesi (Exam Checklist)</span>
+      <span class="badge badge-emerald">Ready for Midterm</span>
+    </div>
+
+    <div class="concept-block">
+      <div class="checklist-header">
+        <strong class="concept-label" style="margin: 0;">Sınava Girmeden Önce Bu Listeyi Tikle (İlerlemen Kaydedilir):</strong>
+        <div class="checklist-controls">
+          <span class="checklist-progress" id="checklistProgress">0 / 9 Tamamlandı</span>
+          <button type="button" class="checklist-reset" id="checklistReset">Sıfırla</button>
+        </div>
+      </div>
+      <ul class="exam-checklist" id="examChecklist">
+        <li><label class="check-item"><input type="checkbox" data-check-id="c1"><span class="check-text">Gündelik akıl yürütmedeki 5 bilişsel hatayı ve bilimin bunları nasıl aştığını ezbere biliyorum.</span><span class="check-state">Tamam ✓</span></label></li>
+        <li><label class="check-item"><input type="checkbox" data-check-id="c2"><span class="check-text">Realizm vs Nominalizm; Pozitivizm vs Yorumlayıcılık vs Eleştirel Teori ayrım tablosunu çizebilirim.</span><span class="check-state">Tamam ✓</span></label></li>
+        <li><label class="check-item"><input type="checkbox" data-check-id="c3"><span class="check-text">Nedenselliğin 3 şartını (korelasyon, zamansal öncelik, sahte ilişki olmaması) yazabilirim.</span><span class="check-state">Tamam ✓</span></label></li>
+        <li><label class="check-item"><input type="checkbox" data-check-id="c4"><span class="check-text">Dilthey'in Erklären vs Verstehen ayrımını açıklayabilirim.</span><span class="check-state">Tamam ✓</span></label></li>
+        <li><label class="check-item"><input type="checkbox" data-check-id="c5"><span class="check-text">Hobbes, Locke ve Rousseau'nun doğa durumu ve toplum sözleşmesini karşılaştırabilirim.</span><span class="check-state">Tamam ✓</span></label></li>
+        <li><label class="check-item"><input type="checkbox" data-check-id="c6"><span class="check-text">Comte'un Üç Hâl Yasası'nı (Teolojik, Metafizik, Pozitif) ve Sosyal Statik/Dinamik ayrımını biliyorum.</span><span class="check-state">Tamam ✓</span></label></li>
+        <li><label class="check-item"><input type="checkbox" data-check-id="c7"><span class="check-text">Durkheim'ın Sosyal Olgularını, Anomi kavramını ve Mekanik/Organik Dayanışmasını tanımlayabilirim.</span><span class="check-state">Tamam ✓</span></label></li>
+        <li><label class="check-item"><input type="checkbox" data-check-id="c8"><span class="check-text">Marx'ın Tarihsel Materyalizmini ve yabancılaşmanın 4 boyutunu sayabilirim.</span><span class="check-state">Tamam ✓</span></label></li>
+        <li><label class="check-item"><input type="checkbox" data-check-id="c9"><span class="check-text">Weber'in Verstehen, İdeal Tip, Protestan Ahlakı ve Demir Kafes teorisini özetleyebilirim.</span><span class="check-state">Tamam ✓</span></label></li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+<script>
+  (function () {
+    const toc = document.querySelector('.toc');
+    const tocLinks = Array.from(document.querySelectorAll('.toc a[href^="#"]'));
+    const sections = tocLinks
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    function getTocOffset() {
+      if (!toc) return 20;
+      return Math.ceil(toc.getBoundingClientRect().height) + 20;
+    }
+
+    function syncScrollMargins() {
+      const offset = getTocOffset();
+      sections.forEach(sec => {
+        sec.style.scrollMarginTop = offset + 'px';
+      });
+    }
+
+    function setActiveLink(id) {
+      tocLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    }
+
+    let lockSpyUntil = 0;
+    let activeNavToken = 0;
+    function scrollToSection(target, behavior) {
+      if (!target) return;
+      const token = ++activeNavToken;
+      const getDesiredY = () => {
+        const maxY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        return Math.max(0, Math.min(maxY, window.scrollY + target.getBoundingClientRect().top - getTocOffset()));
+      };
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (behavior === 'auto' || reduceMotion) {
+        lockSpyUntil = Date.now() + 200;
+        window.scrollTo(0, getDesiredY());
+        return;
+      }
+      const startY = window.scrollY;
+      const startTime = performance.now();
+      const duration = 380;
+      lockSpyUntil = Date.now() + duration + 250;
+      const step = (now) => {
+        if (token !== activeNavToken) return;
+        const p = Math.min(1, (now - startTime) / duration);
+        const ease = 1 - Math.pow(1 - p, 3);
+        const destY = getDesiredY();
+        window.scrollTo(0, startY + (destY - startY) * ease);
+        if (p < 1) {
+          requestAnimationFrame(step);
+        } else {
+          setTimeout(() => {
+            if (token !== activeNavToken || !toc) return;
+            const tocRect = toc.getBoundingClientRect();
+            const rectTop = target.getBoundingClientRect().top;
+            if (tocRect.top <= 18 && rectTop < tocRect.bottom + 8) {
+              window.scrollTo(0, getDesiredY());
+            }
+          }, 120);
+        }
+      };
+      requestAnimationFrame(step);
+    }
+
+    tocLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        const target = href ? document.querySelector(href) : null;
+        if (!target) return;
+        e.preventDefault();
+        link.blur();
+        setActiveLink(target.id);
+        try { history.replaceState(null, '', href); } catch (_) {}
+        scrollToSection(target, 'smooth');
+      });
+    });
+
+    function updateSpy() {
+      if (Date.now() < lockSpyUntil || !sections.length) return;
+      const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 20;
+      if (atBottom) {
+        setActiveLink(sections[sections.length - 1].id);
+        return;
+      }
+      const threshold = getTocOffset() + 24;
+      let current = sections[0];
+      for (const sec of sections) {
+        if (sec.getBoundingClientRect().top <= threshold) current = sec;
+      }
+      if (current) setActiveLink(current.id);
+    }
+
+    syncScrollMargins();
+    window.addEventListener('resize', syncScrollMargins);
+    window.addEventListener('scroll', updateSpy, { passive: true });
+    if (location.hash) {
+      const initialTarget = document.querySelector(location.hash);
+      if (initialTarget) {
+        setActiveLink(initialTarget.id);
+        setTimeout(() => scrollToSection(initialTarget, 'auto'), 50);
+      }
+    } else if (sections[0]) {
+      setActiveLink(sections[0].id);
+    }
+
+    const STORAGE_KEY = 'phil101_exam_checklist_v1';
+    const checkboxes = Array.from(document.querySelectorAll('#examChecklist input[type="checkbox"]'));
+    const progressEl = document.getElementById('checklistProgress');
+    const resetBtn = document.getElementById('checklistReset');
+
+    function loadState() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') || {};
+      } catch (_) {
+        return {};
+      }
+    }
+
+    function saveState(state) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (_) {}
+    }
+
+    function renderChecklist(state) {
+      let done = 0;
+      checkboxes.forEach(cb => {
+        const checked = !!state[cb.dataset.checkId];
+        cb.checked = checked;
+        const row = cb.closest('.check-item');
+        if (row) row.classList.toggle('is-checked', checked);
+        if (checked) done++;
+      });
+      if (progressEl) {
+        const total = checkboxes.length;
+        progressEl.textContent = done === total
+          ? `${done} / ${total} Tamamlandı (Hazırsın!)`
+          : `${done} / ${total} Tamamlandı`;
+      }
+    }
+
+    let checkState = loadState();
+    renderChecklist(checkState);
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        checkState[cb.dataset.checkId] = cb.checked;
+        saveState(checkState);
+        renderChecklist(checkState);
+      });
+    });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        checkState = {};
+        saveState(checkState);
+        renderChecklist(checkState);
+      });
+    }
+  })();
+</script>
+</body>
+</html>

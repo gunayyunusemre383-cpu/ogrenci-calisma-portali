@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Economics I — Chapters 1–5 Dev Konu Özeti &amp; Tüm Formüller</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --primary: #1e3a8a;
+      --accent: #2563eb;
+      --success: #15803d;
+      --warning: #b45309;
+      --danger: #b91c1c;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --formula-bg: #eff6ff;
+      --concept-bg: #f0fdf4;
+      --tip-bg: #fefce8;
+      --trap-bg: #fef2f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      margin: 0;
+      padding: 24px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+      color: white;
+      padding: 32px 36px;
+      border-radius: 16px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2);
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      opacity: 0.92;
+      font-size: 1.05rem;
+    }
+    .toc {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .toc a {
+      text-decoration: none;
+      background: #eff6ff;
+      color: var(--primary);
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid #bfdbfe;
+      font-size: 0.92rem;
+    }
+    .toc a:hover {
+      background: var(--accent);
+      color: white;
+    }
+    .chapter-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .chapter-title {
+      color: var(--primary);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 12px;
+      margin-top: 0;
+      margin-bottom: 22px;
+      font-size: 1.55rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    h3 {
+      color: #1e293b;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+    }
+    .badge {
+      background: var(--accent);
+      color: white;
+      font-size: 0.85rem;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    .concept-block {
+      background: var(--concept-bg);
+      border-left: 5px solid var(--success);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .formula-block {
+      background: var(--formula-bg);
+      border-left: 5px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .formula-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 1.06rem;
+    }
+    .math-eq {
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      background: #ffffff;
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: 1px solid #bfdbfe;
+      display: inline-block;
+      margin: 6px 0;
+    }
+    .frac {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      margin: 0 4px;
+    }
+    .frac > span {
+      display: block;
+      padding: 0 6px;
+    }
+    .frac span.top {
+      border-bottom: 2px solid #0f172a;
+    }
+    .tip-box {
+      background: var(--tip-bg);
+      border-left: 5px solid #eab308;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.96rem;
+    }
+    .trap-box {
+      background: var(--trap-bg);
+      border-left: 5px solid var(--danger);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.96rem;
+    }
+    .eng-quote {
+      background: #f1f5f9;
+      border: 1px dashed #94a3b8;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-style: italic;
+      color: #1e293b;
+      margin: 8px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background: #f1f5f9;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    tr:nth-child(even) { background: #f8fafc; }
+    ul { margin: 8px 0; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    @media (max-width: 720px) {
+      body { padding: 10px; }
+      header { padding: 20px; border-radius: 12px; }
+      header h1 { font-size: 1.45rem; }
+      .chapter-card { padding: 16px; }
+      .chapter-title { font-size: 1.25rem; }
+      .toc { padding: 12px; gap: 8px; }
+      .math-eq { display: block; max-width: 100%; overflow-x: auto; font-size: 1rem; padding: 8px 10px; }
+      table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .chapter-card { box-shadow: none; border: 1px solid #cbd5e1; page-break-inside: avoid; }
+      .toc { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📘 Introduction to Economics I — 5 Bölüm Dev Vize Özeti &amp; Tüm Formüller</h1>
+    <p>Case, Fair &amp; Oster — Principles of Economics (Chapters 1, 2, 3, 4 &amp; 5: Konu Özeti + Sınav İngilizcesi Cümleleri + Türev &amp; Formül Rehberi)</p>
+  </header>
+
+  <nav class="toc">
+    <strong>Hızlı Geçiş:</strong>
+    <a href="#ch1">Chapter 1: Scope &amp; Method</a>
+    <a href="#ch2">Chapter 2: Scarcity, PPF &amp; Trade</a>
+    <a href="#ch3">Chapter 3: Demand, Supply &amp; Equilibrium</a>
+    <a href="#ch4">Chapter 4: Price Controls, CS/PS &amp; DWL</a>
+    <a href="#ch5">Chapter 5: Elasticity, Derivatives &amp; Tax</a>
+  </nav>
+
+  <!-- ==================== CHAPTER 1 ==================== -->
+  <div class="chapter-card" id="ch1">
+    <h2 class="chapter-title">
+      <span>CHAPTER 1: The Scope and Method of Economics</span>
+      <span class="badge">Temel Kavramlar, Yöntem &amp; Politikalar</span>
+    </h2>
+
+    <h3>1.1 Temel Tanımlar ve 3 Çekirdek Kavram (Three Core Concepts)</h3>
+    <div class="concept-block">
+      <ul>
+        <li><strong>Economics (İktisat):</strong> İnsanların ve toplumların sınırsız isteklerini karşılamak için doğanın ve önceki nesillerin sunduğu <strong>kıt kaynakları (scarce resources)</strong> nasıl kullanmayı seçtiklerinin incelenmesidir.
+          <div class="eng-quote">"Economics is the study of how individuals and societies choose to use the scarce resources that nature and previous generations have provided."</div>
+        </li>
+        <li><strong>Scarcity (Kıtlık — Bill Gates Sorusu):</strong> Kıtlık sadece "parasızlık" demek <strong>değildir</strong>! Dünyanın en zengin insanı (Bill Gates) bile günde sadece <strong>24 saate (time and leisure scarcity)</strong> sahiptir ve vaktini bir şeye harcadığında diğer alternatiflerden vazgeçmek zorundadır.</li>
+        <li><strong>1. Opportunity Cost (Fırsat Maliyeti):</strong> Bir seçim yaptığımızda <strong>vazgeçtiğimiz en iyi alternatifin</strong> değeridir (<em>"The best alternative that we forgo, or give up, when we make a choice or a decision"</em>).</li>
+        <li><strong>2. Marginalism &amp; Sunk Costs (Marjinalizm ve Batık Maliyetler):</strong>
+          <ul>
+            <li><strong>Marginal Cost (MC):</strong> <em>"Ekstra 1 birim daha"</em> üretmenin veya yapmanın getirdiği ekstra maliyettir.</li>
+            <li><strong>Sunk Cost (Batık Maliyet):</strong> Geçmişte ödenmiş ve artık geri alınamaz olan maliyetlerdir. Rasyonel kararlarda <strong>sunk cost dikkate alınmaz</strong>, sadece marjinal fayda ve marjinal maliyete bakılır!</li>
+          </ul>
+        </li>
+        <li><strong>3. Efficient Markets — No Free Lunch (Etkin Piyasalar):</strong> Rekabetçi piyasalarda kolay kâr fırsatları herkes tarafından hemen fark edilip anında yok edilir (<em>"Profit opportunities are eliminated almost instantaneously"</em>).</li>
+      </ul>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-title">Chapter 1 Formülleri: Average Cost, Marginal Cost ve Doğrunun Eğimi (Slope)</div>
+      <div class="math-eq">
+        Average Cost (AC) =
+        <span class="frac"><span class="top">Total Cost (TC)</span><span>Quantity (Q)</span></span>
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Marginal Cost (MC) =
+        <span class="frac"><span class="top">&Delta;Total Cost (&Delta;TC)</span><span>&Delta;Quantity (&Delta;Q)</span></span>
+      </div>
+      <br>
+      <div class="math-eq">
+        Slope (Eğim) =
+        <span class="frac"><span class="top">&Delta;Y</span><span>&Delta;X</span></span>
+        =
+        <span class="frac"><span class="top">Y<sub>2</sub> &minus; Y<sub>1</sub></span><span>X<sub>2</sub> &minus; X<sub>1</sub></span></span>
+        &nbsp;&nbsp;&rArr;&nbsp;&nbsp;
+        İktisat Grafiklerinde: Slope =
+        <span class="frac"><span class="top">P<sub>2</sub> &minus; P<sub>1</sub></span><span>Q<sub>2</sub> &minus; Q<sub>1</sub></span></span>
+      </div>
+    </div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Klasiği (Frank'in Spor Salonu — Problem 1.2):</strong><br>
+      Frank aylık <strong>$80</strong> sabit ve sınırsız üyelik ücreti ödeyip ayda <strong>10 kez</strong> spora gidiyorsa:<br>
+      • <strong>Average Cost per trip:</strong> $80 / 10 = <strong>$8 per trip</strong>.<br>
+      • <strong>Marginal Cost of an additional (11th) workout:</strong> Parasal olarak <strong>$0 (Zero dollars)!</strong> Çünkü $80 zaten ödenmiş bir <em>sunk cost</em>'tur ve üyelik sınırsızdır; tek marjinal maliyet <strong>zamanının fırsat maliyetidir (opportunity cost of his time)</strong>.
+    </div>
+
+    <h3>1.2 Alt Dallar, Yöntem, Hatalar (Pitfalls) ve 4 Politika Hedefi</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Kavram Çifti</th>
+          <th>Türkçe Mantığı</th>
+          <th>Sınav İngilizcesi Anahtar Kelimeleri</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Microeconomics vs. Macroeconomics</strong></td>
+          <td><strong>Mikro:</strong> Tekil birimler (firmalar, hane halkları, tek bir malın fiyatı).<br><strong>Makro:</strong> Ülke geneli toplamlar (enflasyon, işsizlik, GSYİH / GDP, toplam büyüme).</td>
+          <td><em>Individual decision-making units (firms &amp; households)</em> vs. <em>National aggregates (inflation, unemployment, national output)</em>.</td>
+        </tr>
+        <tr>
+          <td><strong>Positive vs. Normative Economics</strong></td>
+          <td><strong>Positive:</strong> "Nedir?" sorusuna cevap verir. Test edilebilir sebep-sonuç olgularıdır (doğru veya yanlış olabilir, değer yargısı içermez).<br><strong>Normative:</strong> "Ne olmalıdır?" sorusuna cevap verir. Değer yargısı ve politika görüşü içerir (<em>should, ought to, fair/unfair</em>).</td>
+          <td><strong>Positive:</strong> <em>"What is" — objective, testable, cause-and-effect, no value judgments.</em><br><strong>Normative:</strong> <em>"What ought to be / should be" — subjective value judgments.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Ockham's Razor &amp; Ceteris Paribus</strong></td>
+          <td><strong>Ockham's Razor:</strong> Modellerde gereksiz detayları kesip atarak modeli basit tutma ilkesi.<br><strong>Ceteris Paribus:</strong> "Diğer tüm değişkenler sabitken" tek bir değişkenin etkisini ölçmek.</td>
+          <td><em>Ockham's Razor: cutting away irrelevant details.</em><br><em>Ceteris Paribus: "all else equal" / holding other variables constant.</em></td>
+        </tr>
+        <tr>
+          <td><strong>2 Mantık Hatası (Two Pitfalls)</strong></td>
+          <td><strong>1. Post Hoc, Ergo Propter Hoc:</strong> A olayı B'den önce oldu diye A'nın B'ye sebep olduğunu sanmak (tesadüfü/korelasyonu nedensellik sanmak).<br><strong>2. Fallacy of Composition:</strong> Tek bir kişi için doğru olan şeyin herkes aynı anda yaptığında da doğru olacağını sanmak (örn. konserde tek kişinin ayağa kalkması vs. herkesin ayağa kalkması).</td>
+          <td><strong>1. Post Hoc Fallacy:</strong> <em>"After this, therefore because of this" (confusing correlation/timing with causation).</em><br><strong>2. Fallacy of Composition:</strong> <em>Believing that what is true for a part is necessarily true for the whole.</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="concept-block">
+      <strong>🏛️ İktisat Politikalarını Değerlendiren 4 Kriter (Four Criteria for Judging Economic Outcomes):</strong>
+      <ol>
+        <li><strong>Efficiency (Allocative Efficiency — Verimlilik):</strong> İnsanların istediği şeyleri mümkün olan en düşük maliyetle üretmek (<em>"Producing what people want at the least possible cost"</em>).</li>
+        <li><strong>Equity (Adalet / Hakkaniyet):</strong> Gelirlerin, faydaların ve maliyet yüklerinin toplumda adil dağılması (<em>"Fairness in distribution"</em>).</li>
+        <li><strong>Economic Growth (Ekonomik Büyüme):</strong> Ekonominin toplam üretiminin zaman içinde artması (<em>"Increase in total output of an economy"</em>).</li>
+        <li><strong>Stability (İstikrar):</strong> Düşük enflasyon ve tam istihdamla istikrarlı büyüme (<em>"Steady growth with low inflation and full employment"</em>).</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ==================== CHAPTER 2 ==================== -->
+  <div class="chapter-card" id="ch2">
+    <h2 class="chapter-title">
+      <span>CHAPTER 2: The Economic Problem — Scarcity and Choice</span>
+      <span class="badge">Üretim Faktörleri, Comparative Advantage &amp; PPF</span>
+    </h2>
+
+    <h3>2.1 Üç Temel İktisadi Soru, Üretim Faktörleri ve Sermaye (Capital)</h3>
+    <div class="concept-block">
+      <ul>
+        <li><strong>Her Toplumun Cevaplaması Gereken 3 Temel Soru:</strong>
+          <ol>
+            <li><strong>What gets produced?</strong> (Ne üretilecek?)</li>
+            <li><strong>How is it produced?</strong> (Nasıl / hangi teknoloji ve kaynaklarla üretilecek?)</li>
+            <li><strong>Who gets what is produced?</strong> (Üretilenleri kim alacak / nasıl bölüşülecek?)</li>
+          </ol>
+        </li>
+        <li><strong>Factors of Production (Üretim Faktörleri / Inputs):</strong>
+          <ul>
+            <li><strong>Land:</strong> Tüm doğal kaynaklar.</li>
+            <li><strong>Labor:</strong> Fiziksel ve zihinsel insan emeği.</li>
+            <li><strong>Capital (Sermaye):</strong> Başka malları üretmek için önceden üretilmiş olan mallar!
+              <ul>
+                <li><em>Physical / Tangible Capital:</em> Makineler, fabrikalar, halı tezgahları (<em>looms</em>), ekipmanlar.</li>
+                <li><em>Intangible / Human Capital:</em> Eğitim, bilgi, mesleki beceriler (<em>vocational training</em>).</li>
+                <li><em>Social Capital:</em> Yollar, köprüler, kamu altyapısı (<em>infrastructure</em>).</li>
+              </ul>
+            </li>
+            <li><strong>Entrepreneurship (Girişimcilik):</strong> Kaynakları bir araya getirip risk alarak yeni iş/ürün kuran kişi.</li>
+          </ul>
+        </li>
+        <li><strong>🚨 Kritik Ayrım — Economic Investment vs. Financial Transaction:</strong> İktisatta <strong>Investment (Yatırım)</strong> demek hisse senedi veya tahvil almak <strong>değildir</strong>; yeni fabrika, makine veya tezgah (<strong>new capital</strong>) üretmektir!</li>
+        <li><strong>Consumer Goods vs. Capital Goods:</strong> Bugünkü tüketim için üretilen mallar <strong>Consumer Goods</strong> (örn. halı); gelecekte daha fazla mal üretmek için yapılan makineler <strong>Capital Goods</strong> (örn. halı dokuma tezgahı / <em>loom</em>)'dur. Daha fazla <em>Capital Good</em> üretmek zamanla <strong>PPF'i dışa/sağa kaydırır (Economic Growth)</strong>!</li>
+      </ul>
+    </div>
+
+    <h3>2.2 Absolute Advantage, Comparative Advantage ve Fırsat Maliyeti Hesapları</h3>
+    <div class="formula-block">
+      <div class="formula-title">1. Fırsat Maliyeti (Opportunity Cost) ve Comparative Advantage Formülü</div>
+      <div class="math-eq">
+        Opportunity Cost of 1 unit of Good X =
+        <span class="frac"><span class="top">What You Give Up (Max Output of Good Y)</span><span>What You Get (Max Output of Good X)</span></span>
+        =
+        <span class="frac"><span class="top">Y</span><span>X</span></span>
+      </div>
+      <ul>
+        <li><strong>Absolute Advantage (Mutlak Üstünlük):</strong> Aynı sürede/işçiyle <strong>daha fazla adet üreten</strong> (veya aynı işi daha az kaynakla yapan) taraf. <em>(Bir kişi/ülke her iki malda birden Absolute Advantage sahibi olabilir!)</em></li>
+        <li><strong>Comparative Advantage (Karşılaştırmalı Üstünlük):</strong> Bir malı üretirken <strong>Fırsat Maliyeti (Opportunity Cost) DAHA DÜŞÜK olan</strong> taraf!
+          <div class="eng-quote">"A producer has a comparative advantage in the production of a good if they can produce it at a LOWER opportunity cost than another producer."</div>
+        </li>
+        <li><strong>Uzmanlaşma ve Ticaret Kazancı (Gains from Trade):</strong> Herkes <strong>Comparative Advantage</strong> sahibi olduğu üründe uzmanlaşıp ticaret yaparsa toplam üretim artar ve her iki taraf da <strong>kendi PPF eğrisinin dışına (beyond their PPFs)</strong> çıkabilir!</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <strong>⚡ 5 Saniyelik "Eşit Miktarda Üretim" Kısayolu (Orion &amp; Scorpius — Problem 1.6d):</strong><br>
+      Ülkede <strong>N</strong> işçi varsa ve iki maldan <strong>eşit miktarda (Q<sub>X</sub> = Q<sub>Y</sub>)</strong> üretmek istiyorsa:<br>
+      • <strong>Denklem:</strong> <code>a &middot; x = b &middot; (N &minus; x)</code><br>
+      • <strong>5 Saniyelik Kısayol:</strong> <code>Hızlı Üretilen Malın İşçi Sayısı = Toplam İşçi / (Fırsat Maliyeti + 1)</code>, kalan işçiler yavaş ürüne!<br>
+      <em>(Örn: Orion'da 800 işçi var, 1 işçi 6 Granite veya 18 Blueberry üretiyor &rArr; Fırsat Maliyeti = 18/6 = 3 &rArr; 800 / (3+1) = <strong>200 Blueberry işçisi</strong> ve <strong>600 Granite işçisi</strong>!)</em>
+    </div>
+
+    <h3>2.3 Production Possibility Frontier (PPF) ve Ekonomik Sistemler</h3>
+    <div class="formula-block">
+      <div class="formula-title">PPF Eğimi ve Marginal Rate of Transformation (MRT)</div>
+      <div class="math-eq">
+        MRT = |Slope of PPF| =
+        <span class="frac"><span class="top">|&Delta;Y|</span><span>|&Delta;X|</span></span>
+        = Opportunity Cost of Good X (in terms of Good Y)
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>PPF Durumu / Kavram</th>
+          <th>Anlamı ve Vize Yorumu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>PPF Eğrisinin ÜZERİNDEKİ Noktalar</strong></td>
+          <td><strong>Productive Efficiency (Üretim Etkinliği):</strong> Kaynaklar tam istihdamdadır ve en iyi teknolojiyle çalışılmaktadır.</td>
+        </tr>
+        <tr>
+          <td><strong>Output (Allocative) Efficiency</strong></td>
+          <td>Sadece PPF üzerinde olmak yetmez! Aynı zamanda <strong>toplumun gerçekten istediği doğru ürün karmasını</strong> üretmektir (<em>Örn: Vatandaşlar veganken sadece et üretmek veya toplum et isterken balık üretmek PPF üzerinde olsa bile <strong>Output Inefficiency</strong>'dir!</em>).</td>
+        </tr>
+        <tr>
+          <td><strong>PPF Eğrisinin İÇİNDEKİ Noktalar</strong></td>
+          <td><strong>Inefficient (Verimsiz / Atıl Kaynak):</strong> İşsizlik (<em>unemployment</em>) veya kötü yönetim vardır.<br><strong>🚨 VİZE TUZAĞI (Problem 1.14d):</strong> Ülkede işsizlik artarsa <strong>PPF çizgisi sola KAYMAZ</strong>; sadece üretim noktası <strong>PPF'in İÇİNE düşer</strong>!</td>
+        </tr>
+        <tr>
+          <td><strong>PPF Eğrisinin DIŞINDAKİ Noktalar</strong></td>
+          <td><strong>Unattainable (İmkansız):</strong> Mevcut kaynak ve teknolojiyle tek başına üretilemez (ancak <strong>ticaret</strong> veya gelecekteki <strong>ekonomik büyüme</strong> ile ulaşılabilir).</td>
+        </tr>
+        <tr>
+          <td><strong>Düz Çizgi PPF vs. Dışa Bombeli (Bowed-Out) PPF</strong></td>
+          <td>• Fırsat maliyeti <strong>sabitse (constant)</strong> &rArr; PPF <strong>düz çizgidir</strong>.<br>• Kaynaklar her işe aynı derecede uygun olmadığı için <strong>Law of Increasing Opportunity Cost (Artan Fırsat Maliyeti Yasası)</strong> geçerliyse (örn. vazgeçilen miktar 3 &rarr; 6 &rarr; 9 &rarr; 12 &rarr; 15 diye artıyorsa) &rArr; PPF <strong>dışa doğru bombelidir (bowed outward / concave)</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>PPF'in Sağa vs. Sola Kayması</strong></td>
+          <td>• <strong>Sağa / Dışa Kayma (Shifts Outward):</strong> Yeni teknoloji, eğitim/meslek okulları (<em>human capital</em>), sermaye yatırımı veya iş gücü artışı.<br>• <strong>Sola / İçe Kayma (Shifts Inward):</strong> Deprem, kuraklık (<em>drought</em>), savaş veya işçilerin yurt dışına göç etmesi (<em>migration out</em>).</td>
+        </tr>
+        <tr>
+          <td><strong>Command vs. Laissez-Faire vs. Mixed Economy</strong></td>
+          <td>• <strong>Command Economy:</strong> Merkezi devlet neyin, nasıl, kimin için üretileceğine karar verir.<br>• <strong>Laissez-Faire (Free Market):</strong> Bireyler ve firmalar devlet müdahalesi olmadan fiyat mekanizmasıyla karar verir.<br>• <strong>Gerçek Dünya:</strong> Dünyada %100 saf hali yoktur; tüm ekonomiler <strong>Mixed Economy (Karma Ekonomi)</strong>'dir.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== CHAPTER 3 ==================== -->
+  <div class="chapter-card" id="ch3">
+    <h2 class="chapter-title">
+      <span>CHAPTER 3: Demand, Supply, and Market Equilibrium</span>
+      <span class="badge">Circular Flow, Kaymalar &amp; Denge Denklemleri</span>
+    </h2>
+
+    <h3>3.1 Circular Flow (Döngüsel Akım) — Kim Demand Eder, Kim Supply Eder?</h3>
+    <div class="trap-box">
+      <strong>🚨 Circular Flow Altın Kuralı (Caterpillar Tuzağı — Problem 2.1c):</strong><br>
+      • <strong>OUTPUT Market (Mal ve Hizmet Piyasası):</strong> Her zaman <strong>Firms SUPPLY</strong> eder, <strong>Households DEMAND</strong> eder!<br>
+      • <strong>INPUT Market (Emek/Labor, Toprak/Land, Sermaye/Capital Piyasası):</strong> Her zaman <strong>Households SUPPLY</strong> eder, <strong>Firms DEMAND</strong> eder!<br>
+      <em>(Fabrika işçi alırken "iş arz etmez", <strong>emek talep eder — Caterpillar DEMANDS labor, Households SUPPLY labor!</strong>)</em>
+    </div>
+
+    <h3>3.2 Demand &amp; Supply: Movement Along (Eğri Üzerinde Hareket) vs. Shift (Kayma)</h3>
+    <div class="concept-block">
+      <ul>
+        <li><strong>Change in Quantity Demanded / Quantity Supplied (Eğri Üzerinde Hareket — NO SHIFT!):</strong>
+          <ul>
+            <li>Sadece ve sadece malın <strong>KENDİ FİYATI (Own Price)</strong> değiştiğinde olur!</li>
+            <li><strong>🚨 Vize Tuzağı (Problem 4.2a):</strong> <em>"Arz azaldı, fiyat yükseldi; yükselen fiyat arzı tekrar artırıp fiyatı eski yerine düşürür"</em> ifadesi <strong>YANLIŞTIR!</strong> Çünkü yükselen fiyat <em>Supply</em> eğrisini kaydırmaz, sadece yeni eğri üzerinde <em>Quantity Supplied</em>'ı değiştirir!</li>
+          </ul>
+        </li>
+        <li><strong>Change in Demand (Talep Eğrisini Sağa veya Sola Kaydıran 5 Faktör):</strong>
+          <ol>
+            <li><strong>Income (Gelir):</strong>
+              <ul>
+                <li><strong>Normal Good:</strong> Gelir &uarr; &rArr; Demand sağa kayar (&uarr;); Gelir &darr; &rArr; Demand sola kayar (&darr;).</li>
+                <li><strong>Inferior Good (Ucuz fast food, hazır makarna):</strong> Gelir &uarr; &rArr; Demand sola kayar (&darr;); Krizde gelir &darr; &rArr; Demand sağa kayar (&uarr;)!</li>
+              </ul>
+            </li>
+            <li><strong>Prices of Related Goods (İlişkili Malların Fiyatları):</strong>
+              <ul>
+                <li><strong>Substitutes (İkame — Çay &amp; Kahve):</strong> Kahve fiyatı &uarr; &rArr; Çay talebi sağa kayar (&uarr;). <em>(Not: İki normal mal pekala birbirinin ikamesi olabilir!)</em></li>
+                <li><strong>Complements (Tamamlayıcı — Fıstık Ezmesi &amp; Muz, Pastırma &amp; Yumurta):</strong> Fıstık ezmesi fiyatı &darr; &rArr; Muz talebi sağa kayar (&uarr;).</li>
+              </ul>
+            </li>
+            <li><strong>Tastes &amp; Preferences (Zevkler/Sağlık Haberleri):</strong> Kolesterol uyarısı &rArr; Yumurta talebi sola kayar.</li>
+            <li><strong>Expectations (Gelecek Beklentileri):</strong> Gelecek ay lastik zamlanacak beklentisi &rArr; Bugünkü talep sağa kayar.</li>
+            <li><strong>Number of Buyers (Nüfus).</strong></li>
+          </ol>
+        </li>
+        <li><strong>Change in Supply (Arz Eğrisini Sağa veya Sola Kaydıran Faktörler):</strong>
+          <ul>
+            <li><strong>Input Prices / Cost of Production:</strong> Tavuk yemi pahalanırsa &rArr; Yumurta arzı sola kayar (&darr;).</li>
+            <li><strong>Technology:</strong> Kırılmayı azaltan paketleme teknolojisi &rArr; Yumurta arzı sağa kayar (&uarr;).</li>
+            <li><strong>Üretmeme Sübvansiyonu (Boş İnek Hibesi — Ch4 Problem 1.4):</strong> Devlet sağılmayan her inek için para verirse süt üretmenin fırsat maliyeti artar &rArr; Süt arzı sola kayar (&darr;) ve fiyat yükselir!</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h3>3.3 Piyasa Dengesi (Market Equilibrium) Denklemleri ve İki Eğrinin Aynı Anda Kayması</h3>
+    <div class="formula-block">
+      <div class="formula-title">Doğrusal Denge Hesabı ve "Talep 2 Katına Çıkarsa" Kuralı (Pizza Sorusu — Problem 5.9)</div>
+      <div class="math-eq">
+        Q<sub>d</sub> = a &minus; bP &nbsp;&nbsp;&nbsp;ve&nbsp;&nbsp;&nbsp; Q<sub>s</sub> = dP &minus; c
+        &nbsp;&nbsp;&rArr;&nbsp;&nbsp;
+        Denge: Q<sub>d</sub> = Q<sub>s</sub> &rArr; P* ve Q*
+      </div>
+      <br>
+      <div class="math-eq">
+        Talep Her Fiyatta 2 Katına Çıkarsa (Doubles): &nbsp; Q<sub>d</sub><sup>new</sup> = 2 &times; (a &minus; bP) = 2a &minus; 2bP
+      </div>
+      <ul>
+        <li><strong>Örnek (Pizza 5.9):</strong> <code>Q<sub>d</sub> = 300 &minus; 20P</code> ve <code>Q<sub>s</sub> = 20P &minus; 100</code>:
+          <ul>
+            <li>İlk Denge: <code>40P = 400 &rArr; P* = $10, Q* = 100</code>. (Demand dikeyde $15, yatayda 300'ü keser; Supply dikeyde $5'tan başlar).</li>
+            <li><code>P = $15</code> yapılırsa: <code>Q<sub>s</sub> = 200, Q<sub>d</sub> = 0 &rArr; Surplus (Excess Supply) = 200 pizzas</code>.</li>
+            <li>Talep 2 katına çıkarsa: <code>Q<sub>d</sub><sup>new</sup> = 600 &minus; 40P</code> (İki terim de 2 ile çarpılır!).</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Eşzamanlı Kayma (Simultaneous Shift)</th>
+          <th>Denge Fiyatı (P*)</th>
+          <th>Denge Miktarı (Q*)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Demand &uarr; (sağa) VE Supply &uarr; (sağa)</strong></td>
+          <td><strong>Belirsiz (Ambiguous / ?)</strong> <em>(Arz daha çok artarsa P* düşer!)</em></td>
+          <td><strong>Kesinlikle Artar (Q* &uarr;)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Demand &darr; (sola) VE Supply &darr; (sola)</strong></td>
+          <td><strong>Belirsiz (Ambiguous / ?)</strong> <em>(Talep daha çok düşerse P* düşer!)</em></td>
+          <td><strong>Kesinlikle Azalır (Q* &darr;)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Demand &uarr; (sağa) VE Supply &darr; (sola)</strong></td>
+          <td><strong>Kesinlikle Artar (P* &uarr;)</strong></td>
+          <td><strong>Belirsiz (Ambiguous / ?)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Demand &darr; (sola) VE Supply &uarr; (sağa)</strong></td>
+          <td><strong>Kesinlikle Azalır (P* &darr;)</strong></td>
+          <td><strong>Belirsiz (Ambiguous / ?)</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== CHAPTER 4 ==================== -->
+  <div class="chapter-card" id="ch4">
+    <h2 class="chapter-title">
+      <span>CHAPTER 4: Demand and Supply Applications</span>
+      <span class="badge">Price Ceiling/Floor, Oil Tax, CS/PS &amp; DWL</span>
+    </h2>
+
+    <h3>4.1 Price Rationing, Price Ceiling (Tavan Fiyat) ve Price Floor (Taban Fiyat)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Müdahale Türü</th>
+          <th>Etkin (Binding) Olma Şartı</th>
+          <th>Sonucu ve Etkisiz (Non-Binding) Tuzağı</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Price Ceiling (Tavan Fiyat)</strong><br><em>"En fazla bu fiyata satılabilir"</em> (Kira kontrolü, ilaç/benzin tavan fiyatı)</td>
+          <td>Denge fiyatının <strong>ALTINDA</strong> olmalı:<br><strong>P<sub>ceiling</sub> &lt; P*</strong></td>
+          <td>• <strong>Shortage (Excess Demand) = Q<sub>d</sub> &minus; Q<sub>s</sub></strong> oluşur.<br>• Piyasada gerçekte satılan miktarı kısa taraf olan <strong>Q<sub>s</sub> (Quantity Supplied)</strong> belirler (üretilmeyen mal alınamaz!).<br>• <strong>Fiyat Dışı Tayınlama (Non-price rationing):</strong> Kuyruklar (<em>queuing</em>), torpil (<em>favored customers</em>), karne (<em>ration coupons</em>), karaborsa (<em>black market / scalpers</em>).<br>• 🚨 <strong>Tuzak:</strong> Eğer <code>P<sub>ceiling</sub> &gt; P*</code> verilirse (örn. denge $20 iken tavan $30 ise) <strong>hiçbir şey değişmez (non-binding)</strong>!</td>
+        </tr>
+        <tr>
+          <td><strong>Price Floor (Taban Fiyat)</strong><br><em>"En az bu fiyata satılabilir"</em> (Asgari ücret, tarım taban fiyatı)</td>
+          <td>Denge fiyatının <strong>ÜSTÜNDE</strong> olmalı:<br><strong>P<sub>floor</sub> &gt; P*</strong></td>
+          <td>• <strong>Surplus (Excess Supply) = Q<sub>s</sub> &minus; Q<sub>d</sub></strong> oluşur.<br>• Piyasada gerçekte satılan miktarı <strong>Q<sub>d</sub> (Quantity Demanded)</strong> belirler.<br>• 🚨 <strong>Tuzak:</strong> Eğer <code>P<sub>floor</sub> &lt; P*</code> verilirse (örn. denge $20 iken taban $10 ise) <strong>hiçbir şey değişmez (non-binding)</strong>!</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box">
+      <strong>🎟️ Konser Bileti Karaborsacıları (Scalpers — Problem 1.3) Sınav Yorumu:</strong><br>
+      • <strong>Efficient mıdır? EVET!</strong> Çünkü biletleri en yüksek değeri biçen ve en çok ödemeye razı olan kişilere ulaştırır.<br>
+      • <strong>Herkesin yararına (Fair / Advantage of everyone) mıdır? HAYIR!</strong> Çünkü biletleri gişeden toplayıp fiyatı yükselttikleri için öğrenciler gibi düşük gelirli hayranlar bilet alamaz.
+    </div>
+
+    <h3>4.2 Oil Import Tax (Petrol İthalat Vergisi Analizi — Problem 2.1)</h3>
+    <div class="formula-block">
+      <div class="formula-title">İthalat (Imports) ve Gümrük Vergisi Geliri Formülleri</div>
+      <div class="math-eq">
+        Imports = Q<sub>d</sub> &minus; Q<sub>s</sub> &nbsp;&nbsp;(Dünya Fiyatı P<sub>world</sub> hizasında)
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Vergi Sonrası Fiyat: P<sub>new</sub> = P<sub>world</sub> + Tax (t)
+      </div>
+      <br>
+      <div class="math-eq">
+        Government Tax Revenue = New Imports &times; Tax = (Q<sub>d</sub><sup>new</sup> &minus; Q<sub>s</sub><sup>new</sup>) &times; t
+      </div>
+      <ul>
+        <li><strong>Grafik Gösterimi:</strong> İç piyasadaki <code>Q<sub>d</sub></code> ve <code>Q<sub>s</sub></code> eğrileri <strong>yerinden oynamaz</strong>; sadece yatay dünya fiyatı çizgisi <code>P<sub>world</sub></code>'den <code>P<sub>world</sub> + t</code> seviyesine yukarı çıkar!</li>
+        <li><strong>Kim Kazanır (Helped)?</strong> Yerli üreticiler (<em>Domestic producers</em> — daha yüksek fiyattan daha çok satarlar) ve ABD Hükümeti (vergi geliri toplar).</li>
+        <li><strong>Kim Kaybeder (Hurt)?</strong> Yerli tüketiciler (<em>Domestic consumers / households</em> — daha pahalıya daha az tüketirler) ve Yabancı üreticiler (<em>Foreign producers</em> — satışları düşer).</li>
+      </ul>
+    </div>
+
+    <h3>4.3 Consumer Surplus (CS), Producer Surplus (PS) ve Deadweight Loss (DWL)</h3>
+    <div class="formula-block">
+      <div class="formula-title">Üçgen Alanı Formülleri (Problem 3.1, 3.2 ve 3.4)</div>
+      <div class="math-eq">
+        Consumer Surplus (CS) =
+        <span class="frac"><span class="top">(P<sub>max (Demand dikey kesişimi)</sub> &minus; P*) &times; Q*</span><span>2</span></span>
+        &nbsp;&nbsp;(P* çizgisinin ÜSTÜNDEKİ üçgen)
+      </div>
+      <br>
+      <div class="math-eq">
+        Producer Surplus (PS) =
+        <span class="frac"><span class="top">(P* &minus; P<sub>min (Supply dikey kesişimi)</sub>) &times; Q*</span><span>2</span></span>
+        &nbsp;&nbsp;(P* çizgisinin ALTINDAKİ üçgen)
+      </div>
+      <br>
+      <div class="math-eq">
+        Deadweight Loss (DWL) =
+        <span class="frac"><span class="top">(P<sub>Demand</sub> &minus; P<sub>Supply</sub>) &times; |Q* &minus; Q<sub>new</sub>|</span><span>2</span></span>
+        &nbsp;&nbsp;(Eksik veya aşırı üretimdeki kayıp üçgen)
+      </div>
+      <ul>
+        <li><strong>Pratik DWL &amp; Yamuk Kısayolu (DVD Grafiği Problem 3.4):</strong> Üretim <code>Q* = 18</code>'den tam yarısı olan <code>Q = 9</code>'a düştüğünde, orta taban kuralıyla fiyatlar tam ortadan (<code>$5</code> ve <code>$3</code>) geçer &rArr; <code>DWL = ((5 &minus; 3) &times; (18 &minus; 9)) / 2 = $9 million</code>. Kalan CS ve PS yamuklarını bulmak için de eski üçgen alanından (<code>18</code>) DWL'in yarısını (<code>4.5</code>) çıkarırsın: <code>18 &minus; 4.5 = 13.5</code>!</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== CHAPTER 5 ==================== -->
+  <div class="chapter-card" id="ch5">
+    <h2 class="chapter-title">
+      <span>CHAPTER 5: Elasticity &amp; Tax Incidence</span>
+      <span class="badge">Midpoint, Türev, Total Revenue &amp; Vergi Paylaşımı</span>
+    </h2>
+
+    <h3>5.1 Neden Eğim (Slope) Yerine Esneklik (Elasticity) Kullanılır? (Problem 1.1)</h3>
+    <div class="concept-block">
+      <strong>Slope (&Delta;P / &Delta;Q)</strong> ölçü birimine bağımlıdır: Fiyatı dolardan kuruşa (pennies) çevirdiğimizde aynı talebin eğimi <code>&minus;1/5</code>'ten <code>&minus;20</code>'ye değişir. <strong>Elasticity</strong> ise <strong>yüzdesel değişimleri (% change)</strong> kullandığı için birimden bağımsızdır ve her iki grafikte de aynı sonucu verir!
+    </div>
+
+    <h3>5.2 Esneklik Hesaplama: Midpoint Formülü ve Türev (Point Elasticity) Formülü</h3>
+    <div class="formula-block">
+      <div class="formula-title">1. Midpoint (Orta Nokta) Formülü — (İki Nokta Verildiğinde!)</div>
+      <div class="math-eq">
+        E<sub>d</sub> =
+        <span class="frac"><span class="top">% &Delta;Q<sub>d</sub></span><span>% &Delta;P</span></span>
+        =
+        <span class="frac"><span class="top">(Q<sub>2</sub> &minus; Q<sub>1</sub>) / [(Q<sub>1</sub> + Q<sub>2</sub>) / 2]</span><span>(P<sub>2</sub> &minus; P<sub>1</sub>) / [(P<sub>1</sub> + P<sub>2</sub>) / 2]</span></span>
+        =
+        <span class="frac"><span class="top">Q<sub>2</sub> &minus; Q<sub>1</sub></span><span>P<sub>2</sub> &minus; P<sub>1</sub></span></span>
+        &times;
+        <span class="frac"><span class="top">P<sub>1</sub> + P<sub>2</sub></span><span>Q<sub>1</sub> + Q<sub>2</sub></span></span>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-title">2. Hocanın Türevle Nokta Esnekliği (Point Elasticity) Formülü — (Denklem Verildiğinde!)</div>
+      <div class="math-eq">
+        E<sub>d</sub> =
+        <span class="frac"><span class="top">dQ</span><span>dP</span></span>
+        &times;
+        <span class="frac"><span class="top">P</span><span>Q</span></span>
+      </div>
+      <ul>
+        <li><strong>Doğrusal Denklemde (Q = a &minus; bP):</strong> <code>Q</code>'nun <code>P</code>'ye göre türevi <code>dQ/dP = &minus;b</code> olduğu için:
+          <br><span class="math-eq">E<sub>d</sub> = &minus;b &times; <span class="frac"><span class="top">P</span><span>Q</span></span></span>
+        </li>
+        <li><strong>Kareli Denklemde (Örn: Q = 100 &minus; 2P<sup>2</sup>, P = 5 iken):</strong>
+          <ul>
+            <li>Önce <code>P = 5</code> koyup <code>Q</code>'yu bul: <code>Q = 100 &minus; 2(25) = 50</code>.</li>
+            <li><code>P</code>'ye göre türev al: <code>dQ/dP = &minus;4P = &minus;4(5) = &minus;20</code>.</li>
+            <li>Formülde yerine koy: <code>E<sub>d</sub> = &minus;20 &times; (5 / 50) = <strong>&minus;2.0</strong></code>!</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h3>5.3 Total Revenue (TR = P &times; Q) Testi ve Türevle Maksimum TR Bulma</h3>
+    <div class="formula-block">
+      <div class="formula-title">Hocanın Türevle Maximum Total Revenue (dTR / dP = 0) Yöntemi</div>
+      <p>Talep denklemi <strong>Q = 100 &minus; 5P</strong> verildiğinde toplam geliri (TR) maksimum yapan fiyatı bulmak için:</p>
+      <ol>
+        <li><strong>TR = P &times; Q denklemini kur:</strong> <code>TR = P &times; (100 &minus; 5P) = 100P &minus; 5P<sup>2</sup></code></li>
+        <li><strong>P'ye göre türev alıp 0'a eşitle (dTR / dP = 0):</strong>
+          <br><span class="math-eq"><span class="frac"><span class="top">dTR</span><span>dP</span></span> = 100 &minus; 10P = 0 &rArr; 10P = 100 &rArr; P = $10 &nbsp;(ve Q = 50)</span>
+        </li>
+        <li><strong>Pratik Kısayol (Q = a &minus; bP için):</strong> <span class="math-eq">Q<sub>max TR</sub> = <span class="frac"><span class="top">a</span><span>2</span></span> &nbsp;&nbsp;ve&nbsp;&nbsp; P<sub>max TR</sub> = <span class="frac"><span class="top">a</span><span>2b</span></span></span></li>
+      </ol>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Esneklik Kategorisi</th>
+          <th>Mutlak Değer</th>
+          <th>Fiyat Artarsa (P &uarr;) TR Ne Olur?</th>
+          <th>Fiyat Düşerse (P &darr;) TR Ne Olur?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Elastic (Esnek)</strong><br><em>(Talep doğrusunun üst-sol yarısı / TR tepesinin sol çıkan kolu)</em></td>
+          <td><strong>|E<sub>d</sub>| &gt; 1</strong><br><em>(Pay &gt; Payda)</em></td>
+          <td><strong>TR Azalır (TR &darr;)</strong><br><em>(Fiyat ve TR ZIT yönde!)</em></td>
+          <td><strong>TR Artar (TR &uarr;)</strong><br><em>(İndirim ciroyu artırır!)</em></td>
+        </tr>
+        <tr>
+          <td><strong>Inelastic (İnelastik)</strong><br><em>(Talep doğrusunun alt-sağ yarısı / TR tepesinin sağ inen kolu)</em></td>
+          <td><strong>|E<sub>d</sub>| &lt; 1</strong><br><em>(Pay &lt; Payda)</em></td>
+          <td><strong>TR Artar (TR &uarr;)</strong><br><em>(Fiyat ve TR AYNI yönde!)</em></td>
+          <td><strong>TR Azalır (TR &darr;)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Unitarily Elastic (Birim Esnek)</strong><br><em>(Talep doğrusunun tam ortası / TR tepesinin zirvesi)</em></td>
+          <td><strong>|E<sub>d</sub>| = 1</strong><br><em>(Pay = Payda)</em></td>
+          <td><strong>TR Değişmez / Sabit Kalır</strong><br><em>(TR Maksimumdur!)</em></td>
+          <td><strong>TR Değişmez / Sabit Kalır</strong><br><em>(🚨 Tuzak 2.5c: Azalmaz, sabit kalır!)</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="trap-box">
+      <strong>🚨 Büyük Görsel Tuzak (Problem 2.6):</strong><br>
+      İki ekseni de kesen düz bir talep çizgisine sırf yatık duruyor diye "Elastic", dik duruyor diye "Inelastic" <strong>DENEMEZ (Both are FALSE / Disagree)!</strong> Çünkü eksenleri kesen her düz talep doğrusunun <strong>üst yarısı Elastic, tam ortası Unitary Elastic, alt yarısı Inelastic</strong>'tir!
+    </div>
+
+    <h3>5.4 Esnekliği Belirleyen 4 Faktör ve Diğer Esneklik Türleri (İşaret Kuralları!)</h3>
+    <div class="concept-block">
+      <strong>Talebin Fiyat Esnekliğini Belirleyen 4 Faktör:</strong>
+      <ol>
+        <li><strong>Availability of Substitutes (En Önemlisi!):</strong> Yakın ikamesi çok olan mallar (elma suyu, kebap, Wii) <strong>Elastic</strong>; ikamesi olmayanlar (tuz, insülin, HIV ilacı HAART) <strong>Inelastic</strong>'tir.</li>
+        <li><strong>Share of Budget (Bütçedeki Payı):</strong> Bütçede çok küçük yer tutan ucuz şeyler (tuz, bilgisayar faresi) <strong>Inelastic</strong>'tir.</li>
+        <li><strong>Luxuries vs. Necessities:</strong> Lüks mallar <strong>Elastic</strong>, zorunlu mallar <strong>Inelastic</strong>'tir.</li>
+        <li><strong>Time Dimension (Zaman — Frank'in Şarküterisi 3.1):</strong> Kısa dönemde (<em>short run</em>) insanlar alışkanlıklarını değiştiremediği için talep <strong>Inelastic</strong>, uzun dönemde (<em>long run</em>) alternatif bulabildikleri için <strong>Elastic</strong>'tir!</li>
+      </ol>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Esneklik Türü ve Formülü</th>
+          <th>İşareti (+ / &minus; / 0) ve Anlamı (Mutlak Değer Alınmaz!)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Income Elasticity of Demand (E<sub>I</sub>)</strong><br><code>E<sub>I</sub> = %&Delta;Q<sub>d</sub> / %&Delta;Income</code></td>
+          <td>• <strong>Pozitif (+) &rArr; Normal Good</strong> (Gelir &uarr; &rArr; Talep &uarr;; Gelir &darr; &rArr; Talep &darr;). <em>(E<sub>I</sub> &gt; 1 ise Luxury, 0 &lt; E<sub>I</sub> &lt; 1 ise Necessity)</em>.<br>• <strong>Negatif (&minus;) &rArr; Inferior Good</strong> (Gelir &uarr; &rArr; Talep &darr;; Krizde gelir &darr; &rArr; Talep &uarr;).</td>
+        </tr>
+        <tr>
+          <td><strong>Cross-Price Elasticity of Demand (E<sub>XY</sub>)</strong><br><code>E<sub>XY</sub> = %&Delta;Q<sub>d,X</sub> / %&Delta;P<sub>Y</sub></code></td>
+          <td>• <strong>Pozitif (+) &rArr; Substitutes ("Rakip = +")</strong> (Örn: +5.5, Samsung ve iPad, Sandviç ve Yoğurt).<br>• <strong>Negatif (&minus;) &rArr; Complements ("Ekip = &minus;")</strong> (Örn: &minus;8.7, Sosis ve Sosisli Ekmeği, Sandviç ve Gazoz).<br>• <strong>Sıfır (0.0) &rArr; Independent / Unrelated Goods</strong> (Bağımsız mallar).</td>
+        </tr>
+        <tr>
+          <td><strong>Price Elasticity of Supply (E<sub>s</sub>) &amp; Labor Supply</strong><br><code>E<sub>s</sub> = %&Delta;Q<sub>s</sub> / %&Delta;P</code></td>
+          <td>• Picasso'nun <em>Guernica</em> tablosu gibi miktarı artırılamayan / satılık olmayan şeylerde <strong>E<sub>s</sub> = 0 (Perfectly Inelastic Supply)</strong>.<br>• Emek arzı (<em>Labor supply</em>) yüksek ücretlerde gelir etkisiyle hafif geriye bükülürse (<em>backward-bending</em> ve <em>inelastic</em>) &rArr; <strong>&minus;1 &lt; E<sub>labor</sub> &lt; 0</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>5.5 Özel Tüketim Vergisi (Excise Tax), DWL ve Hocanın Vergi Yükü Paylaşımı Formülü</h3>
+    <div class="formula-block">
+      <div class="formula-title">Vergi Yükü Paylaşımı (Tax Incidence Share) &amp; Vergi DWL Formülleri</div>
+      <div class="math-eq">
+        Birim Vergi (t) = P<sub>buyer</sub> &minus; P<sub>seller</sub>
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Tax Revenue = t &times; Q<sub>1</sub>
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Tax DWL = <span class="frac"><span class="top">1</span><span>2</span></span> &times; t &times; (Q<sub>0</sub> &minus; Q<sub>1</sub>)
+      </div>
+      <br>
+      <div class="math-eq">
+        Tüketicinin Payı (Buyers' Share) =
+        <span class="frac"><span class="top">E<sub>s</sub></span><span>E<sub>s</sub> + |E<sub>d</sub>|</span></span>
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Üreticinin Payı (Sellers' Share) =
+        <span class="frac"><span class="top">|E<sub>d</sub>|</span><span>E<sub>s</sub> + |E<sub>d</sub>|</span></span>
+      </div>
+      <ul>
+        <li><strong>Ezber Şifresi ("Üste Karşı Tarafı Yaz!"):</strong> Tüketicinin (Buyer) ödeyeceği vergi oranını bulurken paya <strong>Üreticinin esnekliğini (E<sub>s</sub>)</strong>, üreticinin (Seller) ödeyeceği oranı bulurken paya <strong>Tüketicinin esnekliğini (|E<sub>d</sub>|)</strong> yazarsın!</li>
+        <li><strong>Altın Kural:</strong> Vergiyi devlete yasal olarak kimin yatırdığının (<em>legal incidence</em>) hiçbir önemi yoktur; piyasada kim daha <strong>INELASTIC (bağımlı / kaçamayan)</strong> ise verginin büyük yükünü (<em>economic incidence</em>) <strong>O ÖDER</strong>!</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

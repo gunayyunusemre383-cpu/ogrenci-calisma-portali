@@ -1,0 +1,875 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İspanyolca I (SPA 101): Master Sınav &amp; Gramer Rehberi (U1–U5 &amp; Aula U1–U2)</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --primary: #c2410c;
+      --accent: #ea580c;
+      --success: #15803d;
+      --warning: #b45309;
+      --danger: #b91c1c;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --formula-bg: #fff7ed;
+      --concept-bg: #f0fdf4;
+      --tip-bg: #fefce8;
+      --trap-bg: #fff1f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      margin: 0;
+      padding: 24px 24px 56px;
+    }
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #7c2d12, #9a3412, #ea580c);
+      color: white;
+      padding: 32px 36px;
+      border-radius: 16px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 25px rgba(234, 88, 12, 0.2);
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      opacity: 0.92;
+      font-size: 1.05rem;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .badge {
+      font-size: 0.82rem;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-primary { background: rgba(255,255,255,0.2); color: #fff; }
+    .badge-accent { background: #fed7aa; color: #7c2d12; }
+    .badge-emerald { background: #34d399; color: #064e3b; }
+    
+    .toc {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      position: sticky;
+      top: 10px;
+      z-index: 30;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .toc::-webkit-scrollbar { display: none; }
+    .toc strong { font-size: 0.84rem; color: var(--primary); margin-right: 2px; white-space: nowrap; flex-shrink: 0; }
+    .toc a {
+      text-decoration: none;
+      background: #fff7ed;
+      color: var(--primary);
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid #ffedd5;
+      font-size: 0.81rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all 0.15s ease;
+    }
+    .toc a:hover,
+    .toc a.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .chapter-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      scroll-margin-top: 96px;
+    }
+    @media (max-width: 768px) {
+      body { padding: 14px 12px 48px; }
+      .chapter-card { padding: 20px 16px; scroll-margin-top: 76px; }
+      .toc {
+        top: 6px;
+        padding: 8px 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+    }
+    .chapter-title {
+      color: var(--primary);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 12px;
+      margin-top: 0;
+      margin-bottom: 22px;
+      font-size: 1.55rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    h3 {
+      color: #9a3412;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+    h4 {
+      color: #c2410c;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
+    
+    /* Dual-Track Components */
+    .concept-block {
+      background: var(--concept-bg);
+      border-left: 5px solid var(--success);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.98rem;
+    }
+    .concept-block strong.concept-label {
+      color: var(--success);
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .spa-quote {
+      background: #fff7ed;
+      border: 1px dashed #fdba74;
+      border-left: 5px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-style: normal;
+      color: #0f172a;
+      margin: 12px 0;
+      font-size: 0.95rem;
+    }
+    .spa-quote .spa-label {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .spa-quote .spa-text {
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: 600;
+      color: #7c2d12;
+      line-height: 1.6;
+    }
+
+    .trap-box {
+      background: var(--trap-bg);
+      border-left: 5px solid var(--danger);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+    .trap-box strong { color: var(--danger); }
+
+    .tip-box {
+      background: var(--tip-bg);
+      border-left: 5px solid #eab308;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+    .tip-box strong { color: #854d0e; }
+
+    .formula-block {
+      background: var(--formula-bg);
+      border-left: 5px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .formula-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 580px;
+      margin: 0;
+      font-size: 0.92rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #ffedd5;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    tr:nth-child(even) { background: #f8fafc; }
+
+    ul, ol { margin: 8px 0; padding-left: 24px; }
+    li { margin-bottom: 6px; }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .chapter-card { box-shadow: none; border: 1px solid #cbd5e1; page-break-inside: avoid; }
+      .toc { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="badges">
+      <span class="badge badge-primary">SPA 101 • Temel İspanyolca I</span>
+      <span class="badge badge-accent">SPA 101 Midterm</span>
+      <span class="badge badge-emerald">Gramática U1–5 &amp; Aula U1–2</span>
+    </div>
+    <h1>🇪🇸 İspanyolca I: Master Sınav &amp; Gramer Rehberi</h1>
+    <p>Türkçe Gramer Mantığı &amp; Sezgi + Sınav İspanyolcası Model Cümleler + Karşılaştırma Matrisleri &amp; PERO Vize Tuzakları</p>
+  </header>
+
+  <nav class="toc">
+    <strong>Bölümlere Git:</strong>
+    <a href="#gramatica">📘 Gramática de Uso (U1–U5)</a>
+    <a href="#aula">📗 AULA Internacional (U1–U2)</a>
+    <a href="#ser-estar">⚖️ SER vs ESTAR</a>
+    <a href="#hay-estar">📍 HAY vs ESTAR</a>
+    <a href="#por-para">🎯 PORQUE vs PARA vs POR</a>
+    <a href="#verbs">🔄 Fiil Çekim Tablosu</a>
+    <a href="#traps">🚨 Top 15 Vize Tuzağı</a>
+  </nav>
+
+  <!-- ==================== BÖLÜM 1: GRAMÁTICA DE USO ==================== -->
+  <section id="gramatica" class="chapter-card">
+    <div class="chapter-title">
+      <span>📘 Bölüm 1: Gramática de Uso del Español (Unidad 1–5)</span>
+      <span class="badge badge-accent">Temel Dilbilgisi Kuralları</span>
+    </div>
+
+    <h3>Unidad 1 &amp; 2: İsimlerde Cinsiyet (Masculino &amp; Femenino)</h3>
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık &amp; Cinsiyet Sezgisi:</strong>
+      İspanyolcada her kelime ya erkektir (<strong>el / un</strong>) ya da dişidir (<strong>la / una</strong>).
+      Genel kural çok basittir: <strong>-o</strong> ile bitenler eril (<em>el chico</em>), <strong>-a</strong> ile bitenler dişil (<em>la chica</em>).
+      Fakat sınavda hoca bu basit kuralı değil, <strong>istisnaları</strong> sorar! Yunancadan geçen bilim, düşünce ve coğrafya kelimeleri <strong>-ma</strong> ile biter ama <strong>ERİLDİR</strong> (<em>el problema, el tema, el mapa, el día</em>).
+    </div>
+
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Kategori</th>
+          <th>Kural &amp; İpucu</th>
+          <th>🇪🇸 Örnekler</th>
+          <th>🚨 Dikkat Edilecek İstisna</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Genel Eril (-o)</strong></td>
+          <td>Sonu -o ile biten nesne ve canlılar erildir.</td>
+          <td><em>el libro, el perro, el teléfono, el hijo</em></td>
+          <td><strong>la mano</strong> (el), <strong>la foto</strong> (fotografía), <strong>la moto</strong> (motocicleta)</td>
+        </tr>
+        <tr>
+          <td><strong>Genel Dişil (-a)</strong></td>
+          <td>Sonu -a ile biten nesne ve canlılar dişildir.</td>
+          <td><em>la mesa, la casa, la puerta, la hija</em></td>
+          <td><strong>el día</strong> (gün), <strong>el mapa</strong> (harita), <strong>el planeta</strong> (gezegen)</td>
+        </tr>
+        <tr>
+          <td><strong>-MA ile Biten Eriller</strong></td>
+          <td>Yunanca kökenli kelimeler -ma ile bitse de <strong>ERİLDİR</strong>!</td>
+          <td><em>el problema, el tema, el sistema, el idioma, el clima</em></td>
+          <td>Asla "la problema" DENMEZ! Doğrusu: <strong>el problema</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Dişil Ekleri</strong></td>
+          <td>-ción, -sión, -dad, -tad, -tud ile bitenler her zaman <strong>DİŞİLDİR</strong>.</td>
+          <td><em>la canción, la profesión, la ciudad, la verdad, la juventud</em></td>
+          <td>İstisnası neredeyse yoktur, %100 dişildir!</td>
+        </tr>
+        <tr>
+          <td><strong>Ortak Cinsiyet (-ista / -e)</strong></td>
+          <td>Kelimede değişiklik olmaz; cinsiyet yalnızca tanımlıkla (el/la) belirtilir.</td>
+          <td><em>el/la periodista</em> (gazeteci), <em>el/la estudiante</em> (öğrenci)</td>
+          <td>"periodisto" diye bir kelime YOKTUR!</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı (En Çok Çıkan 5 Eril Kelime):</strong><br>
+      Sınavda hoca boşluk doldurma sorar: <em>"______ problema es muy difícil."</em> Hemen atlayıp "La" yazma! Doğrusu: <strong>El problema</strong>. Aynı şekilde: <strong>el mapa, el día, el tema, el idioma</strong>!
+    </div>
+
+    <h3>Unidad 3: Çoğul Yapma Kuralları (Singular &amp; Plural)</h3>
+    <div class="formula-block">
+      <div class="formula-title">💡 Çoğul Yapmanın 3 Altın Kuralı:</div>
+      <ul>
+        <li><strong>Sesli harfle bitiyorsa:</strong> Sonuna sadece <strong>-s</strong> ekle (<em>libro → libros, casa → casas</em>).</li>
+        <li><strong>Sessiz harfle bitiyorsa:</strong> Sonuna <strong>-es</strong> ekle (<em>profesor → profesores, ciudad → ciudades</em>).</li>
+        <li><strong>-z ile bitiyorsa:</strong> Z harfi <strong>C</strong>'ye dönüşür ve <strong>-ces</strong> olur (<em>el lápiz → los lápices, la actriz → las actrices</em>).</li>
+      </ul>
+    </div>
+
+    <h3>Unidad 4 &amp; 5: Tanımlıklar (Artículos) ve Kullanılmadığı Durumlar</h3>
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+      Türkçede "Ben doktorum" deriz, "Ben bir doktorum" demeyiz. İspanyolca da tıpkı Türkçe gibidir! Eğer birinin mesleğini söylüyorsan tanımlık (un/una) <strong>KULLANILMAZ</strong> (<em>Soy médico</em>).
+      Ancak o mesleğin önüne bir sıfat getirirsen ("harika bir doktor"), o zaman tanımlık <strong>ZORUNLUDUR</strong> (<em>Soy un médico excelente</em>).
+    </div>
+
+    <div class="spa-quote">
+      <span class="spa-label">🇪🇸 Sınavda Çıkan Cümle Kalıpları:</span>
+      <div class="spa-text">
+        • <strong>Mesleklerde:</strong> Soy estudiante. / Carlos es camarero. (Tanımlık YOK!)<br>
+        • <strong>Sıfat eklenince:</strong> Carlos es <strong>un</strong> camarero muy simpático. (Tanımlık VAR!)<br>
+        • <strong>Haber fiili ile:</strong> En la clase hay <strong>una</strong> pizarra. (HAY'den sonra belirsiz: un/una/unos/unas)<br>
+        • <strong>Tener ile (genel nesneler):</strong> ¿Tienes coche? / No tengo tiempo. (un/una kullanılmaz)
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BÖLÜM 2: AULA INTERNACIONAL ==================== -->
+  <section id="aula" class="chapter-card">
+    <div class="chapter-title">
+      <span>📗 Bölüm 2: AULA Internacional 1 (Unidad 1 &amp; Unidad 2)</span>
+      <span class="badge badge-primary">İletişimsel İspanyolca</span>
+    </div>
+
+    <h3>Unidad 1: NOSOTROS (Tanışma, İsim, Milliyet, Sayılar 0–100)</h3>
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Mantık &amp; 3 Temel Fiil:</strong>
+      Tanışırken 3 temel soru ve fiil kullanılır:
+      1. <strong>Llamarse</strong> (Adı olmak): <em>¿Cómo te llamas? → Me llamo Ahmet.</em>
+      2. <strong>Ser</strong> (Kimlik / Milliyet): <em>¿De dónde eres? → Soy turco / Soy de Turquía.</em>
+      3. <strong>Tener</strong> (Yaş / Sahip olma): <em>¿Cuántos años tienes? → Tengo 20 años.</em> (DİKKAT: Yaş söylerken SER değil TENER kullanılır!)
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-title">💡 Sayılar Kuralları (0–100 Sınav Formülü):</div>
+      <ul>
+        <li><strong>0–15:</strong> Tamamen özel kökler: <em>cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez, once, doce, trece, catorce, quince</em>.</li>
+        <li><strong>16–29:</strong> Tek kelime olarak bitişik yazılır: <em>dieciséis, diecisiete, dieciocho, diecinueve, veinte, veintiuno, veintidós, veintitrés, veintinueve</em>.</li>
+        <li><strong>30:</strong> <em>Treinta</em>.</li>
+        <li><strong>31–99:</strong> "Y" bağlacı ile iki kelime olarak ayrılır: <em>treinta y uno, cuarenta y cinco, cincuenta y ocho, setenta y tres, noventa y nueve</em>.</li>
+        <li><strong>100:</strong> <em>Cien</em> (tek başına) / <em>ciento uno</em> (101).</li>
+      </ul>
+    </div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı:</strong> Sayılarda "veinte y dos" yazarsan hoca çizer! 21-29 arası <strong>bitişiktir</strong>: <em>veintidós</em>! 31'den itibaren ise <strong>ayrıdır</strong>: <em>treinta y dos</em>!
+    </div>
+
+    <h3>Unidad 2: QUIERO APRENDER ESPAÑOL (Niyet, Gerekçe &amp; Neden)</h3>
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Mantık:</strong>
+      Bir şeyi istemek için <strong>Querer + Mastar (infinitivo)</strong> kullanılır: <em>Quiero viajar a España</em> (İspanya'ya seyahat etmek istiyorum).<br>
+      Sebep veya amaç belirtirken ise <strong>PORQUE</strong>, <strong>PARA</strong> ve <strong>POR</strong> kullanılır.
+    </div>
+  </section>
+
+  <!-- ==================== SER VS ESTAR ==================== -->
+  <section id="ser-estar" class="chapter-card">
+    <div class="chapter-title">
+      <span>⚖️ Bölüm 3: SER vs ESTAR Ayrımı (Sınavın En Büyük Sorusu)</span>
+      <span class="badge badge-accent">Core Verb Distinction</span>
+    </div>
+
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık &amp; Öz vs Durum Sezgisi:</strong>
+      Türkçede her ikisi de "-dır/-dir" veya "olmak" olarak çevrilir. Ama mantıkları tamamen zıttır:
+      • <strong>SER:</strong> Bir şeyin <strong>özüdür</strong>, kimliğidir, doğuştan gelen veya kalıcı niteliğidir (İsim, meslek, milliyet, karakter, malzeme, saat).<br>
+      • <strong>ESTAR:</strong> Bir şeyin o anki <strong>geçici durumu</strong>, ruh hali veya <strong>fiziksel konumudur</strong> (Yorgun olmak, hasta olmak, mutfakta olmak, kapalı olmak).
+    </div>
+
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Durum / Alan</th>
+          <th>SER Kullanılır (Öz / Kalıcı)</th>
+          <th>ESTAR Kullanılır (Durum / Konum)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Kimlik / Tanım</strong></td>
+          <td><em>Soy Mehmet. / Es mi hermano.</em></td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Milliyet &amp; Menşe</strong></td>
+          <td><em>Soy turco. / El café es de Colombia.</em></td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Meslek</strong></td>
+          <td><em>Ella es abogada. / Somos estudiantes.</em></td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Karakter vs Ruh Hali</strong></td>
+          <td><em>Juan es alegre.</em> (Juan neşeli bir insandır - karakter)</td>
+          <td><em>Juan está alegre hoy.</em> (Juan bugün neşeli - geçici ruh hali)</td>
+        </tr>
+        <tr>
+          <td><strong>Fiziksel / Sağlık Durumu</strong></td>
+          <td>—</td>
+          <td><em>Estoy cansado. / Mi madre está enferma.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Konum / Yer Bildirme</strong></td>
+          <td>— (Sadece etkinlik yerleri hariç)</td>
+          <td><em>Madrid está en España. / El libro está en la mesa.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Saat &amp; Zaman</strong></td>
+          <td><em>Son las tres y media. / Hoy es lunes.</em></td>
+          <td><em>Estamos a 12 de noviembre.</em> (Tarihte 'estamos a' kalıbı)</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı (Anlamı Değişen Sıfatlar):</strong>
+      <ul style="margin: 0; padding-left: 20px;">
+        <li><em>Ser bueno:</em> İyi / ahlaklı bir insan olmak. $\leftrightarrow$ <em>Estar bueno:</em> Yemeğin lezzetli olması veya kişinin çekici olması.</li>
+        <li><em>Ser listo:</em> Zeki / akıllı olmak. $\leftrightarrow$ <em>Estar listo:</em> Hazır olmak (<em>¿Estás listo?</em> = Hazır mısın?).</li>
+        <li><em>Ser malo:</em> Kötü niyetli biri olmak. $\leftrightarrow$ <em>Estar malo:</em> Hasta olmak veya yemeğin bozulmuş olması.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== HAY VS ESTAR ==================== -->
+  <section id="hay-estar" class="chapter-card">
+    <div class="chapter-title">
+      <span>📍 Bölüm 4: HAY vs ESTAR (Mevcudiyet vs Konum Ayrımı)</span>
+      <span class="badge badge-primary">Location vs Existence</span>
+    </div>
+
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+      • <strong>HAY (Vardır):</strong> Dinleyicinin bilmediği bir nesnenin evrende/ortamda <strong>var olduğunu</strong> söyler. Belirsiz tanımlıklarla (un, una, unos, unas), sayılarla veya çoğul isimlerle kullanılır. ASLA <em>el, la, los, las</em> ile KULLANILMAZ!<br>
+      • <strong>ESTAR (Bulunmaktadır / -dedir):</strong> Zaten bilinen, belirli bir nesnenin <strong>nerede olduğunu</strong> söyler. Belirli tanımlıklarla (el, la, los, las) veya kişi adlarıyla kullanılır.
+    </div>
+
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Kriter</th>
+          <th>HAY (Varlık / Mevcudiyet)</th>
+          <th>ESTAR (Konum / Yer)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Soru Kalıbı</strong></td>
+          <td><em>¿Qué hay en la clase?</em> (Sınıfta ne var?)</td>
+          <td><em>¿Dónde está el profesor?</em> (Hoca nerede?)</td>
+        </tr>
+        <tr>
+          <td><strong>Birlikte Kullanılanlar</strong></td>
+          <td>• un / una / unos / unas<br>• sayılar (dos, tres)<br>• mucho / poco / algún / ningún<br>• yalın çoğul isimler</td>
+          <td>• el / la / los / las<br>• mi / tu / su (iyelik sıfatları)<br>• kişi isimleri (Ahmet, Maria)</td>
+        </tr>
+        <tr>
+          <td><strong>🇪🇸 Model Cümleler</strong></td>
+          <td><em>En mi barrio <strong>hay</strong> un parque grande.</em><br><em>¿<strong>Hay</strong> farmacias cerca?</em><br><em>En la mesa <strong>hay</strong> tres libros.</em></td>
+          <td><em>El parque <strong>está</strong> cerca de mi casa.</em><br><em>La farmacia <strong>está</strong> al lado del banco.</em><br><em>Mis libros <strong>están</strong> en la mesa.</em></td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı:</strong> Hoca sınavda <em>"¿Dónde ______ el banco?"</em> diye sorar. Boşluğa sakın "hay" yazma! Çünkü "el banco" belirli tanımlık almıştır. Doğru cevap: <strong>está</strong>! Eğer cümle <em>"¿Hay un banco por aquí?"</em> şeklinde olsaydı, o zaman <strong>hay</strong> gelirdi!
+    </div>
+  </section>
+
+  <!-- ==================== PORQUE VS PARA VS POR ==================== -->
+  <section id="por-para" class="chapter-card">
+    <div class="chapter-title">
+      <span>🎯 Bölüm 5: PORQUE vs PARA vs POR (Sebep &amp; Amaç Ayrımı)</span>
+      <span class="badge badge-accent">Reason &amp; Purpose</span>
+    </div>
+
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Bağlaç</th>
+          <th>Gramer Kuralı</th>
+          <th>🇹🇷 Türkçe Anlamı</th>
+          <th>🇪🇸 Sınav Cümlesi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>PORQUE</strong></td>
+          <td><strong>Porque + Çekimli Fiil</strong></td>
+          <td>Çünkü / -dığı için (Sebep bildirir)</td>
+          <td><em>Estudio español <strong>porque quiero</strong> vivir en Madrid.</em></td>
+        </tr>
+        <tr>
+          <td><strong>PARA</strong></td>
+          <td><strong>Para + Mastar Fiil (İnfinitivo)</strong></td>
+          <td>-mek / -mak için (Amaç bildirir)</td>
+          <td><em>Estudio español <strong>para viajar</strong> por América Latina.</em></td>
+        </tr>
+        <tr>
+          <td><strong>POR</strong></td>
+          <td><strong>Por + İsim (Sustantivo)</strong></td>
+          <td>-den dolayı / sebebiyle (Motivasyon)</td>
+          <td><em>Estudio español <strong>por mi trabajo</strong>.</em></td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı:</strong> Boşluktan sonraki kelimeye bak!<br>
+      • Eğer fiil mastarsa (<em>hablar, trabajar</em>) → <strong>PARA</strong> gelir!<br>
+      • Eğer fiil çekimliyse (<em>tengo, quiero</em>) → <strong>PORQUE</strong> gelir!<br>
+      • Eğer isimse (<em>mi trabajo, amor</em>) → <strong>POR</strong> gelir!
+    </div>
+  </section>
+
+  <!-- ==================== FİİL ÇEKİM TABLOSU ==================== -->
+  <section id="verbs" class="chapter-card">
+    <div class="chapter-title">
+      <span>🔄 Bölüm 6: Şimdiki Zaman Düzenli ve Düzensiz Fiil Çekim Tablosu</span>
+      <span class="badge badge-primary">Presente de Indicativo</span>
+    </div>
+
+    <h3>Düzenli Fiil Çekimleri (-AR, -ER, -IR)</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Özne</th>
+          <th>-AR (Hablar - Konuşmak)</th>
+          <th>-ER (Comer - Yemek)</th>
+          <th>-IR (Vivir - Yaşamak)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Yo</strong> (Ben)</td>
+          <td>habl<strong>o</strong></td>
+          <td>com<strong>o</strong></td>
+          <td>viv<strong>o</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Tú</strong> (Sen)</td>
+          <td>habl<strong>as</strong></td>
+          <td>com<strong>es</strong></td>
+          <td>viv<strong>es</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Él / Ella / Usted</strong> (O / Siz)</td>
+          <td>habl<strong>a</strong></td>
+          <td>com<strong>e</strong></td>
+          <td>viv<strong>e</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Nosotros/-as</strong> (Biz)</td>
+          <td>habl<strong>amos</strong></td>
+          <td>com<strong>emos</strong></td>
+          <td>viv<strong>imos</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Vosotros/-as</strong> (Sizler)</td>
+          <td>habl<strong>áis</strong></td>
+          <td>com<strong>éis</strong></td>
+          <td>viv<strong>ís</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Ellos / Ellas / Ustedes</strong> (Onlar)</td>
+          <td>habl<strong>an</strong></td>
+          <td>com<strong>en</strong></td>
+          <td>viv<strong>en</strong></td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <h3>Sınavda Çıkan 4 Kritik Düzensiz Fiil</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Özne</th>
+          <th>SER (Olmak - Kimlik)</th>
+          <th>ESTAR (Olmak - Durum)</th>
+          <th>TENER (Sahip Olmak)</th>
+          <th>LLAMARSE (Adı Olmak)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Yo</strong></td>
+          <td><strong>soy</strong></td>
+          <td><strong>estoy</strong></td>
+          <td><strong>tengo</strong></td>
+          <td><strong>me llamo</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Tú</strong></td>
+          <td><strong>eres</strong></td>
+          <td><strong>estás</strong></td>
+          <td><strong>tienes</strong></td>
+          <td><strong>te llamas</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Él / Ella / Usted</strong></td>
+          <td><strong>es</strong></td>
+          <td><strong>está</strong></td>
+          <td><strong>tiene</strong></td>
+          <td><strong>se llama</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Nosotros/-as</strong></td>
+          <td><strong>somos</strong></td>
+          <td><strong>estamos</strong></td>
+          <td><strong>tenemos</strong></td>
+          <td><strong>nos llamamos</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Vosotros/-as</strong></td>
+          <td><strong>sois</strong></td>
+          <td><strong>estáis</strong></td>
+          <td><strong>tenéis</strong></td>
+          <td><strong>os llamáis</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Ellos / Ellas / Ustedes</strong></td>
+          <td><strong>son</strong></td>
+          <td><strong>están</strong></td>
+          <td><strong>tienen</strong></td>
+          <td><strong>se llaman</strong></td>
+        </tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- ==================== VİZE TUZAKLARI ==================== -->
+  <section id="traps" class="chapter-card">
+    <div class="chapter-title">
+      <span>🚨 Bölüm 7: Top 15 İspanyolca Vize Tuzağı &amp; Soru Tüyoları</span>
+      <span class="badge badge-accent">15 Critical Exam Traps</span>
+    </div>
+
+    <div class="trap-box">
+      <strong>1. "El problema" Tuzağı:</strong><br>
+      Sonu -a ile bitmesine rağmen %100 erildir: <em>el problema, el tema, el mapa, el día, el planeta</em>.
+    </div>
+
+    <div class="trap-box">
+      <strong>2. "La mano" Tuzağı:</strong><br>
+      Sonu -o ile bitmesine rağmen %100 dişildir: <em>la mano, la foto, la moto</em>.
+    </div>
+
+    <div class="trap-box">
+      <strong>3. Yaş Bildirirken "Ser" Kullanılmaz:</strong><br>
+      Türkçe mantıkla "Soy 20 años" yazarsan hoca sıfır verir! Yaş fiziksel olarak sahip olunan bir şeydir: <strong>Tengo 20 años</strong>.
+    </div>
+
+    <div class="trap-box">
+      <strong>4. Meslek Söylerken Tanımlık Kullanılmaz:</strong><br>
+      "Soy un profesor" DEĞİL, <strong>Soy profesor</strong> denir. Sadece sıfat eklenirse: <em>Soy un buen profesor</em>.
+    </div>
+
+    <div class="trap-box">
+      <strong>5. Muy vs Mucho Ayrımı:</strong><br>
+      • <strong>Muy:</strong> Sıfat veya zarftan önce gelir (<em>muy guapo, muy bien, muy inteligente</em>). Çoğul eki veya cinsiyet almaz!<br>
+      • <strong>Mucho:</strong> İsimden önce gelir ve cinsiyete göre değişir (<em>mucho dinero, mucha gente, muchos libros, muchas gracias</em>). Fiilden sonra da gelir: <em>Trabajo mucho</em>.
+    </div>
+
+    <div class="trap-box">
+      <strong>6. "¿De dónde eres?" vs "¿Dónde vives?":</strong><br>
+      • <em>¿De dónde eres?</em> → Menşe/Milliyet: <em>Soy de Ankara / Soy turco</em>.<br>
+      • <em>¿Dónde vives?</em> → İkametgah: <em>Vivo en Estambul</em> ("en" kullanılır).
+    </div>
+
+    <div class="trap-box">
+      <strong>7. Sayılarda 16–29 Bitişik Yazılır:</strong><br>
+      <em>Dieciséis, veintidós, veinticinco</em> tek kelimedir. 31'den itibaren <em>treinta y uno</em> olarak ayrılır.
+    </div>
+
+    <div class="trap-box">
+      <strong>8. Hay ile Belirli Tanımlık (El/La) ASLA Kullanılmaz:</strong><br>
+      "Hay el coche" denmez! Ya <em>Hay un coche</em> denir ya da <em>El coche está aquí</em> denir.
+    </div>
+
+    <div class="trap-box">
+      <strong>9. "Gustar" Fiili Ön Bilgisi:</strong><br>
+      Sınavda çıkarsa: <em>Me gusta el libro</em> (tekil isimle), <em>Me gustan los libros</em> (çoğul isimle). Fiil özneye göre değil, sevilen nesneye göre çekimlenir!
+    </div>
+
+    <div class="trap-box">
+      <strong>10. İyelik Sıfatlarında Çoğulluk Uyumu:</strong><br>
+      <em>Mi libro</em> → <em>Mis libros</em>. <em>Tu casa</em> → <em>Tus casas</em>. İsim çoğulsa iyelik sıfatı da mutlaka çoğul eki (-s) alır!
+    </div>
+
+    <div class="trap-box">
+      <strong>11. -ción ve -dad Ekleri Her Zaman Dişildir:</strong><br>
+      <em>La estación, la lección, la nacionalidad, la universidad</em>. Sınavda artikel boşluğuna tereddütsüz <strong>la</strong> yazılır.
+    </div>
+
+    <div class="trap-box">
+      <strong>12. "Estar listo" vs "Ser listo":</strong><br>
+      <em>¿Estás listo?</em> = Hazır mısın? (Estar ile geçici durum). <em>Juan es listo</em> = Juan çok zeki biridir (Ser ile kalıcı zeka).
+    </div>
+
+    <div class="trap-box">
+      <strong>13. Akraba İsimlerinde Tanımlıklar:</strong><br>
+      <em>El padre, la madre, el hermano, la hermana, el abuelo, la abuela, el tío, la tía, el primo, la prima</em>.
+    </div>
+
+    <div class="trap-box">
+      <strong>14. Soru ve Ünlem İşaretleri:</strong><br>
+      İspanyolcada soru ve ünlem cümlelerinin başına <strong>ters işaret</strong> konulur: <em>¿Cómo te llamas?</em> / <em>¡Muchas gracias!</em> Yazılı sınavda bu işaretleri koymak tam puan aldırır.
+    </div>
+
+    <div class="trap-box">
+      <strong>15. Düzensiz Birinci Tekil Şahıslar (Yo):</strong><br>
+      <em>Hacer → Yo hago. Salir → Yo salgo. Conocer → Yo conozco. Saber → Yo sé.</em> Sınavda hoca "Yo" çekimlerindeki bu düzensizlikleri boşluk doldurmada mutlaka sorar!
+    </div>
+  </section>
+
+</div>
+<script>
+  (function () {
+    const toc = document.querySelector('.toc');
+    const tocLinks = Array.from(document.querySelectorAll('.toc a[href^="#"]'));
+    const sections = tocLinks.map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+    function getTocOffset() { return toc ? Math.ceil(toc.getBoundingClientRect().height) + 20 : 20; }
+    function syncScrollMargins() { const o = getTocOffset(); sections.forEach(s => { s.style.scrollMarginTop = o + 'px'; }); }
+    function setActiveLink(id) { tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id)); }
+    let lockSpyUntil = 0;
+    let activeNavToken = 0;
+    function scrollToSection(target, behavior) {
+      if (!target) return;
+      const token = ++activeNavToken;
+      const getDesiredY = () => {
+        const maxY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        return Math.max(0, Math.min(maxY, window.scrollY + target.getBoundingClientRect().top - getTocOffset()));
+      };
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (behavior === 'auto' || reduceMotion) {
+        lockSpyUntil = Date.now() + 200;
+        window.scrollTo(0, getDesiredY());
+        return;
+      }
+      const startY = window.scrollY;
+      const startTime = performance.now();
+      const duration = 380;
+      lockSpyUntil = Date.now() + duration + 250;
+      const step = (now) => {
+        if (token !== activeNavToken) return;
+        const p = Math.min(1, (now - startTime) / duration);
+        const ease = 1 - Math.pow(1 - p, 3);
+        window.scrollTo(0, startY + (getDesiredY() - startY) * ease);
+        if (p < 1) {
+          requestAnimationFrame(step);
+        } else {
+          setTimeout(() => {
+            if (token !== activeNavToken || !toc) return;
+            const tocRect = toc.getBoundingClientRect();
+            const rectTop = target.getBoundingClientRect().top;
+            if (tocRect.top <= 18 && rectTop < tocRect.bottom + 8) {
+              window.scrollTo(0, getDesiredY());
+            }
+          }, 120);
+        }
+      };
+      requestAnimationFrame(step);
+    }
+    tocLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        const target = href ? document.querySelector(href) : null;
+        if (!target) return;
+        e.preventDefault();
+        link.blur();
+        setActiveLink(target.id);
+        try { history.replaceState(null, '', href); } catch (_) {}
+        scrollToSection(target, 'smooth');
+      });
+    });
+    function updateSpy() {
+      if (Date.now() < lockSpyUntil || !sections.length) return;
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 20) {
+        setActiveLink(sections[sections.length - 1].id);
+        return;
+      }
+      const threshold = getTocOffset() + 24;
+      let current = sections[0];
+      for (const sec of sections) if (sec.getBoundingClientRect().top <= threshold) current = sec;
+      if (current) setActiveLink(current.id);
+    }
+    syncScrollMargins();
+    window.addEventListener('resize', syncScrollMargins);
+    window.addEventListener('scroll', updateSpy, { passive: true });
+    if (location.hash) {
+      const initial = document.querySelector(location.hash);
+      if (initial) { setActiveLink(initial.id); setTimeout(() => scrollToSection(initial, 'auto'), 50); }
+    } else if (sections[0]) {
+      setActiveLink(sections[0].id);
+    }
+  })();
+</script>
+</body>
+</html>

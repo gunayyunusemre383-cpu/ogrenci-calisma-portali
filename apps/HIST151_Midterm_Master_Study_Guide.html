@@ -1,0 +1,638 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIST 151: World History I — Çift Dilli Master Sınav Rehberi</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --foreground: #f8fafc;
+      --muted: #94a3b8;
+      --border: #334155;
+      --primary: #38bdf8;
+      --accent: #2563eb;
+      --success: #15803d;
+      --warning: #b45309;
+      --danger: #b91c1c;
+      --concept-bg: #064e3b18;
+      --tip-bg: #78350f18;
+      --trap-bg: #88133718;
+      --formula-bg: #1e3a8a18;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background-color: var(--bg);
+      color: var(--foreground);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e293b, #0369a1);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0 0 8px 0;
+      font-size: 1.85rem;
+      color: #fff;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid;
+    }
+    .badge-sky { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3); }
+    .badge-amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); }
+    .badge-emerald { background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3); }
+
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .toc strong { color: var(--primary); font-size: 0.9rem; }
+    .toc a {
+      text-decoration: none;
+      background: #0f172a;
+      color: var(--foreground);
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .toc a:hover {
+      background: var(--primary);
+      color: #0f172a;
+      border-color: var(--primary);
+    }
+
+    .chapter-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+    .chapter-title {
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 1.45rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    h3 {
+      color: #f1f5f9;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+    }
+    .concept-block {
+      background: var(--concept-bg);
+      border-left: 5px solid #10b981;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 14px 0;
+      border: 1px solid #065f4633;
+    }
+    .concept-block strong { color: #34d399; }
+    .eng-quote {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px dashed #38bdf866;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-style: italic;
+      color: #7dd3fc;
+      margin: 8px 0;
+      font-size: 0.92rem;
+    }
+    .trap-box {
+      background: var(--trap-bg);
+      border-left: 5px solid #ef4444;
+      border: 1px solid #991b1b33;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.92rem;
+      color: #fca5a5;
+    }
+    .trap-box strong { color: #f87171; }
+    .tip-box {
+      background: var(--tip-bg);
+      border-left: 5px solid #f59e0b;
+      border: 1px solid #78350f33;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.92rem;
+      color: #fde68a;
+    }
+    .tip-box strong { color: #fbbf24; }
+    .formula-block {
+      background: var(--formula-bg);
+      border-left: 5px solid var(--primary);
+      border: 1px solid #1e3a8a33;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .formula-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+    
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 580px;
+      margin: 0;
+      font-size: 0.92rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background: #0f172a;
+      color: var(--primary);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
+    ul, ol { margin: 8px 0; padding-left: 20px; color: #cbd5e1; }
+    li { margin-bottom: 6px; }
+    @media (max-width: 720px) {
+      body { padding: 10px; }
+      header { padding: 18px; }
+      header h1 { font-size: 1.35rem; }
+      .chapter-card { padding: 16px; }
+      table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="badges">
+      <span class="badge badge-sky">HIST 151 • World History I</span>
+      <span class="badge badge-amber">Midterm Master Study Guide</span>
+      <span class="badge badge-emerald">Çift Dilli (Türkçe Mantık + Sınav İngilizcesi)</span>
+    </div>
+    <h1>🌍 World History I — Vize Konu Özeti &amp; Akademik Sınav Rehberi</h1>
+    <p>Weeks 2–7 (Prehistory, Early Humans, Neolithic Revolution, Mesopotamia, Egypt, Hittites, Indus Valley, Shang China, The Americas). Türkçe Günlük Hayat Mantığı + Birebir Sınav İngilizcesi Kalıpları + Vize Tuzakları.</p>
+  </header>
+
+  <nav class="toc">
+    <strong>Hızlı Geçiş:</strong>
+    <a href="#week2">Week 2: Terimler &amp; Metodoloji</a>
+    <a href="#week3">Week 3: İnsan Evrimi &amp; Paleolitik</a>
+    <a href="#week4">Week 4: Neolitik &amp; Tarım</a>
+    <a href="#week5">Week 5: Mezopotamya, Mısır, Hititler</a>
+    <a href="#week6">Week 6: İndus &amp; Shang Çin</a>
+    <a href="#week7">Week 7: Antik Amerika (Olmec, Caral, Chavín)</a>
+    <a href="#tables">📊 Karşılaştırma Matrisleri</a>
+    <a href="#traps">🚨 Top 15 Vize Tuzağı</a>
+  </nav>
+
+  <!-- ==================== WEEK 2 ==================== -->
+  <div class="chapter-card" id="week2">
+    <h2 class="chapter-title">
+      <span>WEEK 2: Historical Terms, Prehistory vs. History &amp; Dating Methods</span>
+      <span class="badge badge-sky">Reader pp. 3–4</span>
+    </h2>
+
+    <h3>2.1 Tarih Öncesi (Prehistory) ve Tarih (History) Ayrımı</h3>
+    <div class="concept-block">
+      <strong>🇹🇷 Türkçe Mantık &amp; Günlük Hayat Sezgisi:</strong><br>
+      İnsanlık tarihinin %97'den fazlasında yazı yoktu! Bir toplum için "tarih" ancak yazılı kayıtlar başladığında başlar. Yazı öncesi döneme "prehistory" (tarih öncesi) denir. 
+      <br><em>Unutma:</em> Dünyanın her yerinde tarih aynı anda başlamadı! Mısır ve Sümer MÖ 3200–3000 civarında tarihe geçerken, Avustralya Aborjinleri Avrupalıların gelişine kadar binlerce yıl sözlü gelenekle prehistory döneminde kaldı.
+      <div class="eng-quote">
+        "Prehistory refers to the period before the appearance of written records in a given society. History begins with the formal emergence of written documentation (~3200 BCE in Egypt, ~3000 BCE in Sumer)."
+      </div>
+    </div>
+
+    <h3>2.2 Bilimsel Tarihlendirme Yöntemleri (Dating Methods)</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Yöntem Adı</th>
+          <th>🇹🇷 Türkçe Mantığı &amp; Çalışma Prensibi</th>
+          <th>🇬🇧 Sınav İngilizcesi Anahtar İfadeleri</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Radiocarbon (Carbon-14) Dating</strong></td>
+          <td>Organik (canlı) kalıntılardaki radyoaktif Karbon-14 izotopunun bozunma yarı ömrünü ölçer. <strong>Yalnızca canlı kökenli maddelere</strong> (kemik, ahşap, tohum) uygulanabilir. Taş baltaya veya eritilmiş bakıra uygulanamaz!</td>
+          <td><em>Measures radioactive decay of carbon isotopes in organic remains. Cannot date inorganic stones, metals, or ceramic pottery directly.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Stratigraphic Dating (Stratigrafi)</strong></td>
+          <td>Latince <em>stratum</em> (katman) kökünden gelir. Jeolojik katman kuralı: "Alt katman daha eskidir." Toprak katmanının derinliğine bakarak nesnenin göreceli yaşını saptar.</td>
+          <td><em>Determines age based on the depth and geological rock layer (stratum) in which an artifact is deposited (superposition principle).</em></td>
+        </tr>
+        <tr>
+          <td><strong>Historical Linguistics (Dilbilim)</strong></td>
+          <td>Yazılı belge olmayan dönemde kabilelerin göç yollarını, yaşayan dillerin kök sözcüklerini ve gramer benzerliklerini karşılaştırarak çözer (örn. Bantu göçleri).</td>
+          <td><em>Reconstructs ancient human migration patterns and cultural contact in the absence of writing by analyzing language genealogies.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Genetic Science (Genetik)</strong></td>
+          <td>Fosil DNA ve yaşayan popülasyonların mitokondriyal DNA mutasyonlarını takip ederek Homo sapiens'in Afrika'dan çıkış rotalarını ve Neandertal melezleşmesini belgeler.</td>
+          <td><em>Tracks ancestral migrations and interbreeding (Neanderthals/Denisovans) by mapping genetic markers and mutation rates.</em></td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı (Yazılı Kaynaklar Objektif midir? — Source Critique):</strong><br>
+      • <strong>Tuzak:</strong> "Yazı varsa kesin doğrudur" yanılgısı! Tarihçiler yazılı kayıtlara daima şüpheyle yaklaşır; çünkü antik yazılar kralların, galiplerin ve din adamlarının tek taraflı propagandasıdır (örn. II. Ramses Kadeş'te berabere kaldığı halde tapınaklara mutlak zafer kazandığını yazdırmıştır).<br>
+      • <strong>Sözlü Anlatı Tuzağı:</strong> Kuşaktan kuşağa sözlü aktarılan efsaneler yazıya dökülene kadar bilinçli veya bilinçsiz olarak biçim değiştirir (oral transmission distortions).
+    </div>
+  </div>
+
+  <!-- ==================== WEEK 3 ==================== -->
+  <div class="chapter-card" id="week3">
+    <h2 class="chapter-title">
+      <span>WEEK 3: Early Human Societies &amp; Paleolithic Culture</span>
+      <span class="badge badge-sky">Reader pp. 5–14</span>
+    </h2>
+
+    <h3>3.1 İnsansıların (Hominid) Evrim Çizelgesi</h3>
+    <div class="concept-block">
+      <strong>🇹🇷 Türkçe Mantık &amp; Günlük Hayat Sezgisi:</strong><br>
+      İnsanı diğer primatlardan ayıran ilk ve en temel biyolojik özellik "büyük beyin" değil, <strong>iki ayak üzerinde dik yürümedir (bipedalism)</strong>! 3.2 milyon yıllık Lucy fosili kafatası küçük olmasına rağmen dik yürüyordu. Dik yürümek elleri boşa çıkardı, eller alet yaptı, alet yapmak beyni büyüttü!
+    </div>
+
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Tür / Bulgu</th>
+          <th>Tarih</th>
+          <th>🇹🇷 Türkçe Mantığı &amp; Önemi</th>
+          <th>🇬🇧 Sınav İngilizcesi Kilit Cümlesi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Early Hominids</strong></td>
+          <td>~4–2.5 Mya</td>
+          <td>Doğu Afrika'da ormandan savanaya geçişte ilk kez iki ayak üstünde dik yürüdüler (Bipedalism).</td>
+          <td><em>Diverged from primates in Africa. Fundamental defining physical trait: Bipedalism (walking upright).</em></td>
+        </tr>
+        <tr>
+          <td><strong>Lucy (Australopithecus)</strong></td>
+          <td>3.2 Mya</td>
+          <td>1974 Etiyopya'da bulundu. ~1 metre boyunda. Bipedalizmin büyük beyinden önce geliştiğinin kanıtıdır.</td>
+          <td><em>Proved bipedal upright locomotion preceded brain enlargement in hominid evolution.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Homo habilis</strong></td>
+          <td>~2.3 Mya</td>
+          <td>"Becerikli İnsan" (Handy Man). Taşları yontarak ilk basit taş aletleri (Oldowan) yapan türdür.</td>
+          <td><em>First hominid to deliberately manufacture and use simple stone tools.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Homo erectus</strong></td>
+          <td>~1 Mya – 700k</td>
+          <td>Ateşi kontrol eden İLK tür; Afrika dışına (Avrasya'ya) göç eden İLK türdür.</td>
+          <td><em>First to control fire and first hominid species to venture and migrate out of Africa into Eurasia.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Homo sapiens</strong></td>
+          <td>200k–300k ya</td>
+          <td>Modern insan. ~50.000 yıl önce karmaşık sembolik dil geliştirdi. Hayatta kalan tek hominid türdür.</td>
+          <td><em>Anatomically modern humans. Symbolic language (~50k ya) enabled collective learning and complex planning.</em></td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="tip-box">
+      <strong>💡 Paleolitik Avcı-Toplayıcı Toplumun Özellikleri:</strong><br>
+      • <strong>Grup Büyüklüğü (Band Size):</strong> Ortalama 25–50 kişilik küçük akraba grupları. <em>Exogamy</em> (grup dışından evlenme/üreme) yaptılar.<br>
+      • <strong>Eşitlikçi Yapı (Egalitarianism):</strong> Zenginlik biriktirilemediği için sınıf ayrımı, kalıcı şef veya mülkiyet yoktu.<br>
+      • <strong>Toprak Verimsizliği:</strong> Bir grubu doyurmak için devasa araziler gerektiğinden dünya toplam insan nüfusu 6–10 milyonu geçemiyordu.<br>
+      • <strong>Maneviyat Kanıtı (Şanidar Mağarası / Irak):</strong> Neandertal mezarında çiçek polenleri bulundu; bu ölüye saygı, yas ve şefkat duygusunu kanıtlar.
+    </div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı (Ötzi Buzadam — Hangi Çağda Yaşadı?):</strong><br>
+      • Ötzi (~3300 BCE) Alplerde buzulların içinde bulundu. Yanında bakır balta, çakmaktaşı bıçak ve oklar vardı.<br>
+      • <strong>Tuzak:</strong> Soru bankalarında Ötzi'ye "Paleolitik avcı" derler, YANLIŞTIR! Ötzi, maden kullanan bir <strong>Geç Neolitik / Kalkolitik</strong> dönemi insanıdır!
+    </div>
+  </div>
+
+  <!-- ==================== WEEK 4 ==================== -->
+  <div class="chapter-card" id="week4">
+    <h2 class="chapter-title">
+      <span>WEEK 4: The Neolithic Revolution &amp; The Birth of Agriculture</span>
+      <span class="badge badge-sky">Reader pp. 15–27</span>
+    </h2>
+
+    <h3>4.1 Tarımın Doğuşu ve Zincirleme Dönüşüm</h3>
+    <div class="formula-block">
+      <div class="formula-title">Tarihin En Büyük Sosyo-Ekonomik Zincirleme Tepkimesi:</div>
+      <div style="font-weight:700; color:#38bdf8; font-size:1.05rem; padding:8px 0;">
+        Buzul Çağının Sonu (~10.000 MÖ) ➔ Yerleşik Hayat &amp; Tarım ➔ Besin Fazlası (Caloric Surplus) ➔ Nüfus Patlaması ➔ İşbölümü (Specialization) ➔ Sosyal Sınıflar, Yazı &amp; Devlet
+      </div>
+    </div>
+
+    <div class="concept-block">
+      <strong>🇹🇷 Türkçe Mantık &amp; Günlük Hayat Sezgisi:</strong><br>
+      Avcı-toplayıcı günlük yaşar; buzdolabı olmadığı için depolama yapamaz. Tarım başladığında tonlarca tahıl ambarda depolandı (surplus). Bu sayede herkesin tarlada çalışmasına gerek kalmadı. Tarladan ayrılanlar asker, zanaatkar, din adamı ve yönetici oldu. Böylece dünyada ilk kez <strong>özel mülkiyet</strong>, <strong>sosyal sınıflar</strong> ve bu sınıfları koruyan <strong>hükümet/devlet</strong> ortaya çıktı!
+      <div class="eng-quote">
+        "Agricultural food surplus allowed a portion of society to disengage from food procurement, catalyzing labor specialization, social stratification, private property, and institutionalized governance."
+      </div>
+    </div>
+
+    <h3>4.2 Tarım Merkezleri &amp; Pastoralizm (Göçebelik)</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Bölge</th>
+          <th>Evcilleştirilen Temel Ürünler ve Hayvanlar</th>
+          <th>Önemli Özellik</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Fertile Crescent (Bereketli Hilal)</strong></td>
+          <td>Buğday (wheat), arpa (barley), bezelye; koyun, keçi, sığır, domuz.</td>
+          <td>İlk bağımsız tarım ocağı (~10.000–9000 BCE). Dicle-Fırat ve Şam çevresi.</td>
+        </tr>
+        <tr>
+          <td><strong>China (Sarı Nehir &amp; Yangtze)</strong></td>
+          <td>Darı (millet - kuzeyde), pirinç (rice - güneyde); domuz, tavuk.</td>
+          <td>Löss toprakları sayesinde yüksek verimli tarım.</td>
+        </tr>
+        <tr>
+          <td><strong>The Americas (Mesoamerica &amp; Andes)</strong></td>
+          <td>Mısır (maize), fasulye, kabak ("Three Sisters"); patates; lama/alpaka.</td>
+          <td>Büyük çeki hayvanı (at, sığır) YOKTU; yalnızca lama yük hayvanıydı.</td>
+        </tr>
+        <tr>
+          <td><strong>Pastoralism (Çoban Göçebeliği)</strong></td>
+          <td>Ekin ekilemeyen bozkır ve dağlarda evcil sürüleri (koyun, keçi, at) otlatmak.</td>
+          <td>Köylülerle et/yün/deri karşılığı tahıl takası yaptılar; aşırı otlatma erozyon yarattı.</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı (Nijer Nehri Vadisi İstisnası — West Africa Debate):</strong><br>
+      • Klasik medeniyet tanımında "merkezi krallık, anıtsal saraylar ve yazı" aranır.<br>
+      • Ancak Batı Afrika'daki <strong>Niger River Valley</strong> yerleşimleri (örn. Jenné-jeno), devasa merkezi krallar, saraylar veya bürokratik yazı OLMADAN zanaat loncaları ve yoğun şehirler kurmuştur! Tarihçiler bu yüzden tek tip medeniyet tanımını reddeder.
+    </div>
+  </div>
+
+  <!-- ==================== WEEK 5 ==================== -->
+  <div class="chapter-card" id="week5">
+    <h2 class="chapter-title">
+      <span>WEEK 5: River Valley Dynasties — Mesopotamia, Egypt &amp; The Hittites</span>
+      <span class="badge badge-sky">Reader pp. 28–41</span>
+    </h2>
+
+    <h3>5.1 Mezopotamya ve Mısır'ın Nehir Karşılaştırması</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Kriter</th>
+          <th>Mezopotamya (Dicle &amp; Fırat)</th>
+          <th>Mısır (Nil Nehri)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Nehir Taşkınları</strong></td>
+          <td>Şiddetli, ani, öngörülemez ve yıkıcı taşkınlar.</td>
+          <td>Her yıl düzenli, nazik ve bereketli alüvyon getiren taşkınlar (3 mevsim).</td>
+        </tr>
+        <tr>
+          <td><strong>Dini Dünya Görüşü</strong></td>
+          <td>Tanrılar öfkeli, kaprisli, insana acımasız davranan varlıklar (Gılgamış Destanı).</td>
+          <td>Tanrılar düzenli, şefkatli; ölümden sonra yaşam (ahiret) güneş gibi aydınlık.</td>
+        </tr>
+        <tr>
+          <td><strong>Yazı ve Malzeme</strong></td>
+          <td><strong>Çivi Yazısı (Cuneiform)</strong> — Islak kil tablet üzerine kamışla basılır.</td>
+          <td><strong>Hiyeroglif (Hieroglyphs)</strong> — Nil kenarındaki <em>papirüs</em> bitkisine yazılır.</td>
+        </tr>
+        <tr>
+          <td><strong>Anıtsal Yapılar</strong></td>
+          <td><strong>Ziggurat:</strong> Tanrılara tapınmak için basamaklı kule (Mezar DEĞİLDİR!).</td>
+          <td><strong>Piramitler:</strong> Firavunun ölümsüzlüğü için taş mezarlar (Gize piramitleri).</td>
+        </tr>
+        <tr>
+          <td><strong>Siyasi Yapı</strong></td>
+          <td>Bağımsız şehir devletleri (Ur, Uruk); sonradan imparatorluk (Akkad, Babil).</td>
+          <td>MÖ 3100'de birleşen tek parça merkezi krallık; Firavun yaşayan tanrıdır (Horus).</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="concept-block">
+      <strong>🇹🇷 Hititler (Anadolu / Hattuşa) — 3 Büyük Tarihi Katkı:</strong>
+      <ol>
+        <li><strong>Demir Çağının Öncüsü (~1400 MÖ):</strong> Demiri ilk eriten ve silahlara dönüştüren uygarlıklardan biridir.</li>
+        <li><strong>3 Kişilik Savaş Arabaları:</strong> Sürücü, kalkan taşıyıcı ve mızrakçıdan oluşan arabalarla Mısır'a askeri üstünlük sağladılar.</li>
+        <li><strong>Kadeş Barış Antlaşması (1258 MÖ):</strong> II. Ramses ile Hitit Kralı III. Hattuşili arasında imzalanan <em>dünya tarihinin ilk yazılı uluslararası barış antlaşmasıdır</em>.</li>
+      </ol>
+      <div class="eng-quote">
+        "The Treaty of Kadesh (1258 BCE) is celebrated as the world's earliest recorded international peace treaty, formalizing peace, mutual non-aggression, and extradition of political refugees."
+      </div>
+    </div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı (Piramitleri Köleler mi Yaptı? Hammurabi Eşit midir?):</strong><br>
+      • <strong>Piramitler:</strong> Modern arkeoloji ispatladı ki Gize piramitlerini yabancı köleler değil, taşkın döneminde devlete zorunlu kamu hizmeti (corvée) veren yerli Mısırlı köylüler yapmıştır!<br>
+      • <strong>Hammurabi Kanunları:</strong> "Göze göz, dişe diş" ilkesi vardır ANCAK herkes eşit değildir! Bir soylu kölenin gözünü çıkarırsa sadece para cezası öder; köle soyluya vurursa öldürülür. Sosyal sınıflara göre ceza değişir!
+    </div>
+  </div>
+
+  <!-- ==================== WEEK 6 ==================== -->
+  <div class="chapter-card" id="week6">
+    <h2 class="chapter-title">
+      <span>WEEK 6: The Indus Valley &amp; Shang Dynasty China</span>
+      <span class="badge badge-sky">Reader pp. 42–60</span>
+    </h2>
+
+    <h3>6.1 İndus Vadisi (Harappa &amp; Mohenjo-daro) — Şehir Mühendisliği Mucizesi</h3>
+    <div class="concept-block">
+      <strong>🇹🇷 Türkçe Mantık &amp; Günlük Hayat Sezgisi:</strong><br>
+      İndus medeniyeti MÖ 2500'de bugünkü modern Avrupa şehirlerinden bile daha temiz bir kanalizasyon sistemine sahipti! Her evin kendi banyosu, sokak altında kapalı drenaj kanalları vardı.
+      <br><strong>Büyük Gizem:</strong> İndus'ta hiçbir kral sarayı, devasa askeri kışla veya firavun heykeli YOKTUR! Bu durum, İndus'un merkezi zorba bir kral yerine belediye/tüccar meclisleri tarafından yönetildiğini düşündürür.
+      <div class="eng-quote">
+        "The Indus civilization is uniquely characterized by unprecedented municipal engineering (covered sewers, standardized 1:2:4 baked bricks, Great Bath) and the striking ABSENCE of royal palaces or military monuments."
+      </div>
+    </div>
+
+    <h3>6.2 Shang Hanedanı (Çin, ~1766–1046 MÖ)</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Kavram</th>
+          <th>🇹🇷 Türkçe Mantığı &amp; Önemi</th>
+          <th>🇬🇧 Sınav İngilizcesi Kalıbı</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Löss (Loess Sediment)</strong></td>
+          <td>Sarı Nehir'in taşıdığı ultra verimli sarı toprak rüzgarla birikir; kolay kazılır ve devasa tarımsal ürün fazlası sağlar.</td>
+          <td><em>Fertile, fine-grained windblown silt along the Yellow River enabling massive agricultural yields.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Oracle Bones (Kehanet Kemikleri)</strong></td>
+          <td>Öküz kürek kemikleri ve kaplumbağa kabuklarına soru kazınıp ateşte çatlatılır. Çatlakları kral yorumlar. <strong>Çin yazısının en eski biçimidir</strong>.</td>
+          <td><em>Inscriptions carved onto cattle bones and turtle plastrons heated to divine royal decisions; earliest verified Chinese writing.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Lady Fu Hao Mezarı (Anyang)</strong></td>
+          <td>1976'da soyulmamış halde bulundu. Kadın bir kraliçenin mezarından 130'dan fazla bronz savaş silahı çıktı; kendisinin başkomutan ve ordu generali olduğunu kanıtladı.</td>
+          <td><em>Undisturbed royal tomb with 130+ bronze weapons, proving royal women held supreme military generalship in Shang society.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Piece-Mold Bronze Casting</strong></td>
+          <td>Çinlilerin dünyaca ünlü bronz döküm yöntemi. Kilden çok parçalı kalıplar yaparak karmaşık dini ayin kazanları (Ding) ürettiler.</td>
+          <td><em>Advanced metallurgy using multi-section clay piece-molds to cast intricate ceremonial vessels.</em></td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı (İndus Çöküşü — Aryan İstilası Yalanı):</strong><br>
+      • 20. yüzyıl başında İngiliz sömürgeciler "barbar beyaz Aryanlar geldi, İndus'u yok etti" teorisini attılar.<br>
+      • <strong>Doğrusu:</strong> Modern arkeoloji bunu tamamen çürüttü! İndus, iklim değişikliği, muson yağmurlarının zayıflaması ve Saraswati nehrinin kuruması yüzünden yavaş yavaş terk edildi.
+    </div>
+  </div>
+
+  <!-- ==================== WEEK 7 ==================== -->
+  <div class="chapter-card" id="week7">
+    <h2 class="chapter-title">
+      <span>WEEK 7: Early Civilizations of The Americas (Olmec, Caral, Chavín)</span>
+      <span class="badge badge-sky">Reader pp. 61–72</span>
+    </h2>
+
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Uygarlık</th>
+          <th>Bölge &amp; Tarih</th>
+          <th>🇹🇷 Türkçe Mantığı &amp; Kilit Başarısı</th>
+          <th>🇬🇧 Sınav İngilizcesi Kilit Terimleri</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Olmec (Mesoamerica)</strong></td>
+          <td>Meksika Körfezi<br>(~1200–400 BCE)</td>
+          <td>"Mesoamerika'nın Ana Kültürü" (Mother Culture). 20 tonluk devasa <strong>bazalt taş kafalar</strong>, kauçuk top oyunu, yeşim taşı oymacılığı ve jaguar-insan (were-jaguar) figürleri.</td>
+          <td><em>"Mother culture" of Mesoamerica. Colossal basalt heads, rubber ballgame, were-jaguar rain deity motifs.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Caral (Norte Chico)</strong></td>
+          <td>Peru Sahili<br>(~3000–1800 BCE)</td>
+          <td>Amerika'nın en eski şehri. Çanak çömlek (seramik) ve tahıl tarımı <strong>YOKTUR</strong>! Pamuk ve deniz balıkçılığıyla anıtsal piramitler inşa ettiler.</td>
+          <td><em>Oldest city in Americas. Pre-ceramic civilization based on cotton fishing nets and marine seafood trade without cereal grains.</em></td>
+        </tr>
+        <tr>
+          <td><strong>Chavín de Huántar</strong></td>
+          <td>Peru And Dağları<br>(~900–200 BCE)</td>
+          <td>And dağlarının 3150 metredeki dini hac merkezi. Tapınak altındaki tünellerde ürkütücü <strong>Lanzón dikiti</strong> bulunur. Dikey ekolojiyle lama kervanları yönettiler.</td>
+          <td><em>Highland Andean pilgrimage cult center. Underground sound canals, Lanzón feline stone stela, vertical ecology with llama caravans.</em></td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="concept-block">
+      <strong>🇹🇷 Quipu (Khipu) — Yazısız Bilgi Depolama Teknolojisi:</strong><br>
+      Antik İnka ve Caral halkı alfabeye sahip değildi. Bunun yerine farklı renk ve uzunluktaki iplere onluk tabanda düğümler atarak (Quipu) nüfus sayımı, vergi ve ambar kayıtlarını eksiksiz tuttular!
+      <div class="eng-quote">
+        "Quipu (khipu) was a sophisticated textile recording device using knotted, colored cords to store decimal census and economic accounting data without an alphabetic script."
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOP 15 TRAPS ==================== -->
+  <div class="chapter-card" id="traps">
+    <h2 class="chapter-title">
+      <span>🚨 Top 15 Multiple-Choice Sınav Tuzağı ("Which of the following is NOT true?")</span>
+      <span class="badge badge-amber">Vize Sınav Klasikleri</span>
+    </h2>
+
+    <div class="trap-box">
+      <ol style="margin:0; padding-left:20px; line-height:1.8;">
+        <li><strong>Tarih yazıyla başlar:</strong> Yazı öncesi döneme Paleolitik değil, genel olarak <em>Prehistory</em> denir.</li>
+        <li><strong>Karbon testi metali tarihlendiremez:</strong> Demir, bronz ve taş aletler Karbon-14 ile ölçülemez; stratigrafi gerekir.</li>
+        <li><strong>Lucy'nin beyni küçüktü:</strong> Bipedalizm (iki ayak üzerinde yürüme) büyük beyinden milyonlarca yıl önce gelişmiştir.</li>
+        <li><strong>İlk ateşi yakan ve göç eden:</strong> Homo habilis değil, <em>Homo erectus</em>'tur.</li>
+        <li><strong>Tarım tek bir yerde çıkmadı:</strong> Tarım tek bir mucidin buluşu değil, 4 farklı kıtada bağımsız olarak eşzamanlı ortaya çıkmıştır.</li>
+        <li><strong>Ziggurat mezar değildir:</strong> Mısır piramitleri mezardır; Mezopotamya zigguratları ise tanrı tapınağı ve rasathanedir.</li>
+        <li><strong>Piramitleri köleler yapmadı:</strong> Gize piramitlerini vergi borcunu kamu hizmetiyle ödeyen hür Mısırlı köylüler yapmıştır.</li>
+        <li><strong>Hammurabi eşitlikçi değildir:</strong> Cezalar soylu, hür vatandaş ve köle ayrımına göre radikal biçimde değişir.</li>
+        <li><strong>İndus'ta saray yoktur:</strong> Mezopotamya ve Mısır'ın aksine İndus'ta hiçbir kraliyet sarayı veya anıt savaş heykeli bulunmamıştır.</li>
+        <li><strong>İndus yazısı okunamaz:</strong> Mısır hiyeroglifi ve Sümer çivisi okunmuştur ama İndus yazısı (~400 glif) hala çözülememiştir.</li>
+        <li><strong>Aryan istilası miti:</strong> İndus medeniyetini barbar savaşçılar değil, musonların kayması ve nehirlerin kuruması bitirmiştir.</li>
+        <li><strong>Kehanet kemikleri Çin yazısının köküdür:</strong> Shang kralları öküz kürek kemikleri ve kaplumbağa kabuklarını ateşte çatlatarak kehanet yaptı.</li>
+        <li><strong>Olmec dev kafaları:</strong> Uzaylılar değil, Olmec krallarının ve şeflerinin portreleridir.</li>
+        <li><strong>Caral'da çanak çömlek yoktu:</strong> Caral medeniyeti <em>pre-ceramic</em>'tir; piramit yapmış ama çömlek ve tahıl kullanmamıştır.</li>
+        <li><strong>Kadeş Antlaşması:</strong> Dünya tarihindeki ilk uluslararası yazılı barış antlaşmasıdır (Hititler ve Mısır arasında).</li>
+      </ol>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,759 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İnkılap Tarihi: III. Selim'den I. Meşrutiyet'e — Çift Yönlü Master Sınav Rehberi</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --primary: #991b1b;
+      --accent: #dc2626;
+      --success: #15803d;
+      --warning: #b45309;
+      --danger: #b91c1c;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --formula-bg: #fef2f2;
+      --concept-bg: #f0fdf4;
+      --tip-bg: #fefce8;
+      --trap-bg: #fff1f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      margin: 0;
+      padding: 24px 24px 56px;
+    }
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #450a0a, #7f1d1d, #991b1b);
+      color: white;
+      padding: 32px 36px;
+      border-radius: 16px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 25px rgba(153, 27, 27, 0.2);
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      opacity: 0.92;
+      font-size: 1.05rem;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .badge {
+      font-size: 0.82rem;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-primary { background: rgba(255,255,255,0.2); color: #fff; }
+    .badge-accent { background: #fca5a5; color: #7f1d1d; }
+    .badge-emerald { background: #34d399; color: #064e3b; }
+    
+    .toc {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      position: sticky;
+      top: 10px;
+      z-index: 30;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .toc::-webkit-scrollbar { display: none; }
+    .toc strong { font-size: 0.84rem; color: var(--primary); margin-right: 2px; white-space: nowrap; flex-shrink: 0; }
+    .toc a {
+      text-decoration: none;
+      background: #fef2f2;
+      color: var(--primary);
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid #fecaca;
+      font-size: 0.81rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all 0.15s ease;
+    }
+    .toc a:hover,
+    .toc a.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .chapter-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      scroll-margin-top: 96px;
+    }
+    @media (max-width: 768px) {
+      body { padding: 14px 12px 48px; }
+      .chapter-card { padding: 20px 16px; scroll-margin-top: 76px; }
+      .toc {
+        top: 6px;
+        padding: 8px 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+    }
+    .chapter-title {
+      color: var(--primary);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 12px;
+      margin-top: 0;
+      margin-bottom: 22px;
+      font-size: 1.55rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    h3 {
+      color: #7f1d1d;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+    h4 {
+      color: #991b1b;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
+    
+    /* Dual-Track Components */
+    .concept-block {
+      background: var(--concept-bg);
+      border-left: 5px solid var(--success);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.98rem;
+    }
+    .concept-block strong.concept-label {
+      color: var(--success);
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .zurcher-quote {
+      background: #fff5f5;
+      border: 1px dashed #f87171;
+      border-left: 5px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-style: normal;
+      color: #0f172a;
+      margin: 12px 0;
+      font-size: 0.95rem;
+    }
+    .zurcher-quote .z-label {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .zurcher-quote .z-text {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    .trap-box {
+      background: var(--trap-bg);
+      border-left: 5px solid var(--danger);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+    .trap-box strong { color: var(--danger); }
+
+    .tip-box {
+      background: var(--tip-bg);
+      border-left: 5px solid #eab308;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+      font-size: 0.95rem;
+    }
+    .tip-box strong { color: #854d0e; }
+
+    .formula-block {
+      background: var(--formula-bg);
+      border-left: 5px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .formula-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 580px;
+      margin: 0;
+      font-size: 0.92rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #fef2f2;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    tr:nth-child(even) { background: #f8fafc; }
+
+    ul, ol { margin: 8px 0; padding-left: 24px; }
+    li { margin-bottom: 6px; }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .chapter-card { box-shadow: none; border: 1px solid #cbd5e1; page-break-inside: avoid; }
+      .toc { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="badges">
+      <span class="badge badge-primary">ATA 101 • İnkılap Tarihi I</span>
+      <span class="badge badge-accent">Erik Jan Zürcher: Modernleşen Türkiye'nin Tarihi</span>
+      <span class="badge badge-emerald">Bölüm 2–6 (s. 39–117)</span>
+    </div>
+    <h1>📖 Atatürk İlkeleri ve İnkılap Tarihi I: Master Sınav Kılavuzu</h1>
+    <p>III. Selim'den I. Meşrutiyet'e • Türkçe Tarihsel Mantık &amp; Sezgi + Zürcher'in Tezler ve Sınavda Çıkan Cümleler + Karşılaştırmalı Tablolar &amp; Vize Tuzakları</p>
+  </header>
+
+  <nav class="toc">
+    <strong>Bölümlere Git:</strong>
+    <a href="#ch2">👑 III. Selim &amp; Nizam-ı Cedid</a>
+    <a href="#ch3">⚔️ II. Mahmud &amp; Vaka-i Hayriye</a>
+    <a href="#ch4">📜 Tanzimat &amp; Islahat Fermanı</a>
+    <a href="#ch5">💰 Dış Borçlar &amp; Düyun-ı Umumiye</a>
+    <a href="#ch6">🏛️ Genç Osmanlılar &amp; Kanun-ı Esasi</a>
+    <a href="#matrices">📊 Karşılaştırma Matrisleri</a>
+    <a href="#traps">🚨 Top 15 Vize Tuzağı</a>
+  </nav>
+
+  <!-- ==================== BÖLÜM 2 ==================== -->
+  <section id="ch2" class="chapter-card">
+    <div class="chapter-title">
+      <span>👑 Bölüm 2: Gelenek ile Yenilik Arasında: III. Selim ve Nizam-ı Cedid (1789–1807)</span>
+      <span class="badge badge-accent">Zürcher s. 39–50</span>
+    </div>
+
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık &amp; Tarihsel Sezgi:</strong>
+      Osmanlı 1787–1792 Rus-Avusturya savaşlarında ağır bir hezimet yaşadı. Genç padişah III. Selim tahta çıktığında devletin çöküşünü durdurmanın tek yolunun Avrupa tarzı düzenli bir ordu kurmak olduğunu gördü. Fakat Yeniçeriler o kadar kök salmıştı ki, onları doğrudan lağvetmeye cesaret edemedi. Bu yüzden mevcut yapıyı koruyup <em>paralel bir ordu</em> kurdu: <strong>Nizam-ı Cedid</strong>. Bu orduyu finanse etmek için de ayrı bir bütçe oluşturdu: <strong>İrad-ı Cedid</strong>. Ancak eski yapı dururken yenisini kurmak iki başlılık yarattı ve ulema ile yeniçerilerin Kabakçı Mustafa İsyanı ile Selim'i devirmesine yol açtı.
+    </div>
+
+    <div class="zurcher-quote">
+      <span class="z-label">🎯 Erik Jan Zürcher'in Temel Tezi &amp; Sınav Cümlesi:</span>
+      <div class="z-text">
+        "III. Selim dönemi reformları, bir 'devrim' veya 'Batılılaşma devrimi' olmaktan ziyade, klasik Osmanlı düzenini canlandırmayı hedefleyen geleneksel <em>ıslahat (ihya)</em> zihniyeti ile modern Avrupa askeri teknolojisini bünyeye katma çabası arasındaki gerilimdir. Nizam-ı Cedid ordusunun kurulması geleneksel dengeleri bozmuş; finansmanı için kurulan İrad-ı Cedid hazinesinin koyduğu yeni vergiler taşra ayanları ve halk nezdinde hoşnutsuzluk yaratarak 1807 darbesine zemin hazırlamıştır."
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-title">💡 III. Selim Döneminin 4 Büyük İlki:</div>
+      <ul>
+        <li><strong>Lâyihalar (Raporlar):</strong> Islahatlara başlamadan önce yerli ve yabancı 22 devlet adamından reform layihası istedi (katılımcı planlama).</li>
+        <li><strong>Daimi Elçilikler:</strong> Londra (1793 - Yusuf Agah Efendi), Paris, Viyana ve Berlin'de sürekli elçilikler açıldı (Osmanlı artık Avrupa diplomasisine dahil oldu).</li>
+        <li><strong>Nizam-ı Cedid ve Levent Kışlası:</strong> Fransız talimnameleri ve subaylarıyla eğitilen ilk modern piyade birliği.</li>
+        <li><strong>İrad-ı Cedid Hazinesi:</strong> Klasik Hazine-i Amire'den bağımsız, Nizam-ı Cedid'in masraflarına tahsis edilmiş özel fon.</li>
+      </ul>
+    </div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı:</strong> III. Selim'i tahttan indiren isyan kimin isyanıdır? <em>Kabakçı Mustafa İsyanı (Mayıs 1807)</em>. Patrona Halil İsyanı (1730) ile KARIŞTIRMA! Patrona Halil Lale Devri'ni (III. Ahmed) bitirdi, Kabakçı Mustafa ise III. Selim'i ve Nizam-ı Cedid'i bitirdi!
+    </div>
+  </section>
+
+  <!-- ==================== BÖLÜM 3 ==================== -->
+  <section id="ch3" class="chapter-card">
+    <div class="chapter-title">
+      <span>⚔️ Bölüm 3: Sultan II. Mahmud ve Merkezî Otoritenin Yeniden Tesisi (1808–1839)</span>
+      <span class="badge badge-primary">Zürcher s. 51–64</span>
+    </div>
+
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+      II. Mahmud tahta bir taşra ayanı olan Alemdar Mustafa Paşa'nın darbesiyle çıktı. İlk günlerinde tamamen güçsüzdü; ayanlarla mecburen <strong>Sened-i İttifak (1808)</strong> imzalayarak padişahın mutlak otoritesini sınırlamak zorunda kaldı. Fakat II. Mahmud çok sabırlı ve stratejik bir hükümdardı. 18 yıl boyunca sessizce gücünü topladı, ulemayı yanına çekti, halkı ikna etti ve 1826'da Yeniçeri Ocağı'nı top ateşine tutarak yok etti (<strong>Vaka-i Hayriye</strong>). Yeniçeri belası kalkınca önünde hiçbir engel kalmadı; vezirlikleri bakanlığa (nezaret) dönüştürdü, kılık kıyafeti değiştirdi (fes ve pantolon), ilk nüfus sayımını ve Takvim-i Vekayi gazetesini çıkardı.
+    </div>
+
+    <div class="zurcher-quote">
+      <span class="z-label">🎯 Erik Jan Zürcher'in Temel Tezi &amp; Sınav Cümlesi:</span>
+      <div class="z-text">
+        "Sened-i İttifak bazı tarihçilerce 'Osmanlı'nın Magna Carta'sı' olarak övülse de, modern bir anayasal belge değil; zayıflamış padişah ile feodal taşra derebeyleri (ayanlar) arasındaki geleneksel bir güç taksimi uzlaşısıdır. Nitekim Alemdar'ın ölümünün ardından padişah bu belgeyi fiilen hükümsüz kılmıştır. II. Mahmud'un gerçek dönüm noktası ise Yeniçeriliğin kaldırılmasıdır (Vaka-i Hayriye); çünkü bu adım Osmanlı modernleşmesinin önündeki en büyük kurumsal ve askeri engeli kökünden kazımıştır."
+      </div>
+    </div>
+
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Reform Alanı</th>
+          <th>II. Mahmud Dönemi Düzenlemesi</th>
+          <th>Tarihsel Önemi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Askeri</strong></td>
+          <td>Asakir-i Mansure-i Muhammediye kuruldu. Redif (yedek) birlikleri ve Harbiye (Mekteb-i Harbiye) açıldı.</td>
+          <td>Geleneksel yeniçeri tasfiye edildi; Batı tarzı profesyonel subay kuşağı yetiştirildi.</td>
+        </tr>
+        <tr>
+          <td><strong>Yönetim &amp; Bürokrasi</strong></td>
+          <td>Divan-ı Hümayun kaldırıldı; yerine Nezaretler (Bakanlıklar: Dahiliye, Hariciye, Maliye) ve Babıali bürokrasisi kuruldu.</td>
+          <td>Modern kabine hükümeti ve devlet memurluğu sınıfı doğdu. Müsadere usulü kaldırıldı (özel mülkiyet güvencesi).</td>
+        </tr>
+        <tr>
+          <td><strong>İletişim &amp; Eğitim</strong></td>
+          <td>İlk resmi gazete <em>Takvim-i Vekayi</em> (1831), Posta teşkilatı, Tıbbiye ve Harbiye mektepleri açıldı.</td>
+          <td>Devletin halkla ve bürokrasiyle doğrudan iletişim kurması ve Fransızca bilen kadrolar yetişmesi sağlandı.</td>
+        </tr>
+        <tr>
+          <td><strong>Kıyafet &amp; Semboller</strong></td>
+          <td>Sarık ve cübbe yerine memurlara Fes, ceket ve pantolon zorunluluğu getirildi; padişahın portresi devlet dairelerine asıldı.</td>
+          <td>Modern ve tektip bir vatandaş/bürokrat kimliği inşa edildi ("Gâvur Padişah" lakabı buradan gelir).</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı:</strong> Müsadere usulü (ölen memurun malına devletin el koyması) hangi padişah döneminde kaldırıldı? <strong>II. Mahmud!</strong> Bu gelişme bürokratların servet biriktirmesini ve Tanzimat'ın bağımsız paşalarının (Reşid, Âli, Fuad) ortaya çıkmasını sağlamıştır.
+    </div>
+  </section>
+
+  <!-- ==================== BÖLÜM 4 ==================== -->
+  <section id="ch4" class="chapter-card">
+    <div class="chapter-title">
+      <span>📜 Bölüm 4: Tanzimat Devri (1839–1876): Gülhane Hatt-ı Hümayunu ve Islahat Fermanı</span>
+      <span class="badge badge-accent">Zürcher s. 65–84</span>
+    </div>
+
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+      Tanzimat bir halk devrimi DEĞİLDİR; tabandan gelen bir talep yoktur. Padişah Abdülmecid henüz 16 yaşındayken, Londra ve Paris elçiliği yapmış usta diplomat Mustafa Reşid Paşa tarafından hazırlandı. O sırada Mısır Valisi Kavalalı Mehmed Ali Paşa Osmanlı ordusunu yenmiş ve Kütahya'ya kadar gelmişti! Osmanlı Devleti'nin can havliyle İngiltere ve Fransa'nın askeri desteğine ihtiyacı vardı. İşte Tanzimat Fermanı, hem devleti içeride modern bir hukuk devletine dönüştürmek hem de Batı kamuoyuna "Bakın biz tebaamıza can, mal ve ırz güvenliği veren uygar bir devletiz" mesajı vermek için ilan edildi.
+    </div>
+
+    <div class="zurcher-quote">
+      <span class="z-label">🎯 Erik Jan Zürcher'in Temel Tezi &amp; Sınav Cümlesi:</span>
+      <div class="z-text">
+        "Tanzimat Fermanı bir anayasa değil; padişahın kendi yetkilerini tek taraflı olarak sınırlandırdığını ilan ettiği bir taahhütnamedir. Hükümdar, şeriat kurallarına ve yeni kanunlara uyacağına yemin etmiştir. Asıl köklü kırılma ise 1856 Islahat Fermanı ile yaşanmıştır. Islahat Fermanı, Kırım Savaşı'nın ardından İngiltere ve Fransa'nın doğrudan baskısıyla hazırlanmış olup; gayrimüslim tebaaya Müslümanlarla 'tam hukuki ve sosyal eşitlik' tanımasıyla geleneksel Osmanlı 'Millet Sistemi'ni temelinden sarsmıştır."
+      </div>
+    </div>
+
+    <h3>Tanzimat Fermanı (1839) vs Islahat Fermanı (1856) Karşılaştırması</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Özellik</th>
+          <th>Gülhane Hatt-ı Hümayunu (Tanzimat - 1839)</th>
+          <th>Islahat Fermanı (1856)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Hazırlayan &amp; Padişah</strong></td>
+          <td>Mustafa Reşid Paşa • Sultan Abdülmecid</td>
+          <td>Âli Paşa ve Fuad Paşa (İngiliz/Fransız elçileriyle) • Sultan Abdülmecid</td>
+        </tr>
+        <tr>
+          <td><strong>İlan Edilme Nedeni</strong></td>
+          <td>Mısır Sorunu (Kavalalı krizi) ve Londra Konferansı öncesi Batı desteği almak.</td>
+          <td>Kırım Savaşı sonrası Paris Barış Konferansı şartlarını yerine getirmek.</td>
+        </tr>
+        <tr>
+          <td><strong>Hitap Ettiği Kitle</strong></td>
+          <td>Tüm Osmanlı tebaası (Müslim ve Gayrimüslim eşitliği genel hatlarıyla).</td>
+          <td>Doğrudan ve ağırlıklı olarak <strong>Gayrimüslim tebaa</strong> (Hıristiyan ve Museviler).</td>
+        </tr>
+        <tr>
+          <td><strong>Getirdiği Haklar</strong></td>
+          <td>Can, mal, ırz güvenliği; rüşvetin ve iltizamın kaldırılması; açık mahkeme; adil vergi ve askerlik.</td>
+          <td>Cizye vergisinin kaldırılması; gayrimüslimlere askeri/mülki memuriyet hakkı; bedel-i askeri; hakaret içeren kelimelerin ("gâvur") yasaklanması.</td>
+        </tr>
+        <tr>
+          <td><strong>Toplumsal Tepki</strong></td>
+          <td>Ulema ve halk şeriata uygunluğu vurgulandığı için büyük tepki göstermedi.</td>
+          <td>Müslümanlar "Gâvura gâvur diyemeyecek miyiz?" diye öfkelendi; Ortodoks Patrikhanesi bile ayrıcalıklarını kaybettiği için memnun olmadı!</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı:</strong> Tanzimat Fermanı'nda "padişahın yetkileri ilk kez meclis tarafından sınırlandırılmıştır" ifadesi KESİNLİKLE YANLIŞTIR. Meclis 1876 I. Meşrutiyet'te açılmıştır! Tanzimat'ta meclis yoktur; padişah kendi rızasıyla kendi yetkisini hukuka bağlamıştır.
+    </div>
+  </section>
+
+  <!-- ==================== BÖLÜM 5 ==================== -->
+  <section id="ch5" class="chapter-card">
+    <div class="chapter-title">
+      <span>💰 Bölüm 5: İflas, Dış Borçlar ve Ekonomik Bağımlılık (1854–1881)</span>
+      <span class="badge badge-primary">Zürcher s. 85–97</span>
+    </div>
+
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+      1838 Baltalimanı Antlaşması ile İngiliz mallarına uygulanan gümrük vergileri düşürüldü; Osmanlı açık pazar haline geldi ve yerli el zanaatları çöktü. Üzerine 1853 Kırım Savaşı patlak verince savaş masrafları bütçeyi aştı. Osmanlı tarihinde ilk defa 1854'te Londra ve Paris piyasalarından <strong>dış borç</strong> alındı. Alınan paralar üretime ve fabrikalara değil; saray inşaatlarına (Dolmabahçe, Çırağan), ordu harcamalarına ve eski borçların faizine gitti! Sonunda 1875'te Sadrazam Mahmud Nedim Paşa "Paramız bitti, borcun faizini bile ödeyemiyoruz" diyerek iflas ilan etti (<strong>Ramazan Kararnamesi</strong>). Alacaklı Avrupa devletleri 1881'de gelip devletin en karlı 6 gelirine (tuz, tütün, ipek, pul vs.) el koyan <strong>Düyun-ı Umumiye İdaresi</strong>'ni kurdular.
+    </div>
+
+    <div class="zurcher-quote">
+      <span class="z-label">🎯 Erik Jan Zürcher'in Temel Tezi &amp; Sınav Cümlesi:</span>
+      <div class="z-text">
+        "Osmanlı İmparatorluğu'nun çöküşünü hızlandıran en ölümcül zincirleme mekanizma askeri değil mali alanda yaşanmıştır: 1838 Baltalimanı Antlaşması ile başlayan serbest ticaret bağımlılığı, 1854 Kırım Savaşı'nda ilk dış borçlanmaya yol açmış; Galata bankerlerinin yüksek faizli kısa vadeli avanslarıyla birleşen borç sarmalı 1875 devlet iflası ile sonuçlanmıştır. 1881 Muharrem Kararnamesi ile kurulan Düyun-ı Umumiye (Genel Borçlar İdaresi), Osmanlı maliyesinin egemenliğini fiilen Avrupalı emperyalist güçlerin denetimine devretmiştir."
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-title">💡 İflasın Kronolojik Zinciri:</div>
+      <ol>
+        <li><strong>1838 Baltalimanı Ticaret Antlaşması:</strong> İhracat vergisi %12, ithalat vergisi %5 oldu. Yerli tüccar yabancı tüccarın gerisine düştü.</li>
+        <li><strong>1854 İlk Dış Borç:</strong> Kırım Savaşı sırasında Abdülmecid döneminde İngiltere ve Fransa'dan alındı.</li>
+        <li><strong>1875 Ramazan Kararnamesi:</strong> Sadrazam Mahmud Nedim Paşa borç kuponlarının faiz ödemelerinin yarıya indirildiğini açıkladı (Moratoryum / İflas).</li>
+        <li><strong>1881 Muharrem Kararnamesi:</strong> II. Abdülhamid döneminde borçlar yeniden yapılandırıldı ve Düyun-ı Umumiye kuruldu.</li>
+      </ol>
+    </div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı:</strong> İlk dış borç hangi padişah döneminde alındı? <strong>Sultan Abdülmecid (1854)!</strong> II. Mahmud veya III. Selim ile karıştırma! Düyun-ı Umumiye ise hangi padişah döneminde kuruldu? <strong>II. Abdülhamid (1881)!</strong>
+    </div>
+  </section>
+
+  <!-- ==================== BÖLÜM 6 ==================== -->
+  <section id="ch6" class="chapter-card">
+    <div class="chapter-title">
+      <span>🏛️ Bölüm 6: Genç Osmanlılar, I. Meşrutiyet ve Kanun-ı Esasi (1876–1878)</span>
+      <span class="badge badge-accent">Zürcher s. 98–117</span>
+    </div>
+
+    <div class="concept-block">
+      <strong class="concept-label">🇹🇷 Türkçe Saf Mantık:</strong>
+      Tanzimat döneminin yetiştirdiği aydınlar (Namık Kemal, Şinasi, Ziya Paşa) Âli ve Fuad Paşaların kurduğu "bürokratik diktatörlükten" rahatsız oldular. Devleti kurtarmanın tek yolunun padişahın ve bürokratların yetkisini halkın seçeceği bir meclisle denetlemek olduğuna inandılar. Gizlice <strong>Genç Osmanlılar (İttifak-ı Hamiyet)</strong> cemiyetini kurdular. Sadrazam Mithat Paşa ile anlaşıp meşrutiyet sözü veren II. Abdülhamid'i tahta çıkardılar. 23 Aralık 1876'da Osmanlı tarihinin ilk yazılı anayasası ilan edildi: <strong>Kanun-ı Esasi</strong>. Ancak 1877–78 Osmanlı-Rus Savaşı (93 Harbi) çıkınca Abdülhamid anayasadaki 113. madde yetkisini kullanarak meclisi tatil etti ve 30 yıllık istibdat devri başladı.
+    </div>
+
+    <div class="zurcher-quote">
+      <span class="z-label">🎯 Erik Jan Zürcher'in Temel Tezi &amp; Sınav Cümlesi:</span>
+      <div class="z-text">
+        "Genç Osmanlılar, geleneksel İslami kavramları (Şûra, Meşveret, Biat) modern anayasal meşrutiyet fikirleriyle (Parlamento, Kamuoyu, Vatan) sentezlemeye çalışan ilk modern Osmanlı entelektüel hareketidir. 1876 Kanun-ı Esasi modern bir anayasa olmasına rağmen, padişahın mutlak otoritesini korumuştur: Padişah meclisi feshetme, bakanları atama ve 113. madde uyarınca mahkeme kararı olmaksızın kişileri sürgüne gönderme yetkisine sahipti. Bu nedenle I. Meşrutiyet, parlamenter bir monarşiden ziyade sarayın vesayetinde bir danışma meclisi denemesidir."
+      </div>
+    </div>
+
+    <h3>Meclis-i Umumi: Meclis-i Mebusan vs Meclis-i Âyân</h3>
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Kriter</th>
+          <th>Meclis-i Mebusan (Milletvekilleri)</th>
+          <th>Meclis-i Âyân (Senato)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Üye Seçimi</strong></td>
+          <td>Halk tarafından iki dereceli seçim sistemiyle seçilir.</td>
+          <td>Doğrudan <strong>Padişah tarafından</strong> atanır.</td>
+        </tr>
+        <tr>
+          <td><strong>Görev Süresi</strong></td>
+          <td>4 yıl için seçilirler.</td>
+          <td><strong>Ömür boyu</strong> görevde kalırlar.</td>
+        </tr>
+        <tr>
+          <td><strong>Üye Bileşimi</strong></td>
+          <td>Hem Müslüman hem gayrimüslim mebuslar nüfus oranına göre temsil edilir.</td>
+          <td>En az 40 yaşında, devlete üstün hizmet vermiş paşalar, ulema ve vezirler.</td>
+        </tr>
+        <tr>
+          <td><strong>Kanun Yetkisi</strong></td>
+          <td>Kanun teklifi hazırlayabilir ancak padişahın onay izni (irade-i seniyye) şarttır.</td>
+          <td>Mebusan'dan geçen kanunları inceler; padişah ve din haklarına aykırı bulursa veto eder.</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap-box">
+      <strong>🚨 Vize Tuzağı:</strong> 1876 Kanun-ı Esasi'de hükümet (heyet-i vükela) kime karşı sorumludur? <strong>PADİŞAHA KARŞI!</strong> Meclise karşı değil! Padişah istediği bakanı azleder, meclisi feshedebilir ve 113. madde ile istediği kişiyi yargılamadan sürgüne yollayabilir (nitelim Mithat Paşa'yı bu maddeyle sürgüne göndermiştir).
+    </div>
+  </section>
+
+  <!-- ==================== KARŞILAŞTIRMA MATRİSLERİ ==================== -->
+  <section id="matrices" class="chapter-card">
+    <div class="chapter-title">
+      <span>📊 Bölüm 7: 4 Büyük Tarihsel Metnin Karşılaştırma Matrisi</span>
+      <span class="badge badge-primary">Exam Master Matrix</span>
+    </div>
+
+    <div class="table-responsive"><table>
+      <thead>
+        <tr>
+          <th>Belge</th>
+          <th>Tarih &amp; Padişah</th>
+          <th>Belgenin Hukuki Niteliği</th>
+          <th>Temel Kazanım &amp; Sınırlama</th>
+          <th>🚨 Vize Soru Tuzağı</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sened-i İttifak</strong></td>
+          <td>1808 • II. Mahmud (Alemdar Mustafa Paşa)</td>
+          <td>Padişah ile Âyanlar arasında sözleşme (Misak).</td>
+          <td>Padişah ilk kez kendi gücü dışındaki bir gücü (ayanları) tanıdı.</td>
+          <td>Batılılaşma belgesi DEĞİLDİR; anayasa değildir. Kısa sürede rafa kalktı.</td>
+        </tr>
+        <tr>
+          <td><strong>Tanzimat Fermanı (Gülhane)</strong></td>
+          <td>1839 • Sultan Abdülmecid (Mustafa Reşid Paşa)</td>
+          <td>Padişahın tek taraflı irade beyanı (Hatt-ı Hümayun).</td>
+          <td>Can, mal, ırz güvencesi; rüşvet ve müsadere yasağı; adil vergi. Hukukun üstünlüğü ilkesi.</td>
+          <td>Halk ayaklanmasıyla değil, Mısır krizinde Batı desteği almak için çıkarıldı. Meclis yoktur!</td>
+        </tr>
+        <tr>
+          <td><strong>Islahat Fermanı</strong></td>
+          <td>1856 • Sultan Abdülmecid (Âli ve Fuad Paşalar)</td>
+          <td>Paris Barış Antlaşması baskısıyla ferman.</td>
+          <td>Gayrimüslimlere tam hukuki eşitlik, memuriyet, bedel-i askeri, cizyenin kalkması.</td>
+          <td>Müslüman halk fermanı "Hıristiyanlara üstünlük verildi" diyerek protesto etmiştir.</td>
+        </tr>
+        <tr>
+          <td><strong>Kanun-ı Esasi (I. Meşrutiyet)</strong></td>
+          <td>1876 • Sultan II. Abdülhamid (Mithat Paşa)</td>
+          <td>İlk yazılı Osmanlı Anayasası (Constitution).</td>
+          <td>Parlamento (Meclis-i Umumi: Mebusan + Âyân), iki dereceli seçim, anayasal monarşi.</td>
+          <td>Hükümet meclise değil padişaha sorumludur; 113. madde padişaha sürgün yetkisi verir.</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- ==================== VİZE TUZAKLARI ==================== -->
+  <section id="traps" class="chapter-card">
+    <div class="chapter-title">
+      <span>🚨 Bölüm 8: Top 15 Vize Tuzağı &amp; Sınavda Hoca Ne Sorar?</span>
+      <span class="badge badge-accent">15 Must-Know Traps</span>
+    </div>
+
+    <div class="trap-box">
+      <strong>1. Sened-i İttifak Batılılaşma Hareketi midir?</strong><br>
+      HAYIR. Sened-i İttifak'ta hiçbir Fransız veya Avrupa hukuku esintisi yoktur; tamamen geleneksel Osmanlı taşra feodalleriyle (ayanlar) yapılmış bir iç uzlaşmadır.
+    </div>
+
+    <div class="trap-box">
+      <strong>2. Nizam-ı Cedid Ordusunun İlk Askeri Başarısı Nerededir?</strong><br>
+      1799 Akka Kuşatması'nda Cezzar Ahmed Paşa komutasında Napoléon Bonapart'ın Fransız ordusunu yenilgiye uğratmasıdır!
+    </div>
+
+    <div class="trap-box">
+      <strong>3. Baltalimanı Antlaşması (1838) Hangi Ülkeyle İmzalandı?</strong><br>
+      İngiltere ile. Kavalalı Mehmed Ali Paşa isyanına karşı İngiliz donanmasının ve diplomasisinin desteğini alabilmek için imzalanmıştır.
+    </div>
+
+    <div class="trap-box">
+      <strong>4. Vaka-i Hayriye (1826) Ne Demektir?</strong><br>
+      Yeniçeri Ocağı'nın top ateşine tutularak tarihe karışması olayıdır ("Hayırlı Olay"). Yerine kurulan ordunun adı <em>Asakir-i Mansure-i Muhammediye</em>'dir.
+    </div>
+
+    <div class="trap-box">
+      <strong>5. Tanzimat Dönemi Sadrazamlar Üçlüsü Kimlerdir?</strong><br>
+      Mustafa Reşid Paşa, Âli Paşa ve Fuad Paşa. Bu üç isim Tanzimat bürokratik vesayetini yönetmiştir.
+    </div>
+
+    <div class="trap-box">
+      <strong>6. Gayrimüslimlerden Alınan Cizye Vergisi Ne Zaman Kalktı?</strong><br>
+      1856 Islahat Fermanı ile! Gayrimüslimler askerlik yapmamak için artık <em>Bedel-i Askeri</em> ödemeye başladı.
+    </div>
+
+    <div class="trap-box">
+      <strong>7. İlk Resmi Gazete ve İlk Özel Gazete Hangileridir?</strong><br>
+      İlk Resmi Gazete: <em>Takvim-i Vekayi</em> (1831 - II. Mahmud). İlk Özel Gazete: <em>Tercüman-ı Ahval</em> (1860 - Şinasi ve Agah Efendi).
+    </div>
+
+    <div class="trap-box">
+      <strong>8. 1875 Ramazan Kararnamesi Nedir?</strong><br>
+      Osmanlı Devleti'nin dış borç faizlerini ödeyemeyeceğini ilan ederek fiilen iflasını (moratoryum) açıklamasıdır.
+    </div>
+
+    <div class="trap-box">
+      <strong>9. Düyun-ı Umumiye (1881) Neden Kuruldu?</strong><br>
+      İflas eden Osmanlı'nın alacaklı Avrupalı devletleri (İngiltere, Fransa, Almanya vs.) borçlarını doğrudan tahsil etmek için devlet içinde devlet gibi çalışan bu idareyi kurdu (Muharrem Kararnamesi ile).
+    </div>
+
+    <div class="trap-box">
+      <strong>10. Genç Osmanlılar (Jön Türkler) Kimlerdir?</strong><br>
+      Namık Kemal, Ziya Paşa, Şinasi, Ali Suavi. Amaçları: Meşrutiyet ilan ettirmek ve meclis açtırmaktır.
+    </div>
+
+    <div class="trap-box">
+      <strong>11. Kanun-ı Esasi'nin Ünlü 113. Maddesi Nedir?</strong><br>
+      Padişaha, kamu güvenliğini bozduğunu düşündüğü kişileri mahkeme kararı olmadan doğrudan ülkeden sürgün etme hakkı veren maddedir!
+    </div>
+
+    <div class="trap-box">
+      <strong>12. I. Meşrutiyet Meclisi'nin Kapanma Sebebi Nedir?</strong><br>
+      1877–1878 Osmanlı-Rus Savaşı'nın (93 Harbi) çıkması ve meclisteki gayrimüslim mebusların tutumunu gerekçe gösteren II. Abdülhamid'in meclisi tatil etmesidir.
+    </div>
+
+    <div class="trap-box">
+      <strong>13. III. Selim Döneminde Açılan İlk Sürekli Elçilik Nerededir?</strong><br>
+      Londra (1793). İlk sürekli elçi: Yusuf Agah Efendi.
+    </div>
+
+    <div class="trap-box">
+      <strong>14. Osmanlı'da İlk Nüfus Sayımı Ne Zaman Yapıldı?</strong><br>
+      1831'de II. Mahmud döneminde. Amaç: Asker potansiyelini ve vergi mükelleflerini tespit etmek olduğu için <strong>yalnızca erkekler sayılmıştır!</strong>
+    </div>
+
+    <div class="trap-box">
+      <strong>15. Kavalalı Mehmed Ali Paşa Ordusu Nereye Kadar Geldi?</strong><br>
+      Kütahya'ya kadar geldi! Osmanlı Devleti bunun üzerine Rusya ile Hünkar İskelesi Antlaşması'nı (1833) imzalamak zorunda kaldı ("Denize düşen yılana sarılır").
+    </div>
+  </section>
+
+</div>
+<script>
+  (function () {
+    const toc = document.querySelector('.toc');
+    const tocLinks = Array.from(document.querySelectorAll('.toc a[href^="#"]'));
+    const sections = tocLinks.map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+    function getTocOffset() { return toc ? Math.ceil(toc.getBoundingClientRect().height) + 20 : 20; }
+    function syncScrollMargins() { const o = getTocOffset(); sections.forEach(s => { s.style.scrollMarginTop = o + 'px'; }); }
+    function setActiveLink(id) { tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id)); }
+    let lockSpyUntil = 0;
+    let activeNavToken = 0;
+    function scrollToSection(target, behavior) {
+      if (!target) return;
+      const token = ++activeNavToken;
+      const getDesiredY = () => {
+        const maxY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        return Math.max(0, Math.min(maxY, window.scrollY + target.getBoundingClientRect().top - getTocOffset()));
+      };
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (behavior === 'auto' || reduceMotion) {
+        lockSpyUntil = Date.now() + 200;
+        window.scrollTo(0, getDesiredY());
+        return;
+      }
+      const startY = window.scrollY;
+      const startTime = performance.now();
+      const duration = 380;
+      lockSpyUntil = Date.now() + duration + 250;
+      const step = (now) => {
+        if (token !== activeNavToken) return;
+        const p = Math.min(1, (now - startTime) / duration);
+        const ease = 1 - Math.pow(1 - p, 3);
+        window.scrollTo(0, startY + (getDesiredY() - startY) * ease);
+        if (p < 1) {
+          requestAnimationFrame(step);
+        } else {
+          setTimeout(() => {
+            if (token !== activeNavToken || !toc) return;
+            const tocRect = toc.getBoundingClientRect();
+            const rectTop = target.getBoundingClientRect().top;
+            if (tocRect.top <= 18 && rectTop < tocRect.bottom + 8) {
+              window.scrollTo(0, getDesiredY());
+            }
+          }, 120);
+        }
+      };
+      requestAnimationFrame(step);
+    }
+    tocLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        const target = href ? document.querySelector(href) : null;
+        if (!target) return;
+        e.preventDefault();
+        link.blur();
+        setActiveLink(target.id);
+        try { history.replaceState(null, '', href); } catch (_) {}
+        scrollToSection(target, 'smooth');
+      });
+    });
+    function updateSpy() {
+      if (Date.now() < lockSpyUntil || !sections.length) return;
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 20) {
+        setActiveLink(sections[sections.length - 1].id);
+        return;
+      }
+      const threshold = getTocOffset() + 24;
+      let current = sections[0];
+      for (const sec of sections) if (sec.getBoundingClientRect().top <= threshold) current = sec;
+      if (current) setActiveLink(current.id);
+    }
+    syncScrollMargins();
+    window.addEventListener('resize', syncScrollMargins);
+    window.addEventListener('scroll', updateSpy, { passive: true });
+    if (location.hash) {
+      const initial = document.querySelector(location.hash);
+      if (initial) { setActiveLink(initial.id); setTimeout(() => scrollToSection(initial, 'auto'), 50); }
+    } else if (sections[0]) {
+      setActiveLink(sections[0].id);
+    }
+  })();
+</script>
+</body>
+</html>
