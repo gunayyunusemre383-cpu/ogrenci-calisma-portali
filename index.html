@@ -2823,6 +2823,7 @@ body.zen-mode .notes-fab-btn {
             <div class="c-apps-list">
               <div class="c-app-tag">📐 Chapters 1–5 Tüm Formüller & Konu Özeti (45 KB)</div>
               <div class="c-app-tag">🧮 Esneklik Hesaplayıcı & Sınav Taktikleri</div>
+              <div class="c-app-tag">📰 Günlük Ekonomi Bülteni & Makro Arşiv (12–19 Kasım)</div>
             </div>
           </div>
           <button class="c-enter-btn">Ekonomi Çalışma Alanını Aç →</button>
@@ -2954,7 +2955,7 @@ body.zen-mode .notes-fab-btn {
 
   <script>
     // Embedded Master Applications Database
-    const embeddedApps = {"calc":{"url":"apps/Math_For_Economics_Workbook_Tek_Dosya.html","course":"calculus","name":"Math for Economics Tek Dosya Workbook","filename":"Math_For_Economics_Workbook_Tek_Dosya.html"},"hist_guide":{"url":"apps/HIST151_Midterm_Master_Study_Guide.html","course":"tarih","name":"HIST 151 Midterm Master Çalışma Rehberi","filename":"HIST151_Midterm_Master_Study_Guide.html"},"econ":{"url":"apps/Economics_Chapters_1_to_5_All_Formulas.html","course":"ekonomi","name":"Chapters 1–5 Tüm Formüller \u0026 Konu Özeti","filename":"Economics_Chapters_1_to_5_All_Formulas.html"},"ink_guide":{"url":"apps/Inkilap_Tarihi_III_Selim_-_I_Mesrutiyet_Ozet.html","course":"inkilap","name":"III. Selim\u0027den I. Meşrutiyet\u0027e Kapsamlı Özet","filename":"Inkilap_Tarihi_III_Selim_-_I_Mesrutiyet_Ozet.html"},"spa_test":{"url":"apps/Ispanyolca_100_Soru_Testi.html","course":"ispanyolca","name":"İspanyolca 100 Soru İnteraktif Sınav Testi","filename":"Ispanyolca_100_Soru_Testi.html"},"ink_test":{"url":"apps/Inkilap_Deneme_Sinavi_20_Soru.html","course":"inkilap","name":"İnkılap Tarihi 20 Soruluk Deneme Sınavı","filename":"Inkilap_Deneme_Sinavi_20_Soru.html"},"phil":{"url":"apps/PHIL101_Klasik_Sinav_Rehberi.html","course":"felsefe","name":"PHIL 101 Klasik Sınav Rehberi \u0026 10 Model Soru","filename":"PHIL101_Klasik_Sinav_Rehberi.html"},"spa_guide":{"url":"apps/Ispanyolca_Sinav_Rehberi_U1_U2.html","course":"ispanyolca","name":"İspanyolca U1–U2 Sınav \u0026 Gramer Rehberi","filename":"Ispanyolca_Sinav_Rehberi_U1_U2.html"},"hist_sim":{"url":"apps/HIST151_Midterm_Exam_Simulator.html","course":"tarih","name":"HIST 151 Midterm Sınav Simülatörü","filename":"HIST151_Midterm_Exam_Simulator.html"}};
+    const embeddedApps = {"calc":{"url":"apps/Math_For_Economics_Workbook_Tek_Dosya.html","course":"calculus","name":"Math for Economics Tek Dosya Workbook","filename":"Math_For_Economics_Workbook_Tek_Dosya.html"},"hist_guide":{"url":"apps/HIST151_Midterm_Master_Study_Guide.html","course":"tarih","name":"HIST 151 Midterm Master Çalışma Rehberi","filename":"HIST151_Midterm_Master_Study_Guide.html"},"econ":{"url":"apps/Economics_Chapters_1_to_5_All_Formulas.html","course":"ekonomi","name":"Chapters 1–5 Tüm Formüller \u0026 Konu Özeti","filename":"Economics_Chapters_1_to_5_All_Formulas.html"},"econ_bulten":{"url":"apps/Gunluk_Ekonomi_Bulteni_Arsiv.html","course":"ekonomi","name":"📰 Günlük Ekonomi Bülteni \u0026 Makro Arşiv","filename":"Gunluk_Ekonomi_Bulteni_Arsiv.html"},"ink_guide":{"url":"apps/Inkilap_Tarihi_III_Selim_-_I_Mesrutiyet_Ozet.html","course":"inkilap","name":"III. Selim\u0027den I. Meşrutiyet\u0027e Kapsamlı Özet","filename":"Inkilap_Tarihi_III_Selim_-_I_Mesrutiyet_Ozet.html"},"spa_test":{"url":"apps/Ispanyolca_100_Soru_Testi.html","course":"ispanyolca","name":"İspanyolca 100 Soru İnteraktif Sınav Testi","filename":"Ispanyolca_100_Soru_Testi.html"},"ink_test":{"url":"apps/Inkilap_Deneme_Sinavi_20_Soru.html","course":"inkilap","name":"İnkılap Tarihi 20 Soruluk Deneme Sınavı","filename":"Inkilap_Deneme_Sinavi_20_Soru.html"},"phil":{"url":"apps/PHIL101_Klasik_Sinav_Rehberi.html","course":"felsefe","name":"PHIL 101 Klasik Sınav Rehberi \u0026 10 Model Soru","filename":"PHIL101_Klasik_Sinav_Rehberi.html"},"spa_guide":{"url":"apps/Ispanyolca_Sinav_Rehberi_U1_U2.html","course":"ispanyolca","name":"İspanyolca U1–U2 Sınav \u0026 Gramer Rehberi","filename":"Ispanyolca_Sinav_Rehberi_U1_U2.html"},"hist_sim":{"url":"apps/HIST151_Midterm_Exam_Simulator.html","course":"tarih","name":"HIST 151 Midterm Sınav Simülatörü","filename":"HIST151_Midterm_Exam_Simulator.html"}};
 
     let currentAppKey = "phil";
 
@@ -3029,7 +3030,7 @@ body.zen-mode .notes-fab-btn {
     const courseAppMapping = {
       felsefe: ['phil'],
       tarih: ['hist_sim', 'hist_guide'],
-      ekonomi: ['econ'],
+      ekonomi: ['econ', 'econ_bulten'],
       calculus: ['calc'],
       ispanyolca: ['spa_test', 'spa_guide'],
       inkilap: ['ink_test', 'ink_guide']
@@ -3265,6 +3266,7 @@ body.zen-mode .notes-fab-btn {
       hist_sim: 'tarih',
       hist_guide: 'tarih',
       econ: 'ekonomi',
+      econ_bulten: 'ekonomi',
       calc: 'calculus',
       spa_test: 'ispanyolca',
       spa_guide: 'ispanyolca',
